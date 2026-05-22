@@ -32,10 +32,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -1066.0
-offset_top = -458.99997
-offset_right = 854.0
-offset_bottom = 621.0
+offset_left = -1086.0
+offset_top = -418.99997
+offset_right = 834.0
+offset_bottom = 661.0
 grow_horizontal = 2
 grow_vertical = 2
 rotation = 1.5670968
@@ -49,18 +49,18 @@ script = ExtResource("3_fm0op")
 
 [node name="Button" type="Button" parent="PanelContainer/Control" unique_id=1691894923]
 layout_mode = 0
-offset_left = 260.0
-offset_top = 1120.0
-offset_right = 431.0
-offset_bottom = 1165.0
+offset_left = 321.0
+offset_top = 1115.0
+offset_right = 492.0
+offset_bottom = 1160.0
 theme = ExtResource("1_ktig4")
 text = "Enter"
 
 [node name="Label" type="Label" parent="PanelContainer/Control" unique_id=1616658541]
 layout_mode = 0
-offset_left = 119.0
-offset_top = 174.0
-offset_right = 534.0
-offset_bottom = 259.0
+offset_left = 12.0
+offset_top = 181.0
+offset_right = 739.0
+offset_bottom = 318.0
 theme = ExtResource("1_ktig4")
 text = "Life XP"
