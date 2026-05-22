@@ -49,9 +49,18 @@ script = ExtResource("3_fm0op")
 
 [node name="Button" type="Button" parent="PanelContainer/Control" unique_id=1691894923]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 1088.0
-offset_right = 439.0
-offset_bottom = 1133.0
+offset_left = 260.0
+offset_top = 1120.0
+offset_right = 431.0
+offset_bottom = 1165.0
 theme = ExtResource("1_ktig4")
 text = "Enter"
+
+[node name="Label" type="Label" parent="PanelContainer/Control" unique_id=1616658541]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 174.0
+offset_right = 534.0
+offset_bottom = 259.0
+theme = ExtResource("1_ktig4")
+text = "Life XP"

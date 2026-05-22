@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxj4m0nq5ujql"
-path="res://.godot/imported/VerminVibesV-Zlg3.ttf-39e9aedb078077212f5d7c5c9c098602.fontdata"
+uid="uid://cqdlaunyde18f"
+path="res://.godot/imported/ExploreAcrossDemoRegular-lxYmd.otf-60e9957b383d4b0f1fb15f2b293fedf6.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/VerminVibesV-Zlg3.ttf"
-dest_files=["res://.godot/imported/VerminVibesV-Zlg3.ttf-39e9aedb078077212f5d7c5c9c098602.fontdata"]
+source_file="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf"
+dest_files=["res://.godot/imported/ExploreAcrossDemoRegular-lxYmd.otf-60e9957b383d4b0f1fb15f2b293fedf6.fontdata"]
 
 [params]
 
