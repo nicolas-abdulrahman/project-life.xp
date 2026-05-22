@@ -1,3 +1,14 @@
 [gd_resource type="Theme" format=3 uid="uid://dxj4s3b11gbys"]
 
+[ext_resource type="FontFile" uid="uid://cxj4m0nq5ujql" path="res://assets/fonts/VerminVibesV-Zlg3.ttf" id="1_pjbn5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6rto"]
+bg_color = Color(0, 0.6655055, 0.97958297, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 20
+corner_detail = 10
+
 [resource]
+Button/font_sizes/font_size = 37
+Button/fonts/font = ExtResource("1_pjbn5")
+Button/styles/normal = SubResource("StyleBoxFlat_g6rto")
