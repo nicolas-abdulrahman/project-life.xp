@@ -13,13 +13,16 @@ config_version=5
 config/name="project-Life.xp"
 run/main_scene="uid://drnxryx0u53sl"
 config/features=PackedStringArray("4.6", "Mobile")
-config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
 window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lucide/plugin.cfg")
 
 [physics]
 

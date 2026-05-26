@@ -1,17 +1,29 @@
 [gd_resource type="Theme" format=3 uid="uid://dxj4s3b11gbys"]
 
-[ext_resource type="FontFile" uid="uid://dmavgpyx4m4mg" path="res://assets/fonts/verminVibes/VerminVibesV-Zlg3.ttf" id="1_g6rto"]
+[ext_resource type="FontFile" uid="uid://b8ex7xystp88u" path="res://assets/fonts/midnight-letters-font/MidnightLettersItalic-aYV6m.ttf" id="1_g6rto"]
 [ext_resource type="FontFile" uid="uid://cqdlaunyde18f" path="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf" id="2_g6rto"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6rto"]
-bg_color = Color(0, 0.6655055, 0.97958297, 1)
-corner_radius_top_left = 16
-corner_radius_top_right = 20
-corner_detail = 10
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckmh"]
+bg_color = Color(0.02903209, 0.014397586, 0.1421381, 1)
 
 [resource]
 default_font_size = 85
-Button/font_sizes/font_size = 37
+Button/colors/font_color = Color(0.69803923, 0.92156863, 1, 1)
+Button/font_sizes/font_size = 19
 Button/fonts/font = ExtResource("1_g6rto")
-Button/styles/normal = SubResource("StyleBoxFlat_g6rto")
+Button/styles/normal = SubResource("StyleBoxEmpty_1ckmh")
+Label/colors/font_color = Color(0.69803923, 0.92156863, 1, 1)
+Label/colors/font_shadow_color = Color(0.5092703, 0.71666664, 0.10022882, 0.8156863)
+Label/constants/shadow_outline_size = 8
 Label/fonts/font = ExtResource("2_g6rto")
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 30
+Panel/styles/panel = SubResource("StyleBoxFlat_g6rto")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_1ckmh")
+VBoxContainer/constants/separation = 20

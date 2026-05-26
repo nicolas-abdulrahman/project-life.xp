@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://drnxryx0u53sl"]
+
+[ext_resource type="Script" uid="uid://ctvekw0085v4u" path="res://screens/screen.gd" id="1_hj5ia"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_pkmem"]
+[ext_resource type="VideoStream" uid="uid://b0jnvigmmqljs" path="res://assets/home_screen.ogv" id="2_hj5ia"]
+[ext_resource type="Script" uid="uid://ckppgr7woyasr" path="res://scripts/video_stream_player.gd" id="3_81jmw"]
+
+[node name="Control" type="Control" unique_id=351231481]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_hj5ia")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=265996355]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_pkmem")
+
+[node name="Control" type="Control" parent="PanelContainer" unique_id=903789406]
+clip_contents = true
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="PanelContainer/Control" unique_id=600844018]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1114.0
+offset_top = -373.0
+offset_right = 806.0
+offset_bottom = 707.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5670968
+scale = Vector2(0.99178207, 0.9169831)
+pivot_offset = Vector2(1053.1023, 604.54315)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stream = ExtResource("2_hj5ia")
+autoplay = true
+loop = true
+script = ExtResource("3_81jmw")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="PanelContainer/Control" unique_id=1691894923]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 1051.0
+offset_right = 448.0
+offset_bottom = 1096.0
+scale = Vector2(1.1600019, 1)
+theme = ExtResource("1_pkmem")
+text = "Enter"
+
+[node name="Label" type="Label" parent="PanelContainer/Control" unique_id=1616658541]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 181.0
+offset_right = 739.0
+offset_bottom = 318.0
+theme = ExtResource("1_pkmem")
+text = "Life 
+XP"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer" unique_id=1482727414]
+layout_mode = 2
+theme = ExtResource("1_pkmem")
+
+[node name="Control" type="Control" parent="PanelContainer/PanelContainer" unique_id=748679597]
+layout_mode = 2
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="PanelContainer/PanelContainer/Control" unique_id=645391142]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1114.0
+offset_top = -373.0
+offset_right = 806.0
+offset_bottom = 707.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.5670968
+scale = Vector2(0.99178207, 0.9169831)
+pivot_offset = Vector2(1053.1023, 604.54315)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stream = ExtResource("2_hj5ia")
+autoplay = true
+loop = true
+script = ExtResource("3_81jmw")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="PanelContainer/PanelContainer/Control" unique_id=1716477061]
+layout_mode = 0
+offset_left = 252.0
+offset_top = 1076.0
+offset_right = 461.13647
+offset_bottom = 1101.0
+scale = Vector2(1.1760938, 1.72)
+pivot_offset = Vector2(107.69339, 26)
+theme = ExtResource("1_pkmem")
+text = "SYNC"
+
+[node name="Label" type="Label" parent="PanelContainer/PanelContainer/Control" unique_id=1377509573]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 174.0
+offset_right = 741.0
+offset_bottom = 451.0
+theme = ExtResource("1_pkmem")
+text = "Life 
+XP"
+horizontal_alignment = 1
