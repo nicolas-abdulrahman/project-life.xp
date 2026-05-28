@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://splr3k2woojw"]
+
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_ppr06"]
+[ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="2_3a0fd"]
+
+[node name="Box_label" type="VBoxContainer" unique_id=117325339]
+theme = ExtResource("1_ppr06")
+alignment = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1833397443]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1165730480]
+layout_mode = 2
+theme = ExtResource("2_3a0fd")
+text = "MON"
