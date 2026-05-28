@@ -51,9 +51,20 @@ cache/0/10/0/underline_position = 0.0
 cache/0/10/0/underline_thickness = 0.0
 cache/0/10/0/scale = 1.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ymq"]
+bg_color = Color(0.008890162, 0.013399581, 0.00088226673, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_uexk6"]
+
 [resource]
+default_font = SubResource("SystemFont_uexk6")
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(0, 0.5172867, 0.5452707, 1)
 Label/colors/font_shadow_color = Color(0, 0, 0, 0)
 Label/font_sizes/font_size = 11
 Label/fonts/font = SubResource("FontFile_c2ymq")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_c2ymq")

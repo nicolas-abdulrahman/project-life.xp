@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4erdovvg7wc6"
-path="res://.godot/imported/button collection sci-fi style set color blue 14.jpeg-3f25a2b31f81fa33a1c25156c86e4461.ctex"
+uid="uid://cossxsopa03yk"
+path="res://.godot/imported/lifexp.png-5d5af5e84f19b0abae767d3e5f248e32.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/button collection sci-fi style set color blue 14.jpeg"
-dest_files=["res://.godot/imported/button collection sci-fi style set color blue 14.jpeg-3f25a2b31f81fa33a1c25156c86e4461.ctex"]
+source_file="res://assets/lifexp.png"
+dest_files=["res://.godot/imported/lifexp.png-5d5af5e84f19b0abae767d3e5f248e32.ctex"]
 
 [params]
 

@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://d0f7a1od48of8"]
+
+[ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="1_qw4o4"]
+[ext_resource type="Texture2D" uid="uid://cossxsopa03yk" path="res://assets/lifexp.png" id="2_2in7n"]
+
+[node name="MarginContainer2" type="MarginContainer" unique_id=1814904536]
+theme = ExtResource("1_qw4o4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1017836889]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=910878834]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+texture = ExtResource("2_2in7n")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer" unique_id=1190749616]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 153
+theme_override_constants/margin_right = 5
+
+[node name="Panel" type="Panel" parent="HBoxContainer/MarginContainer" unique_id=1330845248]
+layout_mode = 2
+theme = ExtResource("1_qw4o4")

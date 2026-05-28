@@ -1,18 +1,14 @@
 [gd_scene format=3 uid="uid://bwf4atopy3xg4"]
 
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_u6a3o"]
-[ext_resource type="Script" uid="uid://b7fmwqe84j181" path="res://scripts/stats_list.gd" id="2_m2e60"]
-[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/g23.svg" id="3_ncmot"]
-[ext_resource type="PackedScene" uid="uid://ca6ya7k5h58fa" path="res://screens/stat_panel.tscn" id="3_q18yb"]
-[ext_resource type="Texture2D" uid="uid://c6i0vxtv5kr2" path="res://assets/svg/stats_border.svg" id="4_fd40e"]
+[ext_resource type="PackedScene" uid="uid://d0f7a1od48of8" path="res://screens/stat_screen/profile_xp.tscn" id="2_8rjat"]
+[ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="3_q18yb"]
+[ext_resource type="PackedScene" uid="uid://c7mamg3jy4l15" path="res://screens/stat_screen/stats.tscn" id="4_q4bb5"]
 [ext_resource type="Texture2D" uid="uid://bp0u3i6uilwqu" path="res://assets/svg/calendar-svgrepo-com (2).svg" id="5_8rjat"]
 [ext_resource type="Texture2D" uid="uid://bie7ecn3g81fj" path="res://assets/svg/statistics-svgrepo-com (1).svg" id="6_q18yb"]
 [ext_resource type="Texture2D" uid="uid://cq7rf2l0ca8vx" path="res://assets/svg/smartphone-security-svgrepo-com (1).svg" id="8_q4bb5"]
 [ext_resource type="Texture2D" uid="uid://baywjqyujfulm" path="res://assets/svg/swords.svg" id="8_q18yb"]
-[ext_resource type="Texture2D" uid="uid://ck8snn8odn60m" path="res://assets/svg/settings-svgrepo-com.svg" id="9_503o1"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0w6a"]
-texture = ExtResource("4_fd40e")
+[ext_resource type="Texture2D" uid="uid://b1prl1xxw7pa3" path="res://assets/svg/shop-svgrepo-com.svg" id="9_503o1"]
 
 [node name="Control" type="Control" unique_id=1711850580]
 layout_mode = 3
@@ -40,106 +36,38 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=246128761]
-layout_mode = 2
-theme = ExtResource("1_u6a3o")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1570491879]
-layout_mode = 2
-theme = ExtResource("1_u6a3o")
-script = ExtResource("2_m2e60")
-
-[node name="StatPanelTemplate" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1804356692 instance=ExtResource("3_q18yb")]
+[node name="MarginContainer2" parent="PanelContainer/VBoxContainer" unique_id=1814904536 instance=ExtResource("2_8rjat")]
 layout_mode = 2
 
-[node name="StatPanelTemplate2" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=770849143]
-custom_minimum_size = Vector2(0, 150)
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1901220871]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2" unique_id=222470483]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3" unique_id=1997023563]
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=114157868]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control" unique_id=1224505188]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_t0w6a")
+theme = ExtResource("3_q18yb")
 
-[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2/PanelContainer" unique_id=1684826415]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=1191372062]
 layout_mode = 2
-split_offsets = PackedInt32Array(120)
-dragging_enabled = false
-drag_area_margin_begin = 268
-drag_area_margin_end = -211
-drag_area_offset = 599
-split_offset = 120
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("3_q18yb")
+metadata/_edit_use_anchors_ = true
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2/PanelContainer/HSplitContainer" unique_id=167532822]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("1_u6a3o")
-theme_override_constants/margin_top = 0
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2/PanelContainer/HSplitContainer/MarginContainer" unique_id=929997473]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("3_ncmot")
-
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2/PanelContainer/HSplitContainer" unique_id=1018181405]
-layout_mode = 2
-theme_override_constants/margin_left = 43
-theme_override_constants/margin_top = 37
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 9
-
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate2/PanelContainer/HSplitContainer/MarginContainer2" unique_id=1601895004]
-custom_minimum_size = Vector2(300, 100)
-layout_mode = 2
-
-[node name="StatPanelTemplate3" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1334049927]
-custom_minimum_size = Vector2(0, 150)
-layout_mode = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3" unique_id=818952836]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_t0w6a")
-
-[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3/PanelContainer" unique_id=97194537]
-layout_mode = 2
-split_offsets = PackedInt32Array(120)
-dragging_enabled = false
-drag_area_margin_begin = 268
-drag_area_margin_end = -211
-drag_area_offset = 599
-split_offset = 120
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3/PanelContainer/HSplitContainer" unique_id=340933883]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("1_u6a3o")
-theme_override_constants/margin_top = 0
-
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3/PanelContainer/HSplitContainer/MarginContainer" unique_id=1427349967]
-custom_minimum_size = Vector2(70, 70)
-layout_mode = 2
-size_flags_vertical = 4
-texture = ExtResource("3_ncmot")
-
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3/PanelContainer/HSplitContainer" unique_id=1565338432]
-layout_mode = 2
-theme_override_constants/margin_left = 43
-theme_override_constants/margin_top = 37
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 9
-
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer/VBoxContainer/StatPanelTemplate3/PanelContainer/HSplitContainer/MarginContainer2" unique_id=1652238773]
-custom_minimum_size = Vector2(300, 100)
+[node name="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=469579158 instance=ExtResource("4_q4bb5")]
 layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer" unique_id=1170108823]
