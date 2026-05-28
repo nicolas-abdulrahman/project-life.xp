@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://ca6ya7k5h58fa"]
+
+[ext_resource type="Script" uid="uid://2bive2utd06f" path="res://screens/stat_panel.gd" id="1_j4pra"]
+[ext_resource type="Texture2D" uid="uid://c6i0vxtv5kr2" path="res://assets/svg/stats_border.svg" id="1_yo7j0"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="2_6rpyf"]
+[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/g23.svg" id="3_j4pra"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0w6a"]
+texture = ExtResource("1_yo7j0")
+
+[node name="StatPanelTemplate" type="Control" unique_id=1804356692]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j4pra")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=148513019]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_t0w6a")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer" unique_id=333426663]
+layout_mode = 2
+split_offsets = PackedInt32Array(120)
+dragging_enabled = false
+drag_area_margin_begin = 268
+drag_area_margin_end = -211
+drag_area_offset = 599
+split_offset = 120
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HSplitContainer" unique_id=2091776349]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_6rpyf")
+theme_override_constants/margin_top = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HSplitContainer/MarginContainer" unique_id=1150735914]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+size_flags_vertical = 4
+texture = ExtResource("3_j4pra")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HSplitContainer" unique_id=1176702322]
+layout_mode = 2
+theme_override_constants/margin_left = 43
+theme_override_constants/margin_top = 37
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 9
+
+[node name="BarChart" type="PanelContainer" parent="PanelContainer/HSplitContainer/MarginContainer2" unique_id=97445917]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/HSplitContainer/MarginContainer2/BarChart" unique_id=122165246]
+layout_mode = 2
+theme = ExtResource("2_6rpyf")
