@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c0eeu7isvnnyi"]
+
+[ext_resource type="PackedScene" uid="uid://clj56dr4jdoit" path="res://screens/quest_screen/card.tscn" id="1_h4vfm"]
+
+[sub_resource type="Theme" id="Theme_qlwru"]
+Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
+Label/colors/font_outline_color = Color(0.72, 0.72, 0.72, 1)
+Label/colors/font_shadow_color = Color(0.8848981, 0.0075785755, 0.0911073, 1)
+Label/fonts/font = null
+
+[node name="Control" type="Control" unique_id=1800851215]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1305180025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=369780103]
+layout_mode = 2
+theme = SubResource("Theme_qlwru")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/VBoxContainer" unique_id=1400500893]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="MarginContainer2" parent="PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_h4vfm")]
+layout_mode = 2
