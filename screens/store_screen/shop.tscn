@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qqv8qha88cxy"]
 
-[ext_resource type="PackedScene" uid="uid://dgxmw3eof3roc" path="res://screens/persona_container.tscn" id="1_1n8vj"]
+[ext_resource type="PackedScene" uid="uid://dgxmw3eof3roc" path="res://screens/store_screen/persona_container.tscn" id="1_1n8vj"]
 [ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store_screen/skill_tree2.tscn" id="2_1n8vj"]
 
 [node name="Control" type="Control" unique_id=1138468343]

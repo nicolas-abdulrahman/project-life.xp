@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://bg6177uivk0no"]
 
-[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_b1cp1"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_q6q2c"]
 
-[node name="Control" type="Control" unique_id=493581333]
+[node name="Battle" type="Control" unique_id=493581333]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_b1cp1")
+theme = ExtResource("1_q6q2c")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=277852502]
 layout_mode = 1

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c0eeu7isvnnyi"]
 
-[ext_resource type="PackedScene" uid="uid://clj56dr4jdoit" path="res://screens/quest_screen/card.tscn" id="1_h4vfm"]
+[ext_resource type="PackedScene" uid="uid://clj56dr4jdoit" path="res://screens/quests/card.tscn" id="1_y1ajl"]
 
 [sub_resource type="Theme" id="Theme_qlwru"]
 Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
@@ -32,5 +32,5 @@ theme = SubResource("Theme_qlwru")
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="MarginContainer2" parent="PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_h4vfm")]
+[node name="MarginContainer2" parent="PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_y1ajl")]
 layout_mode = 2

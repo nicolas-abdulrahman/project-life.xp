@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://mnw34wuxfkoe"]
+
+[ext_resource type="PackedScene" uid="uid://bg6177uivk0no" path="res://screens/battle/battle_screen.tscn" id="1_il85u"]
+[ext_resource type="PackedScene" uid="uid://qqv8qha88cxy" path="res://screens/store_screen/shop.tscn" id="2_dph24"]
+[ext_resource type="PackedScene" uid="uid://bwf4atopy3xg4" path="res://screens/stats/stats_screen.tscn" id="3_8kjxw"]
+[ext_resource type="PackedScene" uid="uid://c0eeu7isvnnyi" path="res://screens/quests/quest_screen.tscn" id="4_wyd0a"]
+[ext_resource type="PackedScene" uid="uid://drnxryx0u53sl" path="res://screens/home/home_screen.tscn" id="5_xvjlk"]
+[ext_resource type="PackedScene" uid="uid://dvkpfvavrggqk" path="res://screens/home/login_screen.tscn" id="6_on3n8"]
+
+[node name="Control" type="Control" unique_id=1269205600]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Battle" parent="." unique_id=493581333 instance=ExtResource("1_il85u")]
+layout_mode = 1
+offset_left = 1570.0
+offset_top = 18.0
+offset_right = 1570.0
+offset_bottom = 18.0
+
+[node name="Control" parent="." unique_id=1138468343 instance=ExtResource("2_dph24")]
+layout_mode = 1
+offset_left = 2409.0
+offset_top = 17.0
+offset_right = 2409.0
+offset_bottom = 17.0
+
+[node name="Control2" parent="." unique_id=1711850580 instance=ExtResource("3_8kjxw")]
+layout_mode = 1
+offset_left = 775.0
+offset_top = 32.0
+offset_right = 775.0
+offset_bottom = 32.0
+
+[node name="Control3" parent="." unique_id=1800851215 instance=ExtResource("4_wyd0a")]
+layout_mode = 1
+offset_left = -30.0
+offset_top = 19.0
+offset_right = -30.0
+offset_bottom = 19.0
+
+[node name="Control4" parent="." unique_id=351231481 instance=ExtResource("5_xvjlk")]
+layout_mode = 1
+offset_left = -824.0
+offset_top = 39.0
+offset_right = -824.0
+offset_bottom = 39.0
+
+[node name="Control5" parent="." unique_id=1194515761 instance=ExtResource("6_on3n8")]
+layout_mode = 1
+offset_left = -849.0
+offset_top = 666.0
+offset_right = -849.0
+offset_bottom = 666.0
