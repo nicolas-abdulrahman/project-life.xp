@@ -6,7 +6,7 @@ extends Control
 @onready var hbox = $PanelContainer/HSplitContainer/MarginContainer2/BarChart/HBoxContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	const template = preload("res://screens/stat_screen/box_label.tscn")
+	const template = preload("res://screens/stats/box_label.tscn")
 	var day_labels: Array[String] = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 	for i in range(7):
 		var new_node=template.instantiate() 
