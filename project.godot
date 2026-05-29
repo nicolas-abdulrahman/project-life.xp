@@ -22,7 +22,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/GDTerminal/plugin.cfg", "res://addons/godot_vim/plugin.cfg", "res://addons/godot_xterm/plugin.cfg")
 
 [physics]
 
