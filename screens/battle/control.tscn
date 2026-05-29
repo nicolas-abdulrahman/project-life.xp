@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bg6177uivk0no"]
+
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_b1cp1"]
+
+[node name="Control" type="Control" unique_id=493581333]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_b1cp1")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=277852502]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=20652444]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=216110255]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=672297741]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=1168004811]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=2104684141]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=858062482]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2

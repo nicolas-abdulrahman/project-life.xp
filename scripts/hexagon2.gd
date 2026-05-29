@@ -1,6 +1,7 @@
 @tool
 extends Control
 
+@export var texture: Texture2D = preload("res://assets/sprites/persona/mago_branco.png")
 @export var outline_color: Color = Color.WHITE:
 	set(value):
 		outline_color= value

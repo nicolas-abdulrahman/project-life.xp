@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://qqv8qha88cxy"]
+
+[ext_resource type="PackedScene" uid="uid://dgxmw3eof3roc" path="res://screens/persona_container.tscn" id="1_1n8vj"]
+[ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store_screen/skill_tree2.tscn" id="2_1n8vj"]
+
+[node name="Control" type="Control" unique_id=1138468343]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1502312297]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=374233619]
+layout_mode = 2
+
+[node name="MarginContainer3" parent="PanelContainer/VBoxContainer" unique_id=2007355674 instance=ExtResource("1_1n8vj")]
+custom_minimum_size = Vector2(0, 500)
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_right = 30
+
+[node name="Control" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" parent_id_path=PackedInt32Array(2007355674, 2083893824) index="0" unique_id=38834610]
+size_flags_stretch_ratio = 0.9
+
+[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer" parent_id_path=PackedInt32Array(2007355674, 1953834847) index="0" unique_id=480964002]
+size_flags_stretch_ratio = 8.85
+
+[node name="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2" parent_id_path=PackedInt32Array(2007355674, 1600517000) index="0" unique_id=1819419244]
+size_flags_horizontal = 1
+theme_override_constants/separation = 8
+
+[node name="Label2" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" index="1" unique_id=380166175]
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "5G"
+
+[node name="Control2" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" parent_id_path=PackedInt32Array(2007355674, 2083893824) index="1" unique_id=548009287]
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="PanelContainer2" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control2" index="0" unique_id=1206625981]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=7018151 instance=ExtResource("2_1n8vj")]
+layout_mode = 2
+
+[editable path="PanelContainer/VBoxContainer/MarginContainer3"]

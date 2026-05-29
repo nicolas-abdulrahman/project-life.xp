@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bwf4atopy3xg4"]
 
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_u6a3o"]
-[ext_resource type="PackedScene" uid="uid://d0f7a1od48of8" path="res://screens/stat_screen/profile_xp.tscn" id="2_8rjat"]
-[ext_resource type="Theme" uid="uid://bibcfwkshlorb" path="res://screens/stat_screen/persona.tres" id="3_q4bb5"]
+[ext_resource type="PackedScene" uid="uid://d0f7a1od48of8" path="res://screens/stats/profile_xp.tscn" id="2_8rjat"]
 [ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="3_q18yb"]
-[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stat_screen/persona.tscn" id="4_503o1"]
-[ext_resource type="PackedScene" uid="uid://c7mamg3jy4l15" path="res://screens/stat_screen/stats.tscn" id="4_q4bb5"]
+[ext_resource type="PackedScene" uid="uid://c7mamg3jy4l15" path="res://screens/stats/stats.tscn" id="4_q4bb5"]
 [ext_resource type="Texture2D" uid="uid://bp0u3i6uilwqu" path="res://assets/svg/calendar-svgrepo-com (2).svg" id="5_8rjat"]
 [ext_resource type="Texture2D" uid="uid://bie7ecn3g81fj" path="res://assets/svg/statistics-svgrepo-com (1).svg" id="6_q18yb"]
 [ext_resource type="Texture2D" uid="uid://cq7rf2l0ca8vx" path="res://assets/svg/smartphone-security-svgrepo-com (1).svg" id="8_q4bb5"]
@@ -27,69 +25,32 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_u6a3o")
+theme = ExtResource("3_q18yb")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=419867955]
 layout_mode = 2
 theme = ExtResource("1_u6a3o")
 theme_override_constants/separation = 0
 
-[node name="Panel" type="Panel" parent="PanelContainer/VBoxContainer" unique_id=692035260]
-custom_minimum_size = Vector2(0, 100)
-layout_mode = 2
-
 [node name="MarginContainer2" parent="PanelContainer/VBoxContainer" unique_id=1814904536 instance=ExtResource("2_8rjat")]
 layout_mode = 2
 
-[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1901220871]
-layout_mode = 2
-theme = ExtResource("3_q4bb5")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3" unique_id=1997023563]
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=847620977]
+custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 
-[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=114157868]
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer3" unique_id=2076026237]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/Control" unique_id=1464324446]
 custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 7.0
-
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control" unique_id=1224505188]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = -1
+anchor_right = 0.851
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_q4bb5")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer" unique_id=752795857]
-layout_mode = 2
-theme = ExtResource("3_q4bb5")
-
-[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer" unique_id=2082108533]
-layout_mode = 2
-text = "Personas"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer" unique_id=1512404405]
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer/ScrollContainer" unique_id=1893393083]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Persona_container" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer/ScrollContainer/HBoxContainer" unique_id=11508801 instance=ExtResource("4_503o1")]
-layout_mode = 2
-size_flags_horizontal = 1
-
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" unique_id=1191372062]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
-theme = ExtResource("3_q18yb")
-metadata/_edit_use_anchors_ = true
 
 [node name="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=469579158 instance=ExtResource("4_q4bb5")]
 layout_mode = 2
@@ -159,3 +120,14 @@ theme_type_variation = &"ss"
 texture_normal = ExtResource("9_503o1")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="PanelContainer_VBoxContainer_MarginContainer3_HBoxContainer_PanelContainer2_VBoxContainer#HBoxContainer" type="HBoxContainer" parent="." unique_id=631034450]
+layout_mode = 0
+
+[node name="PanelContainer_VBoxContainer_MarginContainer3_HBoxContainer_PanelContainer2_VBoxContainer_HBoxContainer#TextureRect" type="TextureRect" parent="." unique_id=887032798]
+custom_minimum_size = Vector2(28, 28)
+layout_mode = 0
+
+[node name="PanelContainer_VBoxContainer_MarginContainer3_HBoxContainer_PanelContainer2_VBoxContainer_HBoxContainer#Panel" type="Panel" parent="." unique_id=1160971994]
+layout_mode = 0
+size_flags_horizontal = 3

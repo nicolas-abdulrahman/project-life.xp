@@ -6,10 +6,10 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g6rto"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.5796, 0.63, 0.58463997, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckmh"]
-bg_color = Color(0.02903209, 0.014397586, 0.1421381, 1)
+bg_color = Color(0.0539, 0.0539, 0.07, 1)
 
 [resource]
 default_font_size = 85
