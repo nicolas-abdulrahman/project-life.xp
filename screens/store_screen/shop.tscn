@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dgxmw3eof3roc" path="res://screens/store_screen/persona_container.tscn" id="1_1n8vj"]
 [ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store_screen/skill_tree2.tscn" id="2_1n8vj"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="2_eem11"]
 
 [node name="Control" type="Control" unique_id=1138468343]
 layout_mode = 3
@@ -31,7 +32,10 @@ theme_override_constants/margin_right = 30
 [node name="Control" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer" parent_id_path=PackedInt32Array(2007355674, 2083893824) index="0" unique_id=38834610]
 size_flags_stretch_ratio = 0.9
 
-[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer" parent_id_path=PackedInt32Array(2007355674, 1953834847) index="0" unique_id=480964002]
+[node name="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control" index="0" unique_id=1953834847]
+theme_type_variation = &"SecondaryContainer"
+
+[node name="VBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer" index="0" unique_id=480964002]
 size_flags_stretch_ratio = 8.85
 
 [node name="HBoxContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2" parent_id_path=PackedInt32Array(2007355674, 1600517000) index="0" unique_id=1819419244]
@@ -57,6 +61,8 @@ offset_right = 0.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_eem11")
+theme_type_variation = &"DimmedContainer"
 
 [node name="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=7018151 instance=ExtResource("2_1n8vj")]
 layout_mode = 2

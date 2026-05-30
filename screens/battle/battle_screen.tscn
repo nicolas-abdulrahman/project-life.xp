@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bg6177uivk0no"]
 
-[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_q6q2c"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_q6q2c"]
 
 [node name="Battle" type="Control" unique_id=493581333]
 layout_mode = 3

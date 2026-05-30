@@ -22,7 +22,11 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/asset_cleaner/addons/ImportCleaner/plugin.cfg", "res://addons/godot_vim/plugin.cfg")
+
+[gui]
+
+theme/custom="uid://dxj4s3b11gbys"
 
 [physics]
 

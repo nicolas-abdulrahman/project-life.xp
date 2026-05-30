@@ -1,7 +1,85 @@
 [gd_scene format=3 uid="uid://dgxmw3eof3roc"]
 
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_p2yf3"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/persona.tscn" id="2_2rqfp"]
-[ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="3_hgxwu"]
+
+[sub_resource type="FontFile" id="FontFile_c2ymq"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ymq"]
+bg_color = Color(0.008890162, 0.013399581, 0.00088226673, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_uexk6"]
+subpixel_positioning = 0
+
+[sub_resource type="Theme" id="Theme_8kjxw"]
+default_font = SubResource("SystemFont_uexk6")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0.5172867, 0.5452707, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/font_sizes/font_size = 11
+Label/fonts/font = SubResource("FontFile_c2ymq")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_c2ymq")
 
 [node name="MarginContainer3" type="MarginContainer" unique_id=2007355674]
 
@@ -21,6 +99,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_p2yf3")
+theme_type_variation = &"SecondaryContainer"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control/PanelContainer" unique_id=480964002]
 layout_mode = 2
@@ -68,7 +148,7 @@ offset_right = -4.0
 offset_bottom = 200.0
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("3_hgxwu")
+theme = SubResource("Theme_8kjxw")
 metadata/_edit_use_anchors_ = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control2/PanelContainer2" unique_id=121994223]

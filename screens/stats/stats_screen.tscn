@@ -1,14 +1,87 @@
 [gd_scene format=3 uid="uid://bwf4atopy3xg4"]
 
-[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://styles/main_theme.tres" id="1_u6a3o"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_u6a3o"]
 [ext_resource type="PackedScene" uid="uid://d0f7a1od48of8" path="res://screens/stats/profile_xp.tscn" id="2_8rjat"]
-[ext_resource type="Theme" uid="uid://dhwwuc6tdb11n" path="res://styles/stat_panel.tres" id="3_q18yb"]
 [ext_resource type="PackedScene" uid="uid://c7mamg3jy4l15" path="res://screens/stats/stats.tscn" id="4_q4bb5"]
 [ext_resource type="Texture2D" uid="uid://bp0u3i6uilwqu" path="res://assets/svg/calendar-svgrepo-com (2).svg" id="5_8rjat"]
 [ext_resource type="Texture2D" uid="uid://bie7ecn3g81fj" path="res://assets/svg/statistics-svgrepo-com (1).svg" id="6_q18yb"]
 [ext_resource type="Texture2D" uid="uid://cq7rf2l0ca8vx" path="res://assets/svg/smartphone-security-svgrepo-com (1).svg" id="8_q4bb5"]
 [ext_resource type="Texture2D" uid="uid://baywjqyujfulm" path="res://assets/svg/swords.svg" id="8_q18yb"]
 [ext_resource type="Texture2D" uid="uid://b1prl1xxw7pa3" path="res://assets/svg/shop-svgrepo-com.svg" id="9_503o1"]
+
+[sub_resource type="FontFile" id="FontFile_c2ymq"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/85/0/ascent = 0.0
+cache/0/85/0/descent = 0.0
+cache/0/85/0/underline_position = 0.0
+cache/0/85/0/underline_thickness = 0.0
+cache/0/85/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/30/0/ascent = 0.0
+cache/0/30/0/descent = 0.0
+cache/0/30/0/underline_position = 0.0
+cache/0/30/0/underline_thickness = 0.0
+cache/0/30/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ymq"]
+bg_color = Color(0.008890162, 0.013399581, 0.00088226673, 1)
+
+[sub_resource type="SystemFont" id="SystemFont_uexk6"]
+
+[sub_resource type="Theme" id="Theme_8kjxw"]
+default_font = SubResource("SystemFont_uexk6")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0.5172867, 0.5452707, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/font_sizes/font_size = 11
+Label/fonts/font = SubResource("FontFile_c2ymq")
+MarginContainer/constants/margin_bottom = 10
+MarginContainer/constants/margin_left = 10
+MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_c2ymq")
 
 [node name="Control" type="Control" unique_id=1711850580]
 layout_mode = 3
@@ -25,7 +98,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("3_q18yb")
+theme = SubResource("Theme_8kjxw")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=419867955]
 layout_mode = 2
