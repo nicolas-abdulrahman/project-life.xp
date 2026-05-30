@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv3ah1jbtddd5"
-path="res://.godot/imported/task-list-svgrepo-com (1).svg-21107485edd287ec63fed3aa296e2b0d.ctex"
+uid="uid://b8b0ejwx4r4q7"
+path="res://.godot/imported/chip-svgrepo-com.svg-e8c3a2388d7d22217411af01c1461921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/svg/task-list-svgrepo-com (1).svg"
-dest_files=["res://.godot/imported/task-list-svgrepo-com (1).svg-21107485edd287ec63fed3aa296e2b0d.ctex"]
+source_file="res://assets/svg/icons/chip-svgrepo-com.svg"
+dest_files=["res://.godot/imported/chip-svgrepo-com.svg-e8c3a2388d7d22217411af01c1461921.ctex"]
 
 [params]
 

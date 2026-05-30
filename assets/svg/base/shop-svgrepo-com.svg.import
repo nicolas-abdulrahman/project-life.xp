@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq7rf2l0ca8vx"
-path="res://.godot/imported/smartphone-security-svgrepo-com (1).svg-caf155ad084db251836494ac388a0d0c.ctex"
+uid="uid://b1prl1xxw7pa3"
+path="res://.godot/imported/shop-svgrepo-com.svg-53138cb16e4a82a433b3363d259e90e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/svg/smartphone-security-svgrepo-com (1).svg"
-dest_files=["res://.godot/imported/smartphone-security-svgrepo-com (1).svg-caf155ad084db251836494ac388a0d0c.ctex"]
+source_file="res://assets/svg/base/shop-svgrepo-com.svg"
+dest_files=["res://.godot/imported/shop-svgrepo-com.svg-53138cb16e4a82a433b3363d259e90e5.ctex"]
 
 [params]
 

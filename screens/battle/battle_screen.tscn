@@ -34,6 +34,7 @@ size_flags_horizontal = 3
 [node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=1168004811]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
+theme_type_variation = &"PanelAccent"
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=2104684141]
 layout_mode = 2
@@ -42,3 +43,4 @@ size_flags_horizontal = 3
 [node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=858062482]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
+theme_type_variation = &"PanelAccent"

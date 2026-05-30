@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck8snn8odn60m"
-path="res://.godot/imported/settings-svgrepo-com.svg-8f886869ab5e51f1644b4b9082fb9faf.ctex"
+uid="uid://cq7rf2l0ca8vx"
+path="res://.godot/imported/smartphone-security-svgrepo-com (1).svg-4a3bf49ec07a2648ef44cd1f4ee7fcae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/svg/settings-svgrepo-com.svg"
-dest_files=["res://.godot/imported/settings-svgrepo-com.svg-8f886869ab5e51f1644b4b9082fb9faf.ctex"]
+source_file="res://assets/svg/base/smartphone-security-svgrepo-com (1).svg"
+dest_files=["res://.godot/imported/smartphone-security-svgrepo-com (1).svg-4a3bf49ec07a2648ef44cd1f4ee7fcae.ctex"]
 
 [params]
 

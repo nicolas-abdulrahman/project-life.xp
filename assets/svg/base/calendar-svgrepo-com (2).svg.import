@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1prl1xxw7pa3"
-path="res://.godot/imported/shop-svgrepo-com.svg-f96845e15108d3b6291b1098a1ee0b9d.ctex"
+uid="uid://bp0u3i6uilwqu"
+path="res://.godot/imported/calendar-svgrepo-com (2).svg-1a103eae6179e381963e6a5d3f6f0930.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/svg/shop-svgrepo-com.svg"
-dest_files=["res://.godot/imported/shop-svgrepo-com.svg-f96845e15108d3b6291b1098a1ee0b9d.ctex"]
+source_file="res://assets/svg/base/calendar-svgrepo-com (2).svg"
+dest_files=["res://.godot/imported/calendar-svgrepo-com (2).svg-1a103eae6179e381963e6a5d3f6f0930.ctex"]
 
 [params]
 
