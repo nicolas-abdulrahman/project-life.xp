@@ -1,75 +1,113 @@
 [gd_scene format=3 uid="uid://d0f7a1od48of8"]
 
-[ext_resource type="Texture2D" uid="uid://cossxsopa03yk" path="res://assets/lifexp.png" id="2_2in7n"]
+[ext_resource type="Texture2D" uid="uid://dgpnuw7psgvpc" path="res://assets/bg/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_1/orig.png" id="1_ldlmk"]
+[ext_resource type="Texture2D" uid="uid://cossxsopa03yk" path="res://assets/sprites/lifexp.png" id="2_2in7n"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="2_3ejpn"]
 [ext_resource type="Texture2D" uid="uid://b7mr3cn4gam5d" path="res://assets/svg/base/pen-new-square-svgrepo-com.svg" id="2_mj2jh"]
 [ext_resource type="Texture2D" uid="uid://ck8snn8odn60m" path="res://assets/svg/base/settings-svgrepo-com.svg" id="4_ldlmk"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a10g4"]
-bg_color = Color(0.0198, 0.0649, 0.11, 1)
-corner_radius_top_left = 30
-corner_radius_top_right = 30
-corner_radius_bottom_right = 30
-corner_radius_bottom_left = 30
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ljglb"]
+texture = ExtResource("1_ldlmk")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
-[node name="MarginContainer2" type="MarginContainer" unique_id=1814904536]
+[node name="VBoxContainer" type="VBoxContainer" unique_id=1520093605]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 220.0
+grow_horizontal = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1017836889]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=418411294]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_ljglb")
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer" unique_id=1814904536]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer2" unique_id=1017836889]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=910878834]
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer2/HBoxContainer" unique_id=717829234]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer2/HBoxContainer/Control" unique_id=910878834]
 custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.6
+anchor_bottom = 0.6
 texture = ExtResource("2_2in7n")
 expand_mode = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer" unique_id=264246108]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer2/HBoxContainer" unique_id=264246108]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/VBoxContainer" unique_id=1792500180]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=1792500180]
 layout_mode = 2
 alignment = 2
 
-[node name="ThemedIcon2" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=714038227]
-custom_minimum_size = Vector2(20, 20)
+[node name="ThemedIcon2" type="TextureRect" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=714038227]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 theme_type_variation = &"IconDefault"
 texture = ExtResource("2_mj2jh")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_3ejpn")
+icon_size = 2
 metadata/_custom_type_script = "uid://ctj1xlf344q5o"
 
-[node name="ThemedIcon" type="TextureRect" parent="HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1136749368]
-custom_minimum_size = Vector2(20, 20)
+[node name="ThemedIcon" type="TextureRect" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer/HBoxContainer" unique_id=1136749368]
+custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 texture = ExtResource("4_ldlmk")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("2_3ejpn")
+icon_size = 2
 metadata/_custom_type_script = "uid://ctj1xlf344q5o"
 
-[node name="MarginContainer2" type="MarginContainer" parent="HBoxContainer/VBoxContainer" unique_id=1560144947]
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=1852160370]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="Label" type="Label" parent="HBoxContainer/VBoxContainer/MarginContainer2" unique_id=1436227851]
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer" unique_id=1560144947]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer2/HBoxContainer/VBoxContainer/MarginContainer2" unique_id=1436227851]
 layout_mode = 2
 theme_type_variation = &"TextTitle"
-text = "Nick"
+text = "Nicolas"
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/VBoxContainer" unique_id=1190749616]
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1942762209]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1754098811]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer" unique_id=327681597]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=576280304]
+custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 153
-theme_override_constants/margin_right = 5
+theme_type_variation = &"ContainerAccent"
 
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/VBoxContainer/MarginContainer" unique_id=1427988842]
-clip_children = 1
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PanelContainer2" unique_id=1807794186]
+custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_a10g4")
 
-[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1330845248]
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PanelContainer2/VBoxContainer" unique_id=1074928073]
 layout_mode = 2
-theme_type_variation = &"xpBar"

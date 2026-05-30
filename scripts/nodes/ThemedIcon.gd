@@ -3,30 +3,29 @@
 class_name ThemedIcon
 extends TextureRect
 
-const ICON_SIZE: Vector2i = Vector2i(20, 20)
+enum IconSize {
+	SMALL,
+	NORMAL,
+	BIG
+}
 
-@export var icon_style: String = "IconDefault":
+static func get_value(size: IconSize) -> int:
+	match size:
+		IconSize.SMALL: return 18
+		IconSize.NORMAL: return 25
+		IconSize.BIG: return 30
+	return 25
+@export var icon_size: IconSize = IconSize.SMALL:
 	set(value):
-		icon_style = value
-		theme_type_variation = value
-		_update_icon_style()
+		icon_size = value
+		update_size()
 
+func update_size() -> void:
+	var val = get_value(icon_size)
+	var new_size = Vector2(val, val)
+	size = new_size
+	custom_minimum_size = new_size
 func _ready() -> void:
-	# 1. Fix Godot's stubborn image scaling rules
 	expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	
-	# 2. Lock the size to our universal constant!
-	custom_minimum_size = ICON_SIZE
-	size = ICON_SIZE
-	
-	# 3. Apply the semantic colors
-	_update_icon_style()
-	
-	# Safely connect the theme change signal so it updates live
-	if not theme_changed.is_connected(_update_icon_style):
-		theme_changed.connect(_update_icon_style)
-
-func _update_icon_style() -> void:
-	if has_theme_color("modulate_color", icon_style):
-		modulate = get_theme_color("modulate_color", icon_style)

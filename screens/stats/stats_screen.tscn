@@ -112,23 +112,6 @@ theme_override_constants/separation = 0
 [node name="MarginContainer2" parent="PanelContainer/VBoxContainer" unique_id=1814904536 instance=ExtResource("2_8rjat")]
 layout_mode = 2
 
-[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=847620977]
-custom_minimum_size = Vector2(0, 300)
-layout_mode = 2
-
-[node name="Control" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer3" unique_id=2076026237]
-layout_mode = 2
-size_flags_stretch_ratio = 0.0
-
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/VBoxContainer/MarginContainer3/Control" unique_id=1464324446]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.851
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=469579158 instance=ExtResource("4_q4bb5")]
 layout_mode = 2
 

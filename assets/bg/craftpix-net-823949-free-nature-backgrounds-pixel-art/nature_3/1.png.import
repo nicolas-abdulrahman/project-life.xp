@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cossxsopa03yk"
-path="res://.godot/imported/lifexp.png-5d5af5e84f19b0abae767d3e5f248e32.ctex"
+uid="uid://b0gcu13gqxxl"
+path="res://.godot/imported/1.png-1dd90486c935540bb138ba1bec9ca12b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lifexp.png"
-dest_files=["res://.godot/imported/lifexp.png-5d5af5e84f19b0abae767d3e5f248e32.ctex"]
+source_file="res://assets/bg/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_3/1.png"
+dest_files=["res://.godot/imported/1.png-1dd90486c935540bb138ba1bec9ca12b.ctex"]
 
 [params]
 
