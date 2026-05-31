@@ -1,18 +1,13 @@
+@tool
 extends VBoxContainer
 
-var svg = "res://assets/svg/stats_border.svg"
-var texture
-# Called when the node enters the scene tree for the first time.
+var scene = preload("res://screens/stats/stat_panel.tscn")
+
+var nodes = ["Vitality", "Agility", "Mind", "Spirit", "Charisma" ]
 func _ready() -> void:
-	for i in range(3):
-		texture = TextureRect.new()
-		texture.texture = load(svg)
-		add_element(texture)
-	pass # Replace with function body.
 
-func add_element(texture):
-	add_child(texture)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	for i in range(6):
+		var stat_element:	StatPanel = scene.instantiate()
+		add_element(scene.instantiate())
+func add_element(scene):
+	add_child(scene)

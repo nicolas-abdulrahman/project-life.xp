@@ -11,6 +11,7 @@ theme_override_constants/margin_bottom = 20
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=965011504]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_type_variation = &"ContainerDimmed"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1240253838]
 layout_mode = 2
@@ -25,6 +26,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=719158244]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
 theme_override_font_sizes/font_size = 30
 text = "Drink water 2L"
 
@@ -37,5 +39,6 @@ stretch_mode = 5
 [node name="Label2" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=352356617]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
 theme_override_font_sizes/font_size = 30
 text = "Day 4 "

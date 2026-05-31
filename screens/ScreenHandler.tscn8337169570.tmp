@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://wvg6f8d4g5i1"]
+
+[ext_resource type="Script" uid="uid://cm2csku85pt2q" path="res://scripts/screen_handler.gd" id="1_ilta6"]
+[ext_resource type="PackedScene" uid="uid://b8udgthcyj3y5" path="res://screens/bottom_nav.tscn" id="2_vyl7c"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=829603608]
+script = ExtResource("1_ilta6")
+metadata/_custom_type_script = "uid://cm2csku85pt2q"
+
+[node name="PanelContainer2" parent="." unique_id=1103955307 instance=ExtResource("2_vyl7c")]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1284844880]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)

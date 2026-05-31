@@ -1,12 +1,19 @@
 @tool 
+class_name StatPanel
 extends Control
 
 
-@onready var barChart = $PanelContainer/HSplitContainer/MarginContainer2/BarChart
-@onready var hbox = $PanelContainer/HSplitContainer/MarginContainer2/BarChart/HBoxContainer
-# Called when the node enters the scene tree for the first time.
+@onready var barChart := $PanelContainer/HSplitContainer/MarginContainer2/BarChart
+@onready var hbox := $PanelContainer/HSplitContainer/MarginContainer2/BarChart/HBoxContainer
+@onready var stat := $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/Name
+@onready var level := $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/Level
+var data := [1, 5,2,4,7,6, 10]
+
+func setup(stat, level):
+	stat.text= stat
+	level.name = level
 func _ready() -> void:
-	const template = preload("res://screens/stats/box_label.tscn")
+	const template := preload("res://screens/stats/box_label.tscn")
 	var day_labels: Array[String] = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 	for i in range(7):
 		var new_node=template.instantiate() 

@@ -3,18 +3,19 @@
 [ext_resource type="FontFile" uid="uid://b8ex7xystp88u" path="res://assets/fonts/midnight-letters-font/MidnightLettersItalic-aYV6m.ttf" id="1_g6rto"]
 [ext_resource type="FontFile" uid="uid://cqdlaunyde18f" path="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf" id="2_g6rto"]
 [ext_resource type="FontFile" uid="uid://dmavgpyx4m4mg" path="res://assets/fonts/verminVibes/VerminVibesV-Zlg3.ttf" id="3_3xb56"]
+[ext_resource type="FontFile" uid="uid://bv2ljgpo162a" path="res://assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="3_joxlk"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4jxl"]
-bg_color = Color(0.67763305, 0.2792576, 0.44733667, 1)
+bg_color = Color(0.11050415, 0.2106079, 0.27734375, 1)
 corner_radius_top_left = 64
 corner_radius_top_right = 39
 corner_radius_bottom_right = 53
 corner_radius_bottom_left = 62
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ss8yu"]
-bg_color = Color(0.0021630407, 0.012656917, 0.02482927, 1)
+bg_color = Color(0.083496094, 0.13916017, 0.22265625, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -30,6 +31,17 @@ bg_color = Color(0.3606027, 0.61072844, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tukj"]
 bg_color = Color(0.031499997, 0.10062502, 0.15, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joxlk"]
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.859375, 0.859375, 0.859375, 1)
+corner_radius_top_left = 999
+corner_radius_top_right = 999
+corner_radius_bottom_right = 999
+corner_radius_bottom_left = 999
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckmh"]
 bg_color = Color(0.0198, 0.0649, 0.11, 1)
@@ -68,9 +80,16 @@ MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
 MarginContainer/constants/margin_top = 10
+MarginText/base_type = &"MarginContainer"
+MarginText/constants/margin_bottom = -8
+MarginText/constants/margin_left = 32
+MarginText/constants/margin_right = 0
+MarginText/constants/margin_top = 11
 Panel/styles/panel = SubResource("StyleBoxFlat_g6rto")
 PanelAccent/base_type = &"Panel"
 PanelAccent/styles/panel = SubResource("StyleBoxFlat_6tukj")
+PanelCircle/base_type = &"Panel"
+PanelCircle/styles/panel = SubResource("StyleBoxFlat_joxlk")
 PanelContainer/colors/bg_color = Color(0, 0, 0, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_1ckmh")
 TextEdit/font_sizes/font_size = 100
@@ -79,8 +98,17 @@ TextNormal/colors/font_color = Color(1, 1, 1, 1)
 TextNormal/colors/font_outline_color = Color(0, 0, 0, 1)
 TextNormal/colors/font_shadow_color = Color(0, 0, 0, 1)
 TextNormal/constants/outline_size = 1
-TextNormal/font_sizes/font_size = 18
-TextNormal/fonts/font = ExtResource("3_3xb56")
+TextNormal/constants/shadow_outline_size = 0
+TextNormal/font_sizes/font_size = 25
+TextNormal/fonts/font = ExtResource("3_joxlk")
+TextNumber/base_type = &"Label"
+TextNumber/colors/font_color = Color(1, 1, 1, 1)
+TextNumber/colors/font_outline_color = Color(0, 0, 0, 1)
+TextNumber/colors/font_shadow_color = Color(0, 0, 0, 0)
+TextNumber/constants/outline_size = 3
+TextNumber/constants/shadow_outline_size = 0
+TextNumber/font_sizes/font_size = 21
+TextNumber/fonts/font = ExtResource("3_3xb56")
 TextTitle/base_type = &"Label"
 TextTitle/font_sizes/font_size = 32
 xpBar/base_type = &"Panel"

@@ -1,7 +1,17 @@
 @tool
 extends Control
 
-@export var texture: Texture2D = preload("res://assets/sprites/persona/mago_branco.png")
+
+@export var flip : bool = false:
+	set(value):
+		flip= value
+		_update_sprite()
+		queue_redraw()
+@export var texture: Texture2D = preload("res://assets/sprites/persona/mago_branco.png"):
+	set(value):
+		texture = value
+		_update_sprite()
+		queue_redraw()
 @export var outline_color: Color = Color.WHITE:
 	set(value):
 		outline_color= value
@@ -44,8 +54,8 @@ func _ready() -> void:
 	item_rect_changed.connect(_on_resized)
 	_adjust_layout_size()
 	update_minimum_size()
-	queue_redraw()
 	_update_sprite()
+	queue_redraw()
 
 func _on_resized() -> void:
 	queue_redraw()
@@ -56,11 +66,11 @@ func _notification(what: int) -> void:
 		_update_sprite()
 
 func _draw() -> void:
-	var points = PackedVector2Array()
-	var center = size / 2
+	var points := PackedVector2Array()
+	var center := size / 2
 	for i in range(6):
-		var angle_rad = deg_to_rad(i * 60.0)
-		var point = Vector2(
+		var angle_rad := deg_to_rad(i * 60.0)
+		var point := Vector2(
 			center.x + hexagon_radius * cos(angle_rad),
 			center.y + hexagon_radius * sin(angle_rad)
 		)
@@ -69,14 +79,11 @@ func _draw() -> void:
 	draw_polyline(points + PackedVector2Array([points[0]]), outline_color, outline_size)
 
 func _update_sprite() -> void:
-	if get_child_count() == 0:
+	if not is_inside_tree() or get_child_count()==0:
 		return
-	var sprite = get_child(0)
-	if not sprite is Sprite2D:
-		return
-	
-	# Keep the sprite exactly at the center of the control box plus your offset
+
+	var sprite :Sprite2D = get_child(0)
+	await get_tree().process_frame
+	sprite.flip_h = flip
+	sprite.texture = texture
 	sprite.position = (size / 2) + Vector2(0, sprite_offset_y)
-	
-	# Force the sprite scale back to its original size (1, 1)
-	#sprite.scale = Vector2.ONE

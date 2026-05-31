@@ -3,26 +3,15 @@
 class_name ThemedIcon
 extends TextureRect
 
-enum IconSize {
-	SMALL,
-	NORMAL,
-	BIG
-}
 
-static func get_value(size: IconSize) -> int:
-	match size:
-		IconSize.SMALL: return 18
-		IconSize.NORMAL: return 25
-		IconSize.BIG: return 30
-	return 25
-@export var icon_size: IconSize = IconSize.SMALL:
+@export var icon_size := AppThemeData.IconSize.SMALL:
 	set(value):
 		icon_size = value
 		update_size()
 
 func update_size() -> void:
-	var val = get_value(icon_size)
-	var new_size = Vector2(val, val)
+	var val := AppThemeData.get_value(icon_size)
+	var new_size := Vector2(val, val)
 	size = new_size
 	custom_minimum_size = new_size
 func _ready() -> void:

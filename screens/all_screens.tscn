@@ -3,88 +3,10 @@
 [ext_resource type="PackedScene" uid="uid://bg6177uivk0no" path="res://screens/battle/battle_screen.tscn" id="1_il85u"]
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_wyd0a"]
 [ext_resource type="PackedScene" uid="uid://qqv8qha88cxy" path="res://screens/store_screen/shop.tscn" id="2_dph24"]
-[ext_resource type="PackedScene" uid="uid://bwf4atopy3xg4" path="res://screens/stats/stats_screen.tscn" id="3_8kjxw"]
+[ext_resource type="PackedScene" uid="uid://bwf4atopy3xg4" path="res://screens/stats/profile_screen.tscn" id="3_8kjxw"]
 [ext_resource type="PackedScene" uid="uid://c0eeu7isvnnyi" path="res://screens/quests/quest_screen.tscn" id="4_wyd0a"]
 [ext_resource type="PackedScene" uid="uid://drnxryx0u53sl" path="res://screens/home/home_screen.tscn" id="5_xvjlk"]
 [ext_resource type="PackedScene" uid="uid://dvkpfvavrggqk" path="res://screens/home/login_screen.tscn" id="6_on3n8"]
-
-[sub_resource type="FontFile" id="FontFile_c2ymq"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/85/0/ascent = 0.0
-cache/0/85/0/descent = 0.0
-cache/0/85/0/underline_position = 0.0
-cache/0/85/0/underline_thickness = 0.0
-cache/0/85/0/scale = 1.0
-cache/0/14/0/ascent = 0.0
-cache/0/14/0/descent = 0.0
-cache/0/14/0/underline_position = 0.0
-cache/0/14/0/underline_thickness = 0.0
-cache/0/14/0/scale = 1.0
-cache/0/15/0/ascent = 0.0
-cache/0/15/0/descent = 0.0
-cache/0/15/0/underline_position = 0.0
-cache/0/15/0/underline_thickness = 0.0
-cache/0/15/0/scale = 1.0
-cache/0/13/0/ascent = 0.0
-cache/0/13/0/descent = 0.0
-cache/0/13/0/underline_position = 0.0
-cache/0/13/0/underline_thickness = 0.0
-cache/0/13/0/scale = 1.0
-cache/0/12/0/ascent = 0.0
-cache/0/12/0/descent = 0.0
-cache/0/12/0/underline_position = 0.0
-cache/0/12/0/underline_thickness = 0.0
-cache/0/12/0/scale = 1.0
-cache/0/11/0/ascent = 0.0
-cache/0/11/0/descent = 0.0
-cache/0/11/0/underline_position = 0.0
-cache/0/11/0/underline_thickness = 0.0
-cache/0/11/0/scale = 1.0
-cache/0/10/0/ascent = 0.0
-cache/0/10/0/descent = 0.0
-cache/0/10/0/underline_position = 0.0
-cache/0/10/0/underline_thickness = 0.0
-cache/0/10/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ymq"]
-bg_color = Color(0.008890162, 0.013399581, 0.00088226673, 1)
-
-[sub_resource type="SystemFont" id="SystemFont_uexk6"]
-subpixel_positioning = 0
-
-[sub_resource type="Theme" id="Theme_8kjxw"]
-default_font = SubResource("SystemFont_uexk6")
-Label/colors/font_color = Color(1, 1, 1, 1)
-Label/colors/font_outline_color = Color(0, 0.5172867, 0.5452707, 1)
-Label/colors/font_shadow_color = Color(0, 0, 0, 0)
-Label/font_sizes/font_size = 11
-Label/fonts/font = SubResource("FontFile_c2ymq")
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_right = 10
-MarginContainer/constants/margin_top = 10
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_c2ymq")
 
 [node name="Control" type="Control" unique_id=1269205600]
 layout_mode = 3
@@ -109,10 +31,6 @@ offset_top = 19.0
 offset_right = -30.0
 offset_bottom = 19.0
 
-[node name="PanelContainer" parent="Control3" index="0" unique_id=1305180025]
-theme = SubResource("Theme_8kjxw")
-theme_type_variation = &"SecondaryContainer"
-
 [node name="Control4" parent="." unique_id=351231481 instance=ExtResource("5_xvjlk")]
 layout_mode = 1
 offset_left = -824.0
@@ -136,9 +54,7 @@ offset_bottom = 50.0
 
 [node name="Control6" parent="." unique_id=1711850580 instance=ExtResource("3_8kjxw")]
 layout_mode = 1
-offset_left = 779.0
+offset_left = 778.0
 offset_top = 14.0
-offset_right = 779.0
+offset_right = 778.0
 offset_bottom = 14.0
-
-[editable path="Control3"]

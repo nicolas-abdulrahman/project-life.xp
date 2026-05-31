@@ -25,28 +25,47 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_t0w6a")
 
 [node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer" unique_id=333426663]
 layout_mode = 2
-split_offsets = PackedInt32Array(120)
+split_offsets = PackedInt32Array(90)
 dragging_enabled = false
 drag_area_margin_begin = 268
 drag_area_margin_end = -211
 drag_area_offset = 599
-split_offset = 120
+split_offset = 90
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/HSplitContainer" unique_id=2091776349]
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 3
 theme = ExtResource("2_6rpyf")
+theme_override_constants/margin_left = 19
 theme_override_constants/margin_top = 0
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/HSplitContainer/MarginContainer" unique_id=1150735914]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HSplitContainer/MarginContainer" unique_id=1418641153]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Name" type="Label" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=1473460715]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "Vitality"
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=1150735914]
 custom_minimum_size = Vector2(70, 70)
 layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("3_j4pra")
 
+[node name="Level" type="Label" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=911804140]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNumber"
+text = "7"
+
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/HSplitContainer" unique_id=1176702322]
 layout_mode = 2
-theme_override_constants/margin_left = 43
 theme_override_constants/margin_top = 37
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 9

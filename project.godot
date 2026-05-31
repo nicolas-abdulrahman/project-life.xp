@@ -17,20 +17,37 @@ config/features=PackedStringArray("4.6", "Mobile")
 [autoload]
 
 _mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
+ScreenHandler="*uid://wvg6f8d4g5i1"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=1
+gdscript/warnings/unsafe_property_access=1
+gdscript/warnings/unsafe_method_access=1
+gdscript/warnings/missing_await=1
 
 [display]
 
 window/size/viewport_width=720
 window/size/viewport_height=1280
+window/size/mode=3
 window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/asset_cleaner/addons/ImportCleaner/plugin.cfg", "res://addons/godot_ai/plugin.cfg", "res://addons/godot_vim/plugin.cfg")
+enabled=PackedStringArray("res://addons/asset_cleaner/addons/ImportCleaner/plugin.cfg", "res://addons/go-to-last-scene/plugin.cfg", "res://addons/godot_ai/plugin.cfg")
 
 [gui]
 
 theme/custom="uid://dxj4s3b11gbys"
+
+[input]
+
+ui_text_completion_query={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":true,"meta_pressed":false,"pressed":false,"keycode":32,"physical_keycode":0,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 
