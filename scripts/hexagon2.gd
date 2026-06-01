@@ -1,4 +1,5 @@
 @tool
+class_name  PersonaContainer
 extends Control
 
 
@@ -81,8 +82,7 @@ func _draw() -> void:
 func _update_sprite() -> void:
 	if not is_inside_tree() or get_child_count()==0:
 		return
-
-	var sprite :Sprite2D = get_child(0)
+	var sprite :Sprite2D = get_child(0).get_child(0)
 	await get_tree().process_frame
 	sprite.flip_h = flip
 	sprite.texture = texture

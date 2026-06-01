@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5rdwkt0yrjb0"]
 
 [ext_resource type="Script" uid="uid://cewqkvlb334bl" path="res://scripts/hexagon2.gd" id="2_gymey"]
+[ext_resource type="Script" uid="uid://dhlmnmascw7il" path="res://scripts/character.gd" id="2_xf0ii"]
 [ext_resource type="Texture2D" uid="uid://cyl8glo36rcy4" path="res://assets/sprites/persona/mago_branco.png" id="2_xuuj2"]
 
 [node name="Persona_container" type="Control" unique_id=11508801]
@@ -18,6 +19,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+mouse_filter = 2
 script = ExtResource("2_gymey")
 outline_color = Color(0.67, 0.67, 0.67, 1)
 outline_size = 0.545
@@ -25,7 +27,16 @@ hexagon_radius = 34.6
 hexagon_color = Color(0, 0, 0, 1)
 sprite_offset_y = -41.375
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2000585053]
+[node name="Character" type="Control" parent="." unique_id=52136513]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_xf0ii")
+
+[node name="Sprite2D" type="Sprite2D" parent="Character" unique_id=2000585053]
 texture_filter = 3
 position = Vector2(34.600006, -11.410521)
 scale = Vector2(2, 2)
