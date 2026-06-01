@@ -4,7 +4,7 @@ class_name IconButton
 extends Button
 
 
-@export_file(\"*.tscn\") var target_scene_path := \"res://screens/quests/quest_screen.tscn\"
+@export var target_scene_path := preload("res://screens/quests/quest_screen.tscn")
 @export var icon_size := AppThemeData.IconSize.BIG:
 	set(value):
 		icon_size = value
@@ -21,7 +21,7 @@ func _on_button_pressed() -> void:
 	var handler = ScreenHandler as ScreenHandlerNode
 	if not handler:
 		return
-	handler.transition_to(load(target_scene_path))
+	handler.transition_to(target_scene_path)
 	
 
 func _ready() -> void:
