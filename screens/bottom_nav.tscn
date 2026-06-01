@@ -60,7 +60,7 @@ theme_type_variation = &"ss"
 icon = ExtResource("5_m82jq")
 expand_icon = true
 script = ExtResource("3_bfokl")
-target_scene = ExtResource("6_6aamr")
+target_scene_path = "res://screens/battle/battle_screen.tscn"
 metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
 
 [node name="Shop" type="Button" parent="HBoxContainer" unique_id=836125583]
@@ -73,7 +73,7 @@ theme_type_variation = &"ss"
 icon = ExtResource("7_jytim")
 expand_icon = true
 script = ExtResource("3_bfokl")
-target_scene = ExtResource("8_ufma6")
+target_scene_path = "res://screens/store_screen/shop.tscn"
 metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
 
 [node name="Profile" type="Button" parent="HBoxContainer" unique_id=788407408]
@@ -86,6 +86,6 @@ theme_type_variation = &"ss"
 icon = ExtResource("9_rpknr")
 expand_icon = true
 script = ExtResource("3_bfokl")
-target_scene = ExtResource("10_qg7ku")
+target_scene_path = "res://screens/stats/profile_screen.tscn"
 icon_size = 1
 metadata/_custom_type_script = "uid://dk27wp5pkjvsr"

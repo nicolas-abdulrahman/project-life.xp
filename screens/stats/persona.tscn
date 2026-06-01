@@ -27,7 +27,7 @@ sprite_offset_y = -41.375
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2000585053]
 texture_filter = 3
-position = Vector2(34, -10.999998)
+position = Vector2(34.600006, -11.410521)
 scale = Vector2(2, 2)
 texture = ExtResource("2_xuuj2")
 region_enabled = true

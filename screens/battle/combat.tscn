@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b2xkqomswd3nd"]
+
+[ext_resource type="Script" uid="uid://sqf26njikhs2" path="res://scripts/map.gd" id="1_sjgmj"]
+
+[sub_resource type="TileSet" id="TileSet_cqjk4"]
+tile_shape = 3
+tile_offset_axis = 1
+
+[node name="Node2D" type="Node2D" unique_id=2144446736]
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=1584909067]
+position = Vector2(299, 238)
+tile_set = SubResource("TileSet_cqjk4")
+script = ExtResource("1_sjgmj")

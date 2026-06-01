@@ -1,7 +1,5 @@
 class_name ScreenHandlerNode extends CanvasLayer
 
-var bottom_nav := preload("res://screens/bottom_nav.tscn").instantiate()
-# Called when the node enters the scene tree for the first time.
 @onready var color_rect := $ColorRect
 
 
