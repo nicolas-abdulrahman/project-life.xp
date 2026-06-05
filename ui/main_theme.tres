@@ -111,5 +111,7 @@ TextNumber/font_sizes/font_size = 21
 TextNumber/fonts/font = ExtResource("3_3xb56")
 TextTitle/base_type = &"Label"
 TextTitle/font_sizes/font_size = 32
+TextoJustificado/base_type = &"RichTextLabel"
+TextoJustificado/font_sizes/normal_font_size = 25
 xpBar/base_type = &"Panel"
 xpBar/styles/panel = SubResource("StyleBoxTexture_lsmgg")

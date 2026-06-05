@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://dx1om83s4iajf"]
+
+[ext_resource type="Texture2D" uid="uid://dkm2upm3eaarg" path="res://ui/youtube.svg" id="1_v0g48"]
+
+[node name="Control" type="Control" unique_id=1763736255]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=459947953]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=262182671]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=612715985]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1402162166]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"ContainerAccent"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1339061349]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1968410552]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TextTitle"
+text = "Apps bloqueados"
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1911413553]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=54514551]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/VBoxContainer" unique_id=1828833689]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture = ExtResource("1_v0g48")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=2029982824]
+layout_mode = 2
+theme_type_variation = &"TextNormal"
+text = "Youtube"
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=48489136]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=333843636]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1655156389]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1339963568]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=403465771]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1146435949]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1838316058]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"TextNormal"
+text = "TikTok"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=1822444250]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer2" unique_id=1461463078]
+layout_mode = 2
+size_flags_vertical = 3
+theme_type_variation = &"TextoJustificado"
+text = "Hoje:
+Média Diária:"
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=2021201027]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "manage"
