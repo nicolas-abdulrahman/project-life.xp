@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="EntityData" format=3 uid="uid://bvowpentgjrl2"]
+
+[ext_resource type="Script" uid="uid://d3oent2sa4d8x" path="res://scripts/data/entity_data.gd" id="1_4lksk"]
+[ext_resource type="Texture2D" uid="uid://cyl8glo36rcy4" path="res://entities/persona/mago_branco/mago_branco.png" id="2_1pj2j"]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t382p"]
+
+[resource]
+script = ExtResource("1_4lksk")
+character_name = "Mago"
+animation_library = SubResource("AnimationLibrary_t382p")
+texture = ExtResource("2_1pj2j")
+texture_rect = Rect2i(8, 16, 48, 48)
+metadata/_custom_type_script = "uid://d3oent2sa4d8x"

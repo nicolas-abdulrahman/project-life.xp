@@ -1,10 +1,17 @@
 [gd_scene format=4 uid="uid://b2xkqomswd3nd"]
 
 [ext_resource type="Texture2D" uid="uid://brb5w7k3vin04" path="res://assets/sprites/hexagon.png" id="1_cqjk4"]
+[ext_resource type="Texture2D" uid="uid://ddkpqv4ti11m6" path="res://assets/svg/base/hex.svg" id="1_latv2"]
 [ext_resource type="Texture2D" uid="uid://d1kx4gfrg486j" path="res://assets/sprites/3d-hex-tile-export.png" id="2_2oq8r"]
 [ext_resource type="Script" uid="uid://cool3pba7nvb2" path="res://screens/battle/board_handler.gd" id="4_7y3bt"]
+[ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
 [ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
-[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/persona.tscn" id="5_latv2"]
+[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1l6r"]
+texture = ExtResource("1_latv2")
+texture_region_size = Vector2i(90, 104)
+0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqjk4"]
 texture = ExtResource("1_cqjk4")
@@ -22,18 +29,34 @@ texture_region_size = Vector2i(64, 71)
 [sub_resource type="TileSet" id="TileSet_cqjk4"]
 tile_shape = 3
 tile_layout = 1
-tile_size = Vector2i(58, 64)
+tile_size = Vector2i(90, 104)
 sources/1 = SubResource("TileSetAtlasSource_cqjk4")
 sources/2 = SubResource("TileSetAtlasSource_7y3bt")
+sources/0 = SubResource("TileSetAtlasSource_y1l6r")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_latv2"]
+texture = ExtResource("1_latv2")
+texture_region_size = Vector2i(90, 104)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_y1l6r"]
+tile_shape = 3
+tile_layout = 1
+tile_size = Vector2i(90, 104)
+sources/1 = SubResource("TileSetAtlasSource_latv2")
 
 [node name="Node2D" type="Node2D" unique_id=2144446736]
 
 [node name="Map" type="TileMapLayer" parent="." unique_id=1584909067]
 texture_filter = 3
-position = Vector2(126, 200)
-scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAD/////AQAAAAAAAAAAAP//AQAAAAAAAAAAAAAAAQAAAAAAAAD//wAAAQAAAAAAAAD//wEAAQAAAAAAAAAAAAEAAQAAAAAAAAABAAAAAQAAAAAAAAABAAEAAQAAAAAAAAABAP//AQAAAAAAAAAAAP7/AQAAAAAAAAABAP7/AQAAAAAAAAAAAAIAAQAAAAAAAAABAAIAAQAAAAAAAAD//wIAAQAAAAAAAAD///7/AQAAAAAAAAAEAAEAAQABAAAAAAAEAP//AQABAAAAAAAEAP7/AQABAAAAAAAFAP//AQABAAAAAAAEAAAAAQABAAAAAAAFAAEAAQABAAAAAAAEAAIAAQABAAAAAAAFAAIAAQABAAAAAAAFAAAAAQABAAAAAAAFAP7/AQABAAAAAAADAAIAAQABAAAAAAADAAEAAQABAAAAAAADAAAAAQABAAAAAAADAP//AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAA=")
+position = Vector2(108, 219)
+tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAP//AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAD//wIAAAAAAAAAAAD///7/AAAAAAAAAAAEAAEAAQABAAAAAAAEAP//AQABAAAAAAAEAP7/AQABAAAAAAAFAP//AQABAAAAAAAEAAAAAQABAAAAAAAFAAEAAQABAAAAAAAEAAIAAQABAAAAAAAFAAIAAQABAAAAAAAFAAAAAQABAAAAAAAFAP7/AQABAAAAAAADAAIAAQABAAAAAAADAAEAAQABAAAAAAADAAAAAQABAAAAAAADAP//AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAA=")
 tile_set = SubResource("TileSet_cqjk4")
+script = ExtResource("4_y1l6r")
+
+[node name="Placement" type="TileMapLayer" parent="Map" unique_id=911483936]
+modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+tile_set = SubResource("TileSet_y1l6r")
 
 [node name="BoardHandler" type="Node2D" parent="Map" unique_id=957229633]
 position = Vector2(-299, -238)
@@ -68,9 +91,6 @@ custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 columns = 4
 script = ExtResource("5_d3lsj")
-
-[node name="Persona_container" parent="Control/Container/VBoxContainer/GridContainer" unique_id=11508801 instance=ExtResource("5_latv2")]
-layout_mode = 2
 
 [node name="Persona_container2" parent="Control/Container/VBoxContainer/GridContainer" unique_id=357829191 instance=ExtResource("5_latv2")]
 layout_mode = 2

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://c5rdwkt0yrjb0"]
+
+[ext_resource type="Script" uid="uid://uigq128k5oc0" path="res://scripts/entity.gd" id="2_edduh"]
+[ext_resource type="Script" uid="uid://cewqkvlb334bl" path="res://scripts/hexagon2.gd" id="2_gymey"]
+[ext_resource type="Script" uid="uid://dhlmnmascw7il" path="res://scripts/character.gd" id="2_xf0ii"]
+[ext_resource type="Texture2D" uid="uid://cyl8glo36rcy4" path="res://assets/sprites/persona/mago_branco.png" id="2_xuuj2"]
+
+[node name="Persona_container" type="Control" unique_id=11508801]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = -290.8
+offset_bottom = -580.07104
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("2_gymey")
+outline_color = Color(0.67, 0.67, 0.67, 1)
+outline_size = 0.545
+hexagon_radius = 34.6
+hexagon_color = Color(0, 0, 0, 1)
+sprite_offset_y = -41.375
+
+[node name="Entity" type="Node2D" parent="." unique_id=491382386]
+script = ExtResource("2_edduh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Entity" unique_id=2000585053]
+texture_filter = 3
+position = Vector2(34.600006, -11.410521)
+scale = Vector2(2, 2)
+texture = ExtResource("2_xuuj2")
+region_enabled = true
+region_rect = Rect2(8, 16, 48, 48)
+
+[node name="controller" type="Control" parent="Entity" unique_id=52136513]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -13.399994
+offset_top = -59.410522
+offset_right = 34.600006
+offset_bottom = -11.410522
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("2_xf0ii")

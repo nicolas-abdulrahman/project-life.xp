@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EntityData" format=3 uid="uid://c7ewgfbp4oihu"]
+
+[ext_resource type="Script" uid="uid://d3oent2sa4d8x" path="res://scripts/data/entity_data.gd" id="1_xptol"]
+[ext_resource type="Texture2D" uid="uid://wokeqwu7106k" path="res://entities/pets/fox/fox.png" id="2_tkkvj"]
+
+[resource]
+script = ExtResource("1_xptol")
+character_name = "fox"
+entity_type = 1
+texture = ExtResource("2_tkkvj")
+metadata/_custom_type_script = "uid://d3oent2sa4d8x"

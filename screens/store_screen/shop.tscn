@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store_screen/skill_tree2.tscn" id="2_1n8vj"]
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="2_eem11"]
-[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/persona.tscn" id="2_opes6"]
+[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="2_opes6"]
 [ext_resource type="Texture2D" uid="uid://cxfvq8y43dwfn" path="res://assets/svg/icons/gem-jewelry-jewel-stone-gemstone-svgrepo-com (1).svg" id="3_lpuuf"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="3_opes6"]
-[ext_resource type="Texture2D" uid="uid://wokeqwu7106k" path="res://assets/sprites/pets/fox.png" id="5_kbcr1"]
+[ext_resource type="Texture2D" uid="uid://wokeqwu7106k" path="res://entities/pets/fox/fox.png" id="5_kbcr1"]
 
 [node name="Control" type="Control" unique_id=1138468343]
 layout_mode = 3

@@ -84,6 +84,5 @@ func _update_sprite() -> void:
 		return
 	var sprite :Sprite2D = get_child(0).get_child(0)
 	await get_tree().process_frame
-	sprite.flip_h = flip
 	sprite.texture = texture
-	sprite.position = (size / 2) + Vector2(0, sprite_offset_y)
+	

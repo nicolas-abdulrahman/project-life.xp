@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://c5rdwkt0yrjb0"]
+
+[ext_resource type="Script" uid="uid://cewqkvlb334bl" path="res://scripts/hexagon2.gd" id="1_jebrs"]
+[ext_resource type="PackedScene" uid="uid://cp6hyyyaa2q0f" path="res://scripts/entity.tscn" id="2_06b8i"]
+
+[node name="Persona_container" type="Control" unique_id=11508801]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.600006
+offset_top = -29.964478
+offset_right = 34.599976
+offset_bottom = 29.964478
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_jebrs")
+outline_color = Color(0.67, 0.67, 0.67, 1)
+outline_size = 0.545
+hexagon_radius = 34.6
+hexagon_color = Color(0, 0, 0, 1)
+sprite_offset_y = -41.375
+
+[node name="Entity" parent="." unique_id=1796109999 instance=ExtResource("2_06b8i")]
+layout_mode = 1

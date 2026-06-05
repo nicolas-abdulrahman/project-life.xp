@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dgxmw3eof3roc"]
 
-[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_p2yf3"]
-[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/persona.tscn" id="2_2rqfp"]
+[ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_epneg"]
+[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="2_qmome"]
 
 [sub_resource type="FontFile" id="FontFile_c2ymq"]
 subpixel_positioning = 0
@@ -99,7 +99,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_p2yf3")
+theme = ExtResource("1_epneg")
 theme_type_variation = &"SecondaryContainer"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control/PanelContainer" unique_id=480964002]
@@ -129,7 +129,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="Persona_container" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=11508801 instance=ExtResource("2_2rqfp")]
+[node name="Persona_container" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=11508801 instance=ExtResource("2_qmome")]
 layout_mode = 2
 size_flags_horizontal = 1
 texture = null

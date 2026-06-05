@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baoca3jw2x4ua"
-path="res://.godot/imported/King God Castle Tier List – 2023 – The Game Guides(1).png-deb35b5e3209a5dd1fd8746c1f0af93d.ctex"
+uid="uid://bq1ws60ar530n"
+path="res://.godot/imported/mago_branco-sheet.png-a3ce82e8a3f418d3e39dfa5a88e8128e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/persona/King God Castle Tier List – 2023 – The Game Guides(1).png"
-dest_files=["res://.godot/imported/King God Castle Tier List – 2023 – The Game Guides(1).png-deb35b5e3209a5dd1fd8746c1f0af93d.ctex"]
+source_file="res://entities/persona/mago_branco/mago_branco-sheet.png"
+dest_files=["res://.godot/imported/mago_branco-sheet.png-a3ce82e8a3f418d3e39dfa5a88e8128e.ctex"]
 
 [params]
 

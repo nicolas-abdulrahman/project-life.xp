@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dw8llyubxln3e"
-path="res://.godot/imported/bird_is_the_word.png-df526bc6e533e0c045bd6c7cc3886d94.ctex"
+uid="uid://s7l6dcc3do17"
+path="res://.godot/imported/fox.png-03cfa0c64179b3c73a39f9533cdb9985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/pets/bird_is_the_word.png"
-dest_files=["res://.godot/imported/bird_is_the_word.png-df526bc6e533e0c045bd6c7cc3886d94.ctex"]
+source_file="res://entities/pets/fox.png"
+dest_files=["res://.godot/imported/fox.png-03cfa0c64179b3c73a39f9533cdb9985.ctex"]
 
 [params]
 

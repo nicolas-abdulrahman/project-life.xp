@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://wvg6f8d4g5i1"]
 
 [ext_resource type="Script" uid="uid://cm2csku85pt2q" path="res://scripts/screen_handler.gd" id="1_ilta6"]
-[ext_resource type="PackedScene" uid="uid://b8udgthcyj3y5" path="res://screens/bottom_nav.tscn" id="2_vyl7c"]
+[ext_resource type="PackedScene" uid="uid://b8udgthcyj3y5" path="res://screens/global/bottom_nav.tscn" id="2_vyl7c"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=829603608]
 script = ExtResource("1_ilta6")
