@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://bg6177uivk0no"]
 
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_q6q2c"]
+[ext_resource type="Texture2D" uid="uid://cqakagen2ncux" path="res://assets/bg/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_8/orig.png" id="2_x2k4b"]
+[ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_6nejn"]
+[ext_resource type="PackedScene" uid="uid://b2xkqomswd3nd" path="res://screens/battle/combat.tscn" id="4_6nejn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0rrk"]
+texture = ExtResource("2_x2k4b")
+modulate_color = Color(1, 1, 1, 0.5764706)
 
 [node name="Battle" type="Control" unique_id=493581333]
 layout_mode = 3
@@ -31,10 +38,45 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=1168004811]
+[node name="Panel" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=804040162]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 theme_type_variation = &"PanelAccent"
+theme_override_styles/panel = SubResource("StyleBoxTexture_a0rrk")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel" unique_id=1900902184]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer" unique_id=2018784684]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer" unique_id=1685826500]
+layout_mode = 2
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 50
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/MarginContainer" unique_id=454334518]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+texture = ExtResource("3_6nejn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer" unique_id=1350105327]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1589854618]
+layout_mode = 2
+theme_type_variation = &"TextTitle"
+text = "Timer 1"
+
+[node name="Label2" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=2134619534]
+layout_mode = 2
+theme_type_variation = &"TextTimer"
+text = "00:00.0000"
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=2104684141]
 layout_mode = 2
@@ -53,3 +95,5 @@ stretch = true
 handle_input_locally = false
 size = Vector2i(700, 300)
 render_target_update_mode = 4
+
+[node name="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/SubViewportContainer/SubViewport" unique_id=2144446736 instance=ExtResource("4_6nejn")]

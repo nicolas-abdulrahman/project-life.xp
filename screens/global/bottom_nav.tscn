@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ctgrljunx5rjl" path="res://assets/svg/base/swords-cross-svgrepo-com.svg" id="5_m82jq"]
 [ext_resource type="PackedScene" uid="uid://bg6177uivk0no" path="res://screens/battle/battle_screen.tscn" id="6_6aamr"]
 [ext_resource type="Texture2D" uid="uid://b1prl1xxw7pa3" path="res://assets/svg/base/shop-svgrepo-com.svg" id="7_jytim"]
-[ext_resource type="PackedScene" uid="uid://qqv8qha88cxy" path="res://screens/store_screen/shop.tscn" id="8_ufma6"]
+[ext_resource type="PackedScene" uid="uid://qqv8qha88cxy" path="res://screens/store/shop.tscn" id="8_ufma6"]
 [ext_resource type="Texture2D" uid="uid://b6n7luss30oau" path="res://assets/svg/base/profile-svgrepo-com.svg" id="9_rpknr"]
 [ext_resource type="PackedScene" uid="uid://bwf4atopy3xg4" path="res://screens/stats/profile_screen.tscn" id="10_qg7ku"]
 

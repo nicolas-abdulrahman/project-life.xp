@@ -4,6 +4,7 @@
 [ext_resource type="FontFile" uid="uid://cqdlaunyde18f" path="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf" id="2_g6rto"]
 [ext_resource type="FontFile" uid="uid://dmavgpyx4m4mg" path="res://assets/fonts/verminVibes/VerminVibesV-Zlg3.ttf" id="3_3xb56"]
 [ext_resource type="FontFile" uid="uid://bv2ljgpo162a" path="res://assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="3_joxlk"]
+[ext_resource type="FontFile" uid="uid://vatugw0rkv7y" path="res://assets/fonts/Inter/static/Inter_18pt-Bold.ttf" id="5_lsmgg"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
 
@@ -109,6 +110,8 @@ TextNumber/constants/outline_size = 3
 TextNumber/constants/shadow_outline_size = 0
 TextNumber/font_sizes/font_size = 21
 TextNumber/fonts/font = ExtResource("3_3xb56")
+TextTimer/base_type = &"Label"
+TextTimer/fonts/font = ExtResource("5_lsmgg")
 TextTitle/base_type = &"Label"
 TextTitle/font_sizes/font_size = 32
 xpBar/base_type = &"Panel"

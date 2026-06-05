@@ -35,7 +35,7 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/asset_cleaner/addons/ImportCleaner/plugin.cfg", "res://addons/go-to-last-scene/plugin.cfg", "res://addons/godot_ai/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui]
 

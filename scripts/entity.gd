@@ -2,6 +2,7 @@
 
 @export var data: EntityData
 @onready var sprite : Sprite2D = $Sprite2D
+@onready var animation : AnimationPlayer = $AnimationPlayer
 func _ready() -> void:
 	if data:
 		if data.texture:
@@ -9,7 +10,7 @@ func _ready() -> void:
 		if data.texture_rect.has_area():
 			sprite.region_enabled = true
 			sprite.region_rect = data.texture_rect 
-			
+		animation	
 			
 func world_pos()-> Vector2:
 	return $Sprite2D.global_position
