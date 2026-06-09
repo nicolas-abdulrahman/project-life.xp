@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
 [ext_resource type="Script" uid="uid://chq551qapc75t" path="res://screens/battle/combat_ui.gd" id="5_y1l6r"]
+[ext_resource type="Script" uid="uid://dxoyfbh5mk6s5" path="res://screens/battle/circular_bar.gd" id="6_circular_bar"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upwx4"]
 texture = ExtResource("2_nyqwa")
@@ -58,8 +59,19 @@ theme_override_constants/margin_bottom = 111
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
+size_flags_vertical = 4
 icon = ExtResource("3_lm64f")
+icon_alignment = 1
 expand_icon = true
+
+[node name="CircularBar" type="Control" parent="PanelContainer/VBoxContainer/MarginContainer2" unique_id=1229442634]
+custom_minimum_size = Vector2(460, 460)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 1
+script = ExtResource("6_circular_bar")
+radius = 200.0
 
 [node name="Control" type="Control" parent="PanelContainer/VBoxContainer" unique_id=526010633]
 layout_mode = 2
