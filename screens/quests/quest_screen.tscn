@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://c0eeu7isvnnyi"]
 
 [ext_resource type="PackedScene" uid="uid://clj56dr4jdoit" path="res://screens/quests/card.tscn" id="1_y1ajl"]
+[ext_resource type="Texture2D" uid="uid://de3j623wgvbc" path="res://assets/svg/base/plus-circle-svgrepo-com (1).svg" id="2_2u8ou"]
+[ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="3_4lj57"]
+[ext_resource type="Texture2D" uid="uid://bxrpd3u1tia4q" path="res://assets/template.png" id="4_4lj57"]
 
 [sub_resource type="Theme" id="Theme_qlwru"]
 Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
@@ -24,19 +27,131 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer" unique_id=215438090]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=1866399510]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=148115495]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=2112866605]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer" unique_id=26733276]
 layout_mode = 2
 size_flags_vertical = 0
-theme_type_variation = &"ContainerAccent"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/PanelContainer" unique_id=369780103]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer" unique_id=2078491666]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1791244271]
+layout_mode = 2
+theme_type_variation = &"TextTitleNormal"
+text = "Daily Routine"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=215438090]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=369780103]
 layout_mode = 2
 size_flags_vertical = 0
 theme = SubResource("Theme_qlwru")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/PanelContainer/VBoxContainer" unique_id=1400500893]
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1400500893]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="MarginContainer2" parent="PanelContainer/PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_y1ajl")]
+[node name="MarginContainer2" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_y1ajl")]
 layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=849535467]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2" unique_id=1118467989]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer" unique_id=614314650]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer" unique_id=196252102]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=2142409050]
+layout_mode = 2
+theme_type_variation = &"TextTitleNormal"
+text = "Schedule"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1564268996]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1824635727]
+layout_mode = 2
+size_flags_vertical = 0
+theme = SubResource("Theme_qlwru")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=855779311]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=530696665]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=17320803]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3" unique_id=1799782770]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer" unique_id=855760110]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer/MarginContainer" unique_id=938387753]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer/MarginContainer/VBoxContainer" unique_id=655209003]
+layout_mode = 2
+theme_type_variation = &"TextTitleNormal"
+text = "Calendar"
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer/MarginContainer/VBoxContainer" unique_id=2058363139]
+layout_mode = 2
+size_flags_vertical = 0
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1180764942]
+layout_mode = 2
+size_flags_vertical = 0
+theme = SubResource("Theme_qlwru")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=968414207]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="IconButton" type="Button" parent="." unique_id=2071544823]
+modulate = Color(0.5758667, 0.8385086, 0.99609375, 1)
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_left = 533.0
+offset_top = 381.0
+offset_right = 583.0
+offset_bottom = 431.0
+icon = ExtResource("2_2u8ou")
+expand_icon = true
+script = ExtResource("3_4lj57")
+metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
+
+[node name="Template2" type="Sprite2D" parent="." unique_id=162205998]
+position = Vector2(357, 794.5)
+scale = Vector2(0.84651166, 0.909627)
+texture = ExtResource("4_4lj57")

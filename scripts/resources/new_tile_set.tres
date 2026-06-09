@@ -1,0 +1,19 @@
+[gd_resource type="TileSet" format=3 uid="uid://dtr5wdagyise6"]
+
+[ext_resource type="Texture2D" uid="uid://ddkpqv4ti11m6" path="res://assets/svg/base/hex.svg" id="1_ohu2s"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_latv2"]
+texture = ExtResource("1_ohu2s")
+texture_region_size = Vector2i(90, 104)
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/modulate = Color(0.64038086, 0.953125, 0.8138561, 1)
+0:0/2 = 2
+0:0/2/modulate = Color(0.92578125, 0.72770226, 0.3073883, 1)
+
+[resource]
+tile_shape = 3
+tile_layout = 1
+tile_size = Vector2i(90, 104)
+sources/1 = SubResource("TileSetAtlasSource_latv2")

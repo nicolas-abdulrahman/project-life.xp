@@ -1,7 +1,17 @@
 class_name ScreenHandlerNode extends CanvasLayer
 
 @onready var color_rect := $ColorRect
-
+@onready var panel = $PanelContainer2
+func _ready():
+	await get_tree().process_frame
+	
+	# Grab the top parent node of the currently active scene
+	var root_node = get_tree().current_scene
+	
+	if root_node:
+		if root_node is Screen:
+			panel.visible =  root_node.display_bottom_bar
+	
 
 
 func transition_to(target_scene_path: PackedScene, duration: float = 0.3) -> void:

@@ -6,12 +6,12 @@ extends Control
 @export var flip : bool = false:
 	set(value):
 		flip= value
-		_update_sprite()
+		_update_entity()
 		queue_redraw()
-@export var texture: Texture2D = preload("res://assets/sprites/persona/mago_branco.png"):
+@export var data: EntityData:
 	set(value):
-		texture = value
-		_update_sprite()
+		data = value
+		_update_entity()
 		queue_redraw()
 @export var outline_color: Color = Color.WHITE:
 	set(value):
@@ -23,24 +23,25 @@ extends Control
 		outline_size= value
 		queue_redraw()
 
-@export var hexagon_radius: float = 50.0:
+@export var hexagon_radius: float = 30.0:
 	set(value):
 		hexagon_radius = value
 		_adjust_layout_size()
 		update_minimum_size()
 		queue_redraw()
-		_update_sprite()
+		_update_entity()
 
-@export var hexagon_color: Color = Color.ORANGE_RED:
+@export var hexagon_color: Color = Color.BLACK:
 	set(value):
 		hexagon_color = value
 		queue_redraw()
 
-@export var sprite_offset_y: float = 0.0:
+@export var sprite_offset_y: float = 20.0:
 	set(value):
 		sprite_offset_y = value
-		_update_sprite()
+		_update_entity()
 
+@onready var entity = $Entity
 func _get_minimum_size() -> Vector2:
 	var width = hexagon_radius * 2.0
 	var height = hexagon_radius * sqrt(3.0)
@@ -55,16 +56,16 @@ func _ready() -> void:
 	item_rect_changed.connect(_on_resized)
 	_adjust_layout_size()
 	update_minimum_size()
-	_update_sprite()
+	_update_entity()
 	queue_redraw()
 
 func _on_resized() -> void:
 	queue_redraw()
-	_update_sprite()
+	_update_entity()
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_CHILD_ORDER_CHANGED:
-		_update_sprite()
+		_update_entity()
 
 func _draw() -> void:
 	var points := PackedVector2Array()
@@ -79,10 +80,23 @@ func _draw() -> void:
 	draw_polygon(points, PackedColorArray([hexagon_color]))
 	draw_polyline(points + PackedVector2Array([points[0]]), outline_color, outline_size)
 
-func _update_sprite() -> void:
+func _update_entity() -> void:
 	if not is_inside_tree() or get_child_count()==0:
 		return
-	var sprite :Sprite2D = get_child(0).get_child(0)
+	var entity: Entity = get_child(0)
 	await get_tree().process_frame
-	sprite.texture = texture
+	entity.set_data(data) 
+	var center := size / 2
+	entity.position.y =center.y -(entity.get_height()/2 ) 
+	entity.position.x =  center.x
 	
+func get_entity()-> Entity:
+	return $Entity
+	
+func _gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		# Check if it was the left mouse button and it was just pressed down
+		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			var bus: EventBusClass = EventBus
+			bus.entity_clicked.emit(entity)
+			print("character click")

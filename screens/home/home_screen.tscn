@@ -5,6 +5,8 @@
 [ext_resource type="VideoStream" path="res://assets/home_screen.ogv" id="2_hj5ia"]
 [ext_resource type="Script" uid="uid://ckppgr7woyasr" path="res://scripts/video_stream_player.gd" id="3_81jmw"]
 [ext_resource type="FontFile" uid="uid://cqdlaunyde18f" path="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf" id="5_82tlv"]
+[ext_resource type="Script" uid="uid://c411u25obv7is" path="res://screens/home/sync_button.gd" id="5_k7ryw"]
+[ext_resource type="PackedScene" uid="uid://dvkpfvavrggqk" path="res://screens/home/login_screen.tscn" id="6_b0q3r"]
 
 [node name="Control" type="Control" unique_id=351231481]
 layout_mode = 3
@@ -116,6 +118,7 @@ scale = Vector2(1.1760938, 1.72)
 pivot_offset = Vector2(107.69339, 26)
 theme = ExtResource("1_pkmem")
 text = "SYNC"
+script = ExtResource("5_k7ryw")
 
 [node name="Label" type="Label" parent="PanelContainer/PanelContainer/Control" unique_id=1377509573]
 layout_mode = 0
@@ -128,3 +131,10 @@ theme_override_font_sizes/font_size = 85
 text = "Life 
 XP"
 horizontal_alignment = 1
+
+[node name="Login_panel" parent="." unique_id=1194515761 instance=ExtResource("6_b0q3r")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+offset_top = 380.0
+offset_bottom = 380.0

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://b2xkqomswd3nd"]
+
+[ext_resource type="TileSet" uid="uid://dtr5wdagyise6" path="res://scripts/resources/new_tile_set.tres" id="1_d3lsj"]
+[ext_resource type="Script" uid="uid://mur8qcaecosl" path="res://screens/battle/combat.gd" id="1_latv2"]
+[ext_resource type="Script" uid="uid://cool3pba7nvb2" path="res://screens/battle/board_handler.gd" id="4_7y3bt"]
+[ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
+[ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
+[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
+[ext_resource type="Script" uid="uid://chq551qapc75t" path="res://screens/battle/combat_ui.gd" id="5_y1l6r"]
+
+[node name="Combat" type="Control" unique_id=1866629657]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_latv2")
+display_bottom_bar = null
+
+[node name="Control" type="Control" parent="." unique_id=2016218552]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("5_y1l6r")
+
+[node name="Container" type="TabContainer" parent="Control" unique_id=1187388887]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -600.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 0
+current_tab = 0
+
+[node name="Persona" type="PanelContainer" parent="Control/Container" unique_id=1328393403]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 0
+
+[node name="grid" type="GridContainer" parent="Control/Container/Persona" unique_id=1549281345]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+columns = 4
+script = ExtResource("5_d3lsj")
+
+[node name="Persona_container2" parent="Control/Container/Persona/grid" unique_id=357829191 instance=ExtResource("5_latv2")]
+layout_mode = 2
+
+[node name="Persona_container3" parent="Control/Container/Persona/grid" unique_id=972802742 instance=ExtResource("5_latv2")]
+layout_mode = 2
+
+[node name="Pets" type="PanelContainer" parent="Control/Container" unique_id=1865000497]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 1
+
+[node name="grid" type="GridContainer" parent="Control/Container/Pets" unique_id=1696960178]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+columns = 4
+script = ExtResource("5_d3lsj")
+
+[node name="Persona_container2" parent="Control/Container/Pets/grid" unique_id=11508801 instance=ExtResource("5_latv2")]
+layout_mode = 2
+
+[node name="Persona_container3" parent="Control/Container/Pets/grid" unique_id=826263353 instance=ExtResource("5_latv2")]
+layout_mode = 2
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=1584909067]
+texture_filter = 3
+tile_set = ExtResource("1_d3lsj")
+script = ExtResource("4_y1l6r")
+
+[node name="Placement" type="TileMapLayer" parent="Map" unique_id=911483936]
+modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+tile_set = ExtResource("1_d3lsj")
+
+[node name="BoardHandler" type="Node2D" parent="Map" unique_id=957229633]
+position = Vector2(-299, -238)
+script = ExtResource("4_7y3bt")

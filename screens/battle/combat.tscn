@@ -1,99 +1,131 @@
-[gd_scene format=4 uid="uid://b2xkqomswd3nd"]
+[gd_scene format=3 uid="uid://b2xkqomswd3nd"]
 
-[ext_resource type="Texture2D" uid="uid://brb5w7k3vin04" path="res://assets/sprites/hexagon.png" id="1_cqjk4"]
-[ext_resource type="Texture2D" uid="uid://ddkpqv4ti11m6" path="res://assets/svg/base/hex.svg" id="1_latv2"]
-[ext_resource type="Texture2D" uid="uid://d1kx4gfrg486j" path="res://assets/sprites/3d-hex-tile-export.png" id="2_2oq8r"]
-[ext_resource type="Script" uid="uid://cool3pba7nvb2" path="res://screens/battle/board_handler.gd" id="4_7y3bt"]
+[ext_resource type="TileSet" uid="uid://dtr5wdagyise6" path="res://scripts/resources/new_tile_set.tres" id="1_d3lsj"]
+[ext_resource type="Script" uid="uid://mur8qcaecosl" path="res://screens/battle/combat.gd" id="1_latv2"]
+[ext_resource type="Texture2D" uid="uid://k66p0tum8ebm" path="res://assets/bg/craftpix-net-154389-forest-and-trees-free-pixel-backgrounds/3/2304x1296.png" id="2_nyqwa"]
+[ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_lm64f"]
+[ext_resource type="Script" uid="uid://0ekokmrs8j3a" path="res://screens/battle/sub_viewport.gd" id="4_lm64f"]
 [ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
 [ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
+[ext_resource type="Script" uid="uid://chq551qapc75t" path="res://screens/battle/combat_ui.gd" id="5_y1l6r"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y1l6r"]
-texture = ExtResource("1_latv2")
-texture_region_size = Vector2i(90, 104)
-0:0/0 = 0
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upwx4"]
+texture = ExtResource("2_nyqwa")
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 2
+modulate_color = Color(1, 1, 1, 0.5372549)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cqjk4"]
-texture = ExtResource("1_cqjk4")
-texture_region_size = Vector2i(58, 64)
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7y3bt"]
-texture = ExtResource("2_2oq8r")
-texture_region_size = Vector2i(64, 71)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_cqjk4"]
-tile_shape = 3
-tile_layout = 1
-tile_size = Vector2i(90, 104)
-sources/1 = SubResource("TileSetAtlasSource_cqjk4")
-sources/2 = SubResource("TileSetAtlasSource_7y3bt")
-sources/0 = SubResource("TileSetAtlasSource_y1l6r")
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_latv2"]
-texture = ExtResource("1_latv2")
-texture_region_size = Vector2i(90, 104)
-0:0/0 = 0
-
-[sub_resource type="TileSet" id="TileSet_y1l6r"]
-tile_shape = 3
-tile_layout = 1
-tile_size = Vector2i(90, 104)
-sources/1 = SubResource("TileSetAtlasSource_latv2")
-
-[node name="Node2D" type="Node2D" unique_id=2144446736]
-
-[node name="Map" type="TileMapLayer" parent="." unique_id=1584909067]
-texture_filter = 3
-position = Vector2(108, 219)
-tile_map_data = PackedByteArray("AAD/////AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAAAAAAAAAAAAAABAAEAAAAAAAAAAAABAP//AAAAAAAAAAAAAP7/AAAAAAAAAAABAP7/AAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAD//wIAAAAAAAAAAAD///7/AAAAAAAAAAAEAAEAAQABAAAAAAAEAP//AQABAAAAAAAEAP7/AQABAAAAAAAFAP//AQABAAAAAAAEAAAAAQABAAAAAAAFAAEAAQABAAAAAAAEAAIAAQABAAAAAAAFAAIAAQABAAAAAAAFAAAAAQABAAAAAAAFAP7/AQABAAAAAAADAAIAAQABAAAAAAADAAEAAQABAAAAAAADAAAAAQABAAAAAAADAP//AQABAAAAAAADAP7/AQABAAAAAAACAP7/AQABAAEAAAACAP//AQABAAEAAAACAAAAAQABAAEAAAACAAEAAQABAAEAAAACAAIAAQABAAEAAAA=")
-tile_set = SubResource("TileSet_cqjk4")
-script = ExtResource("4_y1l6r")
-
-[node name="Placement" type="TileMapLayer" parent="Map" unique_id=911483936]
-modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
-tile_set = SubResource("TileSet_y1l6r")
-
-[node name="BoardHandler" type="Node2D" parent="Map" unique_id=957229633]
-position = Vector2(-299, -238)
-script = ExtResource("4_7y3bt")
-
-[node name="Control" type="Control" parent="." unique_id=2016218552]
+[node name="Combat" type="Control" unique_id=1866629657]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 703.0
-offset_bottom = 1188.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Container" type="PanelContainer" parent="Control" unique_id=3676803]
-custom_minimum_size = Vector2(0, 300)
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -300.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
+script = ExtResource("1_latv2")
+display_bottom_bar = false
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/Container" unique_id=556827891]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1603114811]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_upwx4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1104300027]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1705149021]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=1970078]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextTimerBig"
+text = "00:00:00"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1227092430]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 111
+
+[node name="Panel" type="Button" parent="PanelContainer/VBoxContainer/MarginContainer2" unique_id=1369780564]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+size_flags_horizontal = 4
+icon = ExtResource("3_lm64f")
+expand_icon = true
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer" unique_id=526010633]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/VBoxContainer" unique_id=322661645]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="SubViewport" type="SubViewport" parent="PanelContainer/VBoxContainer/SubViewportContainer" unique_id=2063761215]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(750, 300)
+render_target_update_mode = 4
+script = ExtResource("4_lm64f")
+
+[node name="Map" type="TileMapLayer" parent="PanelContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=1584909067]
+modulate = Color(1, 1, 1, 0.78431374)
+texture_filter = 3
+tile_set = ExtResource("1_d3lsj")
+script = ExtResource("4_y1l6r")
+
+[node name="Placement" type="TileMapLayer" parent="PanelContainer/VBoxContainer/SubViewportContainer/SubViewport/Map" unique_id=911483936]
+modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+tile_set = ExtResource("1_d3lsj")
+
+[node name="BoardHandler" type="Node2D" parent="PanelContainer/VBoxContainer/SubViewportContainer/SubViewport/Map" unique_id=957229633]
+position = Vector2(-299, -238)
+
+[node name="entities" type="Node2D" parent="PanelContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=1279664460]
+
+[node name="Container" type="TabContainer" parent="PanelContainer/VBoxContainer" unique_id=1187388887]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 0
+current_tab = 0
+script = ExtResource("5_y1l6r")
+
+[node name="Persona" type="PanelContainer" parent="PanelContainer/VBoxContainer/Container" unique_id=1328393403]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+metadata/_tab_index = 0
 
-[node name="GridContainer" type="GridContainer" parent="Control/Container/VBoxContainer" unique_id=1549281345]
+[node name="grid" type="GridContainer" parent="PanelContainer/VBoxContainer/Container/Persona" unique_id=1549281345]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 columns = 4
 script = ExtResource("5_d3lsj")
 
-[node name="Persona_container2" parent="Control/Container/VBoxContainer/GridContainer" unique_id=357829191 instance=ExtResource("5_latv2")]
+[node name="Pets" type="PanelContainer" parent="PanelContainer/VBoxContainer/Container" unique_id=1865000497]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_tab_index = 1
+
+[node name="grid" type="GridContainer" parent="PanelContainer/VBoxContainer/Container/Pets" unique_id=1696960178]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+columns = 4
+script = ExtResource("5_d3lsj")
+
+[node name="Persona_container2" parent="PanelContainer/VBoxContainer/Container/Pets/grid" unique_id=11508801 instance=ExtResource("5_latv2")]
 layout_mode = 2
 
-[node name="Persona_container3" parent="Control/Container/VBoxContainer/GridContainer" unique_id=972802742 instance=ExtResource("5_latv2")]
+[node name="Persona_container3" parent="PanelContainer/VBoxContainer/Container/Pets/grid" unique_id=826263353 instance=ExtResource("5_latv2")]
 layout_mode = 2

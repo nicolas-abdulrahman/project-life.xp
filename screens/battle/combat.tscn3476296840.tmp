@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://b2xkqomswd3nd"]
+
+[ext_resource type="TileSet" uid="uid://dtr5wdagyise6" path="res://scripts/resources/new_tile_set.tres" id="1_d3lsj"]
+[ext_resource type="Script" uid="uid://mur8qcaecosl" path="res://screens/battle/combat.gd" id="1_latv2"]
+[ext_resource type="Script" uid="uid://cool3pba7nvb2" path="res://screens/battle/board_handler.gd" id="4_7y3bt"]
+[ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
+[ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
+[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
+
+[node name="Combat" type="Node2D" unique_id=2144446736]
+script = ExtResource("1_latv2")
+
+[node name="Map" type="TileMapLayer" parent="." unique_id=1584909067]
+texture_filter = 3
+tile_set = ExtResource("1_d3lsj")
+script = ExtResource("4_y1l6r")
+
+[node name="Placement" type="TileMapLayer" parent="Map" unique_id=911483936]
+modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+tile_set = ExtResource("1_d3lsj")
+
+[node name="BoardHandler" type="Node2D" parent="Map" unique_id=957229633]
+position = Vector2(-299, -238)
+script = ExtResource("4_7y3bt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1605768824]
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=2016218552]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 703.0
+offset_bottom = 1188.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Container" type="PanelContainer" parent="CanvasLayer/Control" unique_id=3676803]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -600.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control/Container" unique_id=556827891]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Control/Container/VBoxContainer" unique_id=1549281345]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+columns = 4
+script = ExtResource("5_d3lsj")
+
+[node name="Persona_container2" parent="CanvasLayer/Control/Container/VBoxContainer/GridContainer" unique_id=357829191 instance=ExtResource("5_latv2")]
+layout_mode = 2
+
+[node name="Persona_container3" parent="CanvasLayer/Control/Container/VBoxContainer/GridContainer" unique_id=972802742 instance=ExtResource("5_latv2")]
+layout_mode = 2

@@ -3,7 +3,12 @@
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_q6q2c"]
 [ext_resource type="Texture2D" uid="uid://cqakagen2ncux" path="res://assets/bg/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_8/orig.png" id="2_x2k4b"]
 [ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_6nejn"]
+[ext_resource type="Texture2D" uid="uid://c7a4wnkca35jp" path="res://assets/svg/base/three-bars-svgrepo-com.svg" id="3_jv58y"]
 [ext_resource type="PackedScene" uid="uid://b2xkqomswd3nd" path="res://screens/battle/combat.tscn" id="4_6nejn"]
+[ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="4_nahbd"]
+[ext_resource type="Texture2D" uid="uid://b7mr3cn4gam5d" path="res://assets/svg/base/pen-new-square-svgrepo-com.svg" id="5_kthq6"]
+[ext_resource type="Texture2D" uid="uid://po2h1v0mopwr" path="res://assets/svg/base/backpack-svgrepo-com.svg" id="7_kthq6"]
+[ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="8_nggjs"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0rrk"]
 texture = ExtResource("2_x2k4b")
@@ -38,45 +43,117 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Panel" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=804040162]
-custom_minimum_size = Vector2(0, 300)
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer" unique_id=804040162]
+custom_minimum_size = Vector2(0, 350)
 layout_mode = 2
 theme_type_variation = &"PanelAccent"
 theme_override_styles/panel = SubResource("StyleBoxTexture_a0rrk")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel" unique_id=1900902184]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1900902184]
+layout_mode = 2
+theme_override_constants/margin_top = 26
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=1662374916]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer" unique_id=2018784684]
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1406124866]
+custom_minimum_size = Vector2(0, 22)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer" unique_id=1685826500]
+[node name="IconButton" type="Button" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1034105818]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+icon = ExtResource("3_jv58y")
+expand_icon = true
+script = ExtResource("4_nahbd")
+metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=487294105]
+layout_mode = 2
+theme_type_variation = &"TextTitleNormal"
+text = "Forest"
+
+[node name="Control" type="Control" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1671372866]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IconButton2" type="Button" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=122178739]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+icon = ExtResource("5_kthq6")
+expand_icon = true
+script = ExtResource("4_nahbd")
+metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2018784684]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1685826500]
 layout_mode = 2
 theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/MarginContainer" unique_id=454334518]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=454334518]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 texture = ExtResource("3_6nejn")
 expand_mode = 1
 stretch_mode = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer" unique_id=1350105327]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1350105327]
 layout_mode = 2
 size_flags_horizontal = 4
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1589854618]
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1589854618]
 layout_mode = 2
 theme_type_variation = &"TextTitle"
 text = "Timer 1"
 
-[node name="Label2" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=2134619534]
+[node name="Label2" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2134619534]
 layout_mode = 2
 theme_type_variation = &"TextTimer"
 text = "00:00.0000"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=1211112027]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Panel" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3" unique_id=1066680779]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 2
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel" unique_id=553401702]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer" unique_id=2143121403]
+layout_mode = 2
+
+[node name="ThemedIcon" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer/HBoxContainer" unique_id=104265742]
+custom_minimum_size = Vector2(35, 35)
+layout_mode = 2
+texture = ExtResource("7_kthq6")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("8_nggjs")
+icon_size = 1
+metadata/_custom_type_script = "uid://ctj1xlf344q5o"
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer/HBoxContainer" unique_id=2106069451]
+layout_mode = 2
+theme_type_variation = &"TextTitleNormal"
+text = "Inventory"
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer" unique_id=134338269]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer/MarginContainer" unique_id=1228185413]
+layout_mode = 2
+theme_type_variation = &"ContainerAccent"
 
 [node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=2104684141]
 layout_mode = 2

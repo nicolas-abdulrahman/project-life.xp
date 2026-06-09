@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dvkpfvavrggqk"]
 
+[ext_resource type="Script" uid="uid://dwknw6wq3a340" path="res://screens/home/login.gd" id="1_u4onm"]
+
 [node name="Control" type="Control" unique_id=1194515761]
 layout_mode = 3
 anchors_preset = 15
@@ -55,3 +57,4 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Entrar"
+script = ExtResource("1_u4onm")

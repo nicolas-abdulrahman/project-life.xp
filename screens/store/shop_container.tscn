@@ -1,167 +1,59 @@
-[gd_scene format=3 uid="uid://dgxmw3eof3roc"]
+[gd_scene format=3 uid="uid://jugumyilldyo"]
 
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="1_epneg"]
-[ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="2_qmome"]
+[ext_resource type="Script" uid="uid://dvfjwh4jaxddj" path="res://screens/store/shop_container.gd" id="2_7msy3"]
 
-[sub_resource type="FontFile" id="FontFile_c2ymq"]
-subpixel_positioning = 0
-msdf_pixel_range = 14
-msdf_size = 128
-cache/0/variation_coordinates = {}
-cache/0/face_index = 0
-cache/0/embolden = 0.0
-cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
-cache/0/spacing_top = 0
-cache/0/spacing_bottom = 0
-cache/0/spacing_space = 0
-cache/0/spacing_glyph = 0
-cache/0/baseline_offset = 0.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/85/0/ascent = 0.0
-cache/0/85/0/descent = 0.0
-cache/0/85/0/underline_position = 0.0
-cache/0/85/0/underline_thickness = 0.0
-cache/0/85/0/scale = 1.0
-cache/0/14/0/ascent = 0.0
-cache/0/14/0/descent = 0.0
-cache/0/14/0/underline_position = 0.0
-cache/0/14/0/underline_thickness = 0.0
-cache/0/14/0/scale = 1.0
-cache/0/15/0/ascent = 0.0
-cache/0/15/0/descent = 0.0
-cache/0/15/0/underline_position = 0.0
-cache/0/15/0/underline_thickness = 0.0
-cache/0/15/0/scale = 1.0
-cache/0/13/0/ascent = 0.0
-cache/0/13/0/descent = 0.0
-cache/0/13/0/underline_position = 0.0
-cache/0/13/0/underline_thickness = 0.0
-cache/0/13/0/scale = 1.0
-cache/0/12/0/ascent = 0.0
-cache/0/12/0/descent = 0.0
-cache/0/12/0/underline_position = 0.0
-cache/0/12/0/underline_thickness = 0.0
-cache/0/12/0/scale = 1.0
-cache/0/11/0/ascent = 0.0
-cache/0/11/0/descent = 0.0
-cache/0/11/0/underline_position = 0.0
-cache/0/11/0/underline_thickness = 0.0
-cache/0/11/0/scale = 1.0
-cache/0/10/0/ascent = 0.0
-cache/0/10/0/descent = 0.0
-cache/0/10/0/underline_position = 0.0
-cache/0/10/0/underline_thickness = 0.0
-cache/0/10/0/scale = 1.0
-cache/0/30/0/ascent = 0.0
-cache/0/30/0/descent = 0.0
-cache/0/30/0/underline_position = 0.0
-cache/0/30/0/underline_thickness = 0.0
-cache/0/30/0/scale = 1.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c2ymq"]
-bg_color = Color(0.008890162, 0.013399581, 0.00088226673, 1)
-
-[sub_resource type="SystemFont" id="SystemFont_uexk6"]
-subpixel_positioning = 0
-
-[sub_resource type="Theme" id="Theme_8kjxw"]
-default_font = SubResource("SystemFont_uexk6")
-Label/colors/font_color = Color(1, 1, 1, 1)
-Label/colors/font_outline_color = Color(0, 0.5172867, 0.5452707, 1)
-Label/colors/font_shadow_color = Color(0, 0, 0, 0)
-Label/font_sizes/font_size = 11
-Label/fonts/font = SubResource("FontFile_c2ymq")
-MarginContainer/constants/margin_bottom = 10
-MarginContainer/constants/margin_left = 10
-MarginContainer/constants/margin_right = 10
-MarginContainer/constants/margin_top = 10
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_c2ymq")
-
-[node name="MarginContainer3" type="MarginContainer" unique_id=2007355674]
-
-[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=2083893824]
-layout_mode = 2
-
-[node name="Control" type="Control" parent="HBoxContainer" unique_id=38834610]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 7.0
-
-[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/Control" unique_id=1953834847]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="PanelContainer" type="PanelContainer" unique_id=358693167]
+custom_minimum_size = Vector2(550, 600)
 theme = ExtResource("1_epneg")
-theme_type_variation = &"SecondaryContainer"
+theme_type_variation = &"ContainerAccent"
+script = ExtResource("2_7msy3")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control/PanelContainer" unique_id=480964002]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=639304326]
 layout_mode = 2
+size_flags_stretch_ratio = 8.85
 
-[node name="Label" type="Label" parent="HBoxContainer/Control/PanelContainer/VBoxContainer" unique_id=1582981519]
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer" unique_id=2120084431]
+layout_mode = 2
+theme_type_variation = &"MarginText"
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer2" unique_id=895614877]
 layout_mode = 2
 text = "Personas"
 
-[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Control/PanelContainer/VBoxContainer" unique_id=755885033]
-custom_minimum_size = Vector2(0, 20)
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=1561128543]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Control/PanelContainer/VBoxContainer" unique_id=869253613]
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer" unique_id=1296790585]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="HBoxContainer2" type="GridContainer" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer" unique_id=1600517000]
+[node name="HBoxContainer2" type="GridContainer" parent="VBoxContainer/MarginContainer" unique_id=1529111746]
 layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/h_separation = 20
 columns = 4
 
-[node name="HBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2" unique_id=1819419244]
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=214266447]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+alignment = 1
 
-[node name="Persona_container" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=11508801 instance=ExtResource("2_qmome")]
+[node name="Panel" type="Panel" parent="VBoxContainer/HBoxContainer2" unique_id=1079321436]
+custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
-size_flags_horizontal = 1
-texture = null
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_type_variation = &"PanelCircle"
 
-[node name="Label2" type="Label" parent="HBoxContainer/Control/PanelContainer/VBoxContainer/MarginContainer/HBoxContainer2/HBoxContainer" unique_id=380166175]
+[node name="Panel2" type="Panel" parent="VBoxContainer/HBoxContainer2" unique_id=1616162414]
+custom_minimum_size = Vector2(18, 18)
 layout_mode = 2
-text = "    5G"
-
-[node name="Control2" type="Control" parent="HBoxContainer" unique_id=548009287]
-layout_mode = 2
-
-[node name="PanelContainer2" type="PanelContainer" parent="HBoxContainer/Control2" unique_id=1206625981]
-layout_mode = 0
-offset_left = -4.0
-offset_right = -4.0
-offset_bottom = 200.0
-size_flags_horizontal = 3
-size_flags_stretch_ratio = 3.0
-theme = SubResource("Theme_8kjxw")
-metadata/_edit_use_anchors_ = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Control2/PanelContainer2" unique_id=121994223]
-layout_mode = 2
-size_flags_stretch_ratio = 0.2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/Control2/PanelContainer2/VBoxContainer" unique_id=1982429084]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="HBoxContainer/Control2/PanelContainer2/VBoxContainer/HBoxContainer" unique_id=535094241]
-custom_minimum_size = Vector2(28, 28)
-layout_mode = 2
-
-[node name="Panel" type="Panel" parent="HBoxContainer/Control2/PanelContainer2/VBoxContainer/HBoxContainer" unique_id=1659732804]
-layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_type_variation = &"PanelCircle"

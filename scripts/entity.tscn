@@ -3,8 +3,12 @@
 [ext_resource type="Script" uid="uid://uigq128k5oc0" path="res://scripts/entity.gd" id="1_s51tr"]
 [ext_resource type="Resource" uid="uid://c7ewgfbp4oihu" path="res://entities/pets/fox/fox.tres" id="2_s51tr"]
 [ext_resource type="Script" uid="uid://dhlmnmascw7il" path="res://scripts/character.gd" id="3_0k7io"]
-[ext_resource type="Texture2D" uid="uid://bq1ws60ar530n" path="res://entities/persona/mago_branco/mago_branco-sheet.png" id="3_w7jq4"]
-[ext_resource type="AnimationLibrary" uid="uid://dfvjvy48gobra" path="res://entities/persona/mago_branco/animation_player.res" id="5_0k7io"]
+[ext_resource type="Texture2D" uid="uid://bre8136wwwxc0" path="res://entities/pets/fox/sprite_sheet.png" id="3_dqpw1"]
+[ext_resource type="Script" uid="uid://c4qn62i6s8od7" path="res://scripts/entities/draw_border_sprite.gd" id="4_itc3x"]
+[ext_resource type="AnimationLibrary" uid="uid://5a63dxi1nkeo" path="res://entities/pets/fox/animation_player.res" id="6_dqpw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqpw1"]
+size = Vector2(36, 31)
 
 [node name="Entity" type="Control" unique_id=1796109999]
 layout_mode = 3
@@ -13,27 +17,43 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = -640.0
+offset_right = -360.0
+offset_bottom = -640.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_s51tr")
 data = ExtResource("2_s51tr")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1540965684]
 texture_filter = 3
-texture = ExtResource("3_w7jq4")
-hframes = 4
-vframes = 2
+scale = Vector2(2, 2)
+texture = ExtResource("3_dqpw1")
+hframes = 5
+vframes = 3
 region_rect = Rect2(0, 0, 64, 64)
+script = ExtResource("4_itc3x")
 
 [node name="controller" type="Control" parent="." unique_id=1983611392]
 anchors_preset = 0
-offset_left = -24.0
-offset_top = -24.0
-offset_right = 24.0
-offset_bottom = 24.0
+offset_left = -32.0
+offset_top = -32.0
+offset_right = 32.0
+offset_bottom = 32.0
 size_flags_horizontal = 6
 size_flags_vertical = 6
+mouse_filter = 1
 script = ExtResource("3_0k7io")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039989992]
-libraries/ = ExtResource("5_0k7io")
+libraries/ = ExtResource("6_dqpw1")
+autoplay = &"Idle"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1258273331]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=514453706]
+position = Vector2(0, 15)
+shape = SubResource("RectangleShape2D_dqpw1")

@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://dmavgpyx4m4mg" path="res://assets/fonts/verminVibes/VerminVibesV-Zlg3.ttf" id="3_3xb56"]
 [ext_resource type="FontFile" uid="uid://bv2ljgpo162a" path="res://assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="3_joxlk"]
 [ext_resource type="FontFile" uid="uid://vatugw0rkv7y" path="res://assets/fonts/Inter/static/Inter_18pt-Bold.ttf" id="5_lsmgg"]
+[ext_resource type="FontFile" uid="uid://cgla6otq7t5yq" path="res://assets/fonts/Inter/static/Inter_28pt-Light.ttf" id="6_11ing"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
 
@@ -46,6 +47,49 @@ corner_radius_bottom_left = 999
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckmh"]
 bg_color = Color(0.0198, 0.0649, 0.11, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11ing"]
+bg_color = Color(0.041999996, 0.13679998, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0627451, 0.20392157, 0.3019608, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="FontFile" id="FontFile_11ing"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/120/0/ascent = 0.0
+cache/0/120/0/descent = 0.0
+cache/0/120/0/underline_position = 0.0
+cache/0/120/0/underline_thickness = 0.0
+cache/0/120/0/scale = 1.0
 
 [sub_resource type="Gradient" id="Gradient_3xb56"]
 colors = PackedColorArray(0, 0.122666664, 0.23, 1, 0.55859375, 1, 0.71032715, 1)
@@ -93,6 +137,8 @@ PanelCircle/base_type = &"Panel"
 PanelCircle/styles/panel = SubResource("StyleBoxFlat_joxlk")
 PanelContainer/colors/bg_color = Color(0, 0, 0, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_1ckmh")
+PanelSecondary/base_type = &"PanelContainer"
+PanelSecondary/styles/panel = SubResource("StyleBoxFlat_11ing")
 TextEdit/font_sizes/font_size = 100
 TextNormal/base_type = &"Label"
 TextNormal/colors/font_color = Color(1, 1, 1, 1)
@@ -112,8 +158,15 @@ TextNumber/font_sizes/font_size = 21
 TextNumber/fonts/font = ExtResource("3_3xb56")
 TextTimer/base_type = &"Label"
 TextTimer/fonts/font = ExtResource("5_lsmgg")
+TextTimerBig/base_type = &"Label"
+TextTimerBig/font_sizes/font_size = 120
+TextTimerBig/fonts/font = SubResource("FontFile_11ing")
 TextTitle/base_type = &"Label"
 TextTitle/font_sizes/font_size = 32
+TextTitleNormal/base_type = &"Label"
+TextTitleNormal/colors/font_color = Color(0.88671875, 0.9017639, 1, 1)
+TextTitleNormal/font_sizes/font_size = 40
+TextTitleNormal/fonts/font = ExtResource("6_11ing")
 TextoJustificado/base_type = &"RichTextLabel"
 TextoJustificado/font_sizes/normal_font_size = 25
 xpBar/base_type = &"Panel"
