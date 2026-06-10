@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://cp6hyyyaa2q0f"]
 
 [ext_resource type="Script" uid="uid://uigq128k5oc0" path="res://scripts/entity.gd" id="1_s51tr"]
-[ext_resource type="Resource" uid="uid://c7ewgfbp4oihu" path="res://entities/pets/fox/fox.tres" id="2_s51tr"]
+[ext_resource type="Resource" uid="uid://dkujs650qtnee" path="res://entities/enemies/golem/golem.tres" id="2_itc3x"]
 [ext_resource type="Script" uid="uid://dhlmnmascw7il" path="res://scripts/character.gd" id="3_0k7io"]
-[ext_resource type="Texture2D" uid="uid://bre8136wwwxc0" path="res://entities/pets/fox/sprite_sheet.png" id="3_dqpw1"]
+[ext_resource type="Texture2D" uid="uid://by3c7faau4any" path="res://entities/enemies/golem/sprite_sheet.png" id="3_dqpw1"]
 [ext_resource type="Script" uid="uid://c4qn62i6s8od7" path="res://scripts/entities/draw_border_sprite.gd" id="4_itc3x"]
-[ext_resource type="AnimationLibrary" uid="uid://5a63dxi1nkeo" path="res://entities/pets/fox/animation_player.res" id="6_dqpw1"]
+[ext_resource type="AnimationLibrary" uid="uid://dkoh03yciu86v" path="res://entities/enemies/golem/animation_player.res" id="6_0h6hw"]
+[ext_resource type="Script" uid="uid://d4ccn4nxgk4ia" path="res://scripts/attack_component.gd" id="7_itc3x"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_dqpw1"]
-size = Vector2(36, 31)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_itc3x"]
+size = Vector2(37, 43)
 
 [node name="Entity" type="Control" unique_id=1796109999]
 layout_mode = 3
@@ -25,14 +26,14 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_s51tr")
-data = ExtResource("2_s51tr")
+data = ExtResource("2_itc3x")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1540965684]
 texture_filter = 3
 scale = Vector2(2, 2)
 texture = ExtResource("3_dqpw1")
-hframes = 5
-vframes = 3
+hframes = 9
+vframes = 9
 region_rect = Rect2(0, 0, 64, 64)
 script = ExtResource("4_itc3x")
 
@@ -48,12 +49,16 @@ mouse_filter = 1
 script = ExtResource("3_0k7io")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039989992]
-libraries/ = ExtResource("6_dqpw1")
-autoplay = &"Idle"
+libraries/ = ExtResource("6_0h6hw")
+autoplay = &"Walk"
+blend_times = [&"Attack", &"Attack", 834.783, &"Attack", &"Idle", 260.869, &"Walk", &"Idle", 365.218, &"Walk", &"Walk", 156.522]
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1258273331]
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=514453706]
-position = Vector2(0, 15)
-shape = SubResource("RectangleShape2D_dqpw1")
+position = Vector2(-1, 4)
+shape = SubResource("RectangleShape2D_itc3x")
+
+[node name="AttackComponent" type="Node2D" parent="." unique_id=1068137273]
+script = ExtResource("7_itc3x")

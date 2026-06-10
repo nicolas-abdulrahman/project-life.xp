@@ -14,6 +14,10 @@ config/name="project-Life.xp"
 run/main_scene="uid://drnxryx0u53sl"
 config/features=PackedStringArray("4.6", "Mobile")
 
+[audio]
+
+buses/default_bus_layout="uid://bf6lbqq02cjv6"
+
 [autoload]
 
 ScreenHandler="*uid://wvg6f8d4g5i1"

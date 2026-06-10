@@ -6,6 +6,6 @@
 script = ExtResource("1_4lksk")
 character_name = "Mago"
 hitbox = Rect2i(-1, 4, 37, 43)
-frames = 4
+frames = Vector2i(4, 3)
 price = 20
 metadata/_custom_type_script = "uid://d3oent2sa4d8x"

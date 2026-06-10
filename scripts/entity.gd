@@ -5,11 +5,14 @@
 @onready var animation : AnimationPlayer = $AnimationPlayer
 @onready var hitbox : CollisionShape2D = $Area2D/CollisionShape2D
 @onready var area  = $Area2D
+@export var flipped = false
 func _ready() -> void:
 	clear_animations()
 	if data:
 		set_data(data)
 	animation.pause()
+	var bus : EventBusClass = EventBus
+	bus.animate.connect(animation.play)
 
 func _on_animation_finish(anim_name: String):
 	if anim_name == "Attack":
@@ -29,8 +32,8 @@ func set_data(entity_data):
 		var animation_lib = folder + "/animation_player.res"
 		var animation_library:AnimationLibrary = load(animation_lib)
 		sprite.texture = load(sprite_sheet)
-		sprite.hframes = data.frames 
-		sprite.vframes = 3
+		sprite.hframes = data.frames.x 
+		sprite.vframes = data.frames.y
 		animation.add_animation_library("", animation_library)
 		animation.animation_finished.connect(_on_animation_finish)
 	else:
@@ -66,3 +69,7 @@ func get_width() -> float:
 	
 func play(name: String):
 	animation.play(name )
+
+func flip():
+	sprite.flip_h = flipped
+	

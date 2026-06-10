@@ -2,8 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://clj56dr4jdoit" path="res://screens/quests/card.tscn" id="1_y1ajl"]
 [ext_resource type="Texture2D" uid="uid://de3j623wgvbc" path="res://assets/svg/base/plus-circle-svgrepo-com (1).svg" id="2_2u8ou"]
+[ext_resource type="Texture2D" uid="uid://bxvslj2yb6c7e" path="res://addons/lucide/icons/clock-arrow-down.svg" id="2_i6pbr"]
 [ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="3_4lj57"]
+[ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="3_hhfjw"]
 [ext_resource type="Texture2D" uid="uid://bxrpd3u1tia4q" path="res://assets/template.png" id="4_4lj57"]
+[ext_resource type="Texture2D" uid="uid://dfu74dhrjgjea" path="res://assets/svg/base/circle.svg" id="4_hhfjw"]
 
 [sub_resource type="Theme" id="Theme_qlwru"]
 Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
@@ -70,42 +73,106 @@ layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=849535467]
 layout_mode = 2
+size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2" unique_id=1118467989]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2" unique_id=614314650]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_right = 14
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer" unique_id=614314650]
-layout_mode = 2
-size_flags_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer" unique_id=196252102]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer" unique_id=196252102]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=2142409050]
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=2142409050]
 layout_mode = 2
 theme_type_variation = &"TextTitleNormal"
 text = "Schedule"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1564268996]
-layout_mode = 2
-size_flags_vertical = 0
-theme_type_variation = &"PanelSecondary"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1824635727]
-layout_mode = 2
-size_flags_vertical = 0
-theme = SubResource("Theme_qlwru")
-
-[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=855779311]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-
-[node name="Control" type="Control" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=530696665]
+[node name="Schedule" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1564268996]
 layout_mode = 2
 size_flags_vertical = 3
+theme_type_variation = &"PanelBG"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule" unique_id=1481732359]
+layout_mode = 2
+
+[node name="Header" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer" unique_id=1130139578]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=401447489]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer" unique_id=495863719]
+layout_mode = 2
+theme_type_variation = &"ContainerAccent"
+
+[node name="ThemedIcon" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer/PanelContainer" unique_id=739185364]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_i6pbr")
+stretch_mode = 5
+script = ExtResource("3_hhfjw")
+metadata/_custom_type_script = "uid://ctj1xlf344q5o"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=1680252380]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer2" unique_id=1324224798]
+layout_mode = 2
+theme_type_variation = &"ContainerAccent"
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer2/PanelContainer" unique_id=429291253]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextTitleNormal"
+text = "Monday"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=921138166]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer3" unique_id=1517392032]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_type_variation = &"ContainerAccent"
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer3/PanelContainer" unique_id=930083501]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextTitleNormal"
+text = "Mood"
+
+[node name="Item" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer" unique_id=1081362056]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=413270303]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "7:30"
+
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=1068519435]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+theme_type_variation = &"TextEditSchedule"
+text = "oiiiii"
+placeholder_text = "I Like bananas "
+
+[node name="CheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=1882891197]
+layout_mode = 2
+icon = ExtResource("4_hhfjw")
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=17320803]
+visible = false
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer3" unique_id=1799782770]
@@ -142,16 +209,16 @@ layout_mode = 2
 modulate = Color(0.5758667, 0.8385086, 0.99609375, 1)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 533.0
-offset_top = 381.0
-offset_right = 583.0
-offset_bottom = 431.0
+offset_left = 489.0
+offset_top = 377.0
+offset_right = 634.0
+offset_bottom = 527.0
 icon = ExtResource("2_2u8ou")
 expand_icon = true
 script = ExtResource("3_4lj57")
 metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
 
 [node name="Template2" type="Sprite2D" parent="." unique_id=162205998]
-position = Vector2(357, 794.5)
+position = Vector2(-1056, 432.00003)
 scale = Vector2(0.84651166, 0.909627)
 texture = ExtResource("4_4lj57")

@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://cqakagen2ncux" path="res://assets/bg/craftpix-net-823949-free-nature-backgrounds-pixel-art/nature_8/orig.png" id="2_x2k4b"]
 [ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_6nejn"]
 [ext_resource type="Texture2D" uid="uid://c7a4wnkca35jp" path="res://assets/svg/base/three-bars-svgrepo-com.svg" id="3_jv58y"]
-[ext_resource type="PackedScene" uid="uid://b2xkqomswd3nd" path="res://screens/battle/combat.tscn" id="4_6nejn"]
 [ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="4_nahbd"]
 [ext_resource type="Texture2D" uid="uid://b7mr3cn4gam5d" path="res://assets/svg/base/pen-new-square-svgrepo-com.svg" id="5_kthq6"]
 [ext_resource type="Texture2D" uid="uid://po2h1v0mopwr" path="res://assets/svg/base/backpack-svgrepo-com.svg" id="7_kthq6"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="8_nggjs"]
+[ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store/skill_tree2.tscn" id="9_kthq6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0rrk"]
 texture = ExtResource("2_x2k4b")
@@ -155,22 +155,5 @@ size_flags_vertical = 3
 layout_mode = 2
 theme_type_variation = &"ContainerAccent"
 
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=2104684141]
+[node name="SkillTree" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=7018151 instance=ExtResource("9_kthq6")]
 layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Panel" type="Panel" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=858062482]
-custom_minimum_size = Vector2(0, 300)
-layout_mode = 2
-theme_type_variation = &"PanelAccent"
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=1751121903]
-layout_mode = 2
-stretch = true
-
-[node name="SubViewport" type="SubViewport" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/SubViewportContainer" unique_id=510258646]
-handle_input_locally = false
-size = Vector2i(700, 300)
-render_target_update_mode = 4
-
-[node name="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/SubViewportContainer/SubViewport" unique_id=2144446736 instance=ExtResource("4_6nejn")]

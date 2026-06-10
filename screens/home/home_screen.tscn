@@ -17,6 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 script = ExtResource("1_hj5ia")
+display_bottom_bar = false
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=265996355]
 clip_contents = true

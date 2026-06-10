@@ -1,5 +1,6 @@
 @tool extends Sprite2D
 
+var reversed = false
 func _draw() -> void:
 	# Cria o retângulo baseado no tamanho atual (size) do seu Control
 	# No _draw, o início é sempre Vector2.ZERO (coordenada local)

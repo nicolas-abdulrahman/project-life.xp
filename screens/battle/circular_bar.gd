@@ -1,6 +1,7 @@
 @tool
 extends Control
 
+@onready var clock = %TimerLabel
 @export var radius: float = 120.0:
 	set(v):
 		radius = v
@@ -15,11 +16,14 @@ extends Control
 	set(v):
 		value = clamp(v, 0.0, 1.0)
 		queue_redraw()
-
+		
+@onready var timer_label = %TimerLabel
+@onready var element = $".."
 var is_dragging: bool = false
 
+var total = 0
 func _ready() -> void:
-	radius = $"../Panel".size.x /2 +tick_length + padding
+	radius = element.size.x /2 +tick_length + padding
 	custom_minimum_size = Vector2(radius * 2 + 60, radius * 2 + 60)
 	mouse_filter = MouseFilter.MOUSE_FILTER_PASS
 
@@ -87,7 +91,31 @@ func _update_value_from_pos(pos: Vector2) -> void:
 	if angle < 0:
 		angle += TAU
 	
-	value = angle / TAU
-	emit_signal("value_changed", value)
+	
+	var new_value = angle / TAU
+	if value > 0.8 and new_value < 0.2:
+		print("Full circle completed clockwise!")
+		total +=1
+	elif value < 0.2 and new_value > 0.8:
+		if total ==0:
+			return
+		print("Full circle completed counter-clockwise!")
+		total -=1
+		if total<0:
+			total =0
+	value = new_value
+	var minutes = int(value * 60)
+	minutes += total *60
+	clock.set_minutes(minutes)
+	
+	
 
-signal value_changed(new_value)
+func is_near_clock(value: float, threshold: float, tolerance: float) -> bool:
+	var distance = abs(value - threshold)
+
+	# If the distance is huge (like 59), it means we are measuring the long way 
+	# around the circle. This flips it to measure across the 12 o'clock gap.
+	if distance > 30: 
+		distance = 60 - distance
+		
+	return distance <= tolerance

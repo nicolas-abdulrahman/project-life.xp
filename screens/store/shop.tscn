@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c5ykcvnwvxhpq" path="res://screens/store/snap_scroll.gd" id="1_kykcs"]
 [ext_resource type="PackedScene" uid="uid://jugumyilldyo" path="res://screens/store/shop_container.tscn" id="1_sburc"]
-[ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store/skill_tree2.tscn" id="2_1n8vj"]
 [ext_resource type="Script" uid="uid://d3oent2sa4d8x" path="res://scripts/data/entity_data.gd" id="3_7fmer"]
 [ext_resource type="Resource" uid="uid://c7ewgfbp4oihu" path="res://entities/pets/fox/fox.tres" id="3_kykcs"]
 [ext_resource type="Resource" uid="uid://bvowpentgjrl2" path="res://entities/persona/mago_branco/mago_branco.tres" id="4_sburc"]
@@ -92,9 +91,5 @@ layout_mode = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/PanelContainer/ScrollContainer" unique_id=1110841796]
 layout_mode = 2
-
-[node name="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=7018151 instance=ExtResource("2_1n8vj")]
-layout_mode = 2
-size_flags_vertical = 10
 
 [editable path="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2"]

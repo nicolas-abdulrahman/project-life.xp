@@ -121,7 +121,7 @@ position = Vector2(-299, -238)
 
 [node name="entities" type="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler" unique_id=1279664460]
 
-[node name="InventoryContainer" type="TabContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=1187388887]
+[node name="Container" type="TabContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=1187388887]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
@@ -129,33 +129,33 @@ size_flags_vertical = 0
 mouse_filter = 0
 current_tab = 0
 
-[node name="Persona" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer" unique_id=1328393403]
+[node name="Persona" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/Container" unique_id=1328393403]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 metadata/_tab_index = 0
 
-[node name="grid" type="GridContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer/Persona" unique_id=1549281345]
+[node name="grid" type="GridContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/Container/Persona" unique_id=1549281345]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 columns = 4
 script = ExtResource("5_d3lsj")
 
-[node name="Pets" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer" unique_id=1865000497]
+[node name="Pets" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/Container" unique_id=1865000497]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 metadata/_tab_index = 1
 
-[node name="grid" type="GridContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer/Pets" unique_id=1696960178]
+[node name="grid" type="GridContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/Container/Pets" unique_id=1696960178]
 custom_minimum_size = Vector2(0, 600)
 layout_mode = 2
 columns = 4
 script = ExtResource("5_d3lsj")
 
-[node name="Persona_container2" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer/Pets/grid" unique_id=11508801 instance=ExtResource("5_latv2")]
+[node name="Persona_container2" parent="PanelContainer/ScrollContainer/VBoxContainer/Container/Pets/grid" unique_id=11508801 instance=ExtResource("5_latv2")]
 layout_mode = 2
 
-[node name="Persona_container3" parent="PanelContainer/ScrollContainer/VBoxContainer/InventoryContainer/Pets/grid" unique_id=826263353 instance=ExtResource("5_latv2")]
+[node name="Persona_container3" parent="PanelContainer/ScrollContainer/VBoxContainer/Container/Pets/grid" unique_id=826263353 instance=ExtResource("5_latv2")]
 layout_mode = 2

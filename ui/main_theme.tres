@@ -34,6 +34,13 @@ bg_color = Color(0.3606027, 0.61072844, 1, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6tukj"]
 bg_color = Color(0.031499997, 0.10062502, 0.15, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_47as2"]
+bg_color = Color(0.03137255, 0.101960786, 0.14901961, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joxlk"]
 border_width_left = 1
 border_width_top = 1
@@ -106,6 +113,9 @@ Button/colors/font_color = Color(0.85490197, 0.8784314, 0.9411765, 1)
 Button/font_sizes/font_size = 19
 Button/fonts/font = ExtResource("1_g6rto")
 Button/styles/normal = SubResource("StyleBoxEmpty_1ckmh")
+ButtonUnchange/base_type = &"Button"
+ButtonUnchange/styles/hover = null
+ButtonUnchange/styles/hover_pressed = null
 ContainerAccent/base_type = &"PanelContainer"
 ContainerAccent/styles/panel = SubResource("StyleBoxFlat_t4jxl")
 ContainerDimmed/base_type = &"PanelContainer"
@@ -133,6 +143,8 @@ MarginText/constants/margin_top = 11
 Panel/styles/panel = SubResource("StyleBoxFlat_g6rto")
 PanelAccent/base_type = &"Panel"
 PanelAccent/styles/panel = SubResource("StyleBoxFlat_6tukj")
+PanelBG/base_type = &"PanelContainer"
+PanelBG/styles/panel = SubResource("StyleBoxFlat_47as2")
 PanelCircle/base_type = &"Panel"
 PanelCircle/styles/panel = SubResource("StyleBoxFlat_joxlk")
 PanelContainer/colors/bg_color = Color(0, 0, 0, 1)
@@ -140,6 +152,9 @@ PanelContainer/styles/panel = SubResource("StyleBoxFlat_1ckmh")
 PanelSecondary/base_type = &"PanelContainer"
 PanelSecondary/styles/panel = SubResource("StyleBoxFlat_11ing")
 TextEdit/font_sizes/font_size = 100
+TextEditSchedule/base_type = &"TextEdit"
+TextEditSchedule/font_sizes/font_size = 21
+TextEditSchedule/fonts/font = ExtResource("6_11ing")
 TextNormal/base_type = &"Label"
 TextNormal/colors/font_color = Color(1, 1, 1, 1)
 TextNormal/colors/font_outline_color = Color(0, 0, 0, 1)
