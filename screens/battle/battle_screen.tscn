@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="4_nahbd"]
 [ext_resource type="Texture2D" uid="uid://b7mr3cn4gam5d" path="res://assets/svg/base/pen-new-square-svgrepo-com.svg" id="5_kthq6"]
 [ext_resource type="Texture2D" uid="uid://po2h1v0mopwr" path="res://assets/svg/base/backpack-svgrepo-com.svg" id="7_kthq6"]
+[ext_resource type="Script" uid="uid://wt6lct7w4ey0" path="res://screens/battle/battle_screen_button.gd" id="7_nggjs"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="8_nggjs"]
 [ext_resource type="PackedScene" uid="uid://dvce6ojybi5kl" path="res://screens/store/skill_tree2.tscn" id="9_kthq6"]
 
@@ -95,12 +96,13 @@ theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 50
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=454334518]
+[node name="TextureRect" type="TextureButton" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/MarginContainer" unique_id=1287308943]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
-texture = ExtResource("3_6nejn")
-expand_mode = 1
-stretch_mode = 4
+texture_normal = ExtResource("3_6nejn")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_nggjs")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1350105327]
 layout_mode = 2
@@ -110,7 +112,7 @@ alignment = 1
 [node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1589854618]
 layout_mode = 2
 theme_type_variation = &"TextTitle"
-text = "Timer 1"
+text = "Timer "
 
 [node name="Label2" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=2134619534]
 layout_mode = 2
@@ -139,7 +141,11 @@ texture = ExtResource("7_kthq6")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("8_nggjs")
+svg_path = null
 icon_size = 1
+fill_color = null
+stroke_color = null
+stroke_width = null
 metadata/_custom_type_script = "uid://ctj1xlf344q5o"
 
 [node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/Panel/VBoxContainer/HBoxContainer" unique_id=2106069451]

@@ -8,6 +8,8 @@ var state = State.Pause
 @onready var container =%InventoryContainer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	await get_tree().process_frame
+
 	var current_scene_root : Combat = get_tree().current_scene
 	current_scene_root.Play.connect(_on_start)
 

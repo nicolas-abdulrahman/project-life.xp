@@ -24,18 +24,20 @@ func transition_to(target_scene_path: PackedScene, duration: float = 0.3) -> voi
 	await tween.finished
 	
 
-	await get_tree().process_frame
 	var tree := get_tree()
 	var root := tree.root
 	
 	if tree.current_scene:
 		tree.current_scene.queue_free()
-	
+	await get_tree().process_frame
+
 	# 2. Attach your pre-existing instantiated node to the root viewport
 	var new_scene := target_scene_path.instantiate()
 	root.add_child(new_scene)
 	tree.current_scene = new_scene
 	await tree.process_frame
+	if new_scene is Screen:
+		panel.visible = new_scene.display_bottom_bar
 	
 	# 4. Fade back out to reveal the new screen
 	var tween_out := create_tween()

@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://k66p0tum8ebm" path="res://assets/bg/craftpix-net-154389-forest-and-trees-free-pixel-backgrounds/3/2304x1296.png" id="2_nyqwa"]
 [ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_lm64f"]
 [ext_resource type="Script" uid="uid://drtxeqtamoc31" path="res://screens/battle/timer_label.gd" id="3_va0ij"]
-[ext_resource type="Script" uid="uid://cap5xmv6myk6b" path="res://screens/battle/play_button.gd" id="4_7hab5"]
 [ext_resource type="Script" uid="uid://0ekokmrs8j3a" path="res://screens/battle/sub_viewport.gd" id="4_lm64f"]
 [ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
 [ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
+[ext_resource type="Script" uid="uid://bu0qb0u26oobf" path="res://screens/battle/combat_play_button.gd" id="5_va0ij"]
 [ext_resource type="Script" uid="uid://dxoyfbh5mk6s5" path="res://screens/battle/circular_bar.gd" id="6_circular_bar"]
 [ext_resource type="Script" uid="uid://c536os7c32q6m" path="res://screens/battle/game_handler.gd" id="8_dcyct"]
 
@@ -64,7 +64,7 @@ layout_mode = 2
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_bottom = 50
 
-[node name="PlayButton" type="TextureButton" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=55223465]
+[node name="PlayButton" type="TextureButton" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2" unique_id=2050610706]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -72,7 +72,8 @@ size_flags_vertical = 4
 texture_normal = ExtResource("3_lm64f")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("4_7hab5")
+script = ExtResource("5_va0ij")
+metadata/_custom_type_script = "uid://cap5xmv6myk6b"
 
 [node name="CircularBar" type="Control" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/PlayButton" unique_id=1229442634]
 custom_minimum_size = Vector2(394, 394)

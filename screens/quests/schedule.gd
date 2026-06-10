@@ -1,11 +1,10 @@
-@tool
 class_name Schedule extends PanelContainer
 # Percentage constraints: 10%, 70%, 20%
-const COL_RATIOS = [0.1, 0.5, 0.4]
+const COL_RATIOS = [0.1, 0.7, 0.1, 0.1]
 const LINE_COLOR = Color(1, 1, 1, 0.4)
 const LINE_WIDTH = 2.0
 const padding = 3
-var column_widths = [0.0, 0.0, 0.0]
+var column_widths = [0.0, 0.0, 0.0, 0.0]
 var lines_overlay: Control
 
 @onready var v_box = find_child("VBoxContainer", true, false)
@@ -70,7 +69,7 @@ func _on_overlay_draw():
 	var height = size.y
 	var current_x = 0.0
 	
-	for i in range(COL_RATIOS.size() - 1):
+	for i in range(COL_RATIOS.size() - 2):
 		current_x += column_widths[i]
 		
 		lines_overlay.draw_line(

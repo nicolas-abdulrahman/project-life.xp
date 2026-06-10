@@ -36,6 +36,10 @@ func update() -> void:
 			# Labels use theme overrides for font colors
 			child.add_theme_color_override("font_color", child_color)
 			child.add_theme_color_override("font_shadow_color", child_outline)
+		elif child is ThemedIcon:
+			child.stroke_color = child_color
+			child.fill_color = child_outline
 		else:
+			
 			# Standard fallback for textures or buttons
 			child.modulate = child_color
