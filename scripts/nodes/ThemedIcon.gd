@@ -15,6 +15,6 @@ func update_size() -> void:
 	size = new_size
 	custom_minimum_size = new_size
 func _ready() -> void:
-	expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+
 	stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 	

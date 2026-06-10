@@ -55,6 +55,13 @@ corner_radius_bottom_left = 999
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ckmh"]
 bg_color = Color(0.0198, 0.0649, 0.11, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5itkh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11ing"]
 bg_color = Color(0.041999996, 0.13679998, 0.2, 1)
 border_width_left = 1
@@ -149,6 +156,8 @@ PanelCircle/base_type = &"Panel"
 PanelCircle/styles/panel = SubResource("StyleBoxFlat_joxlk")
 PanelContainer/colors/bg_color = Color(0, 0, 0, 1)
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_1ckmh")
+PanelSchedule/base_type = &"PanelContainer"
+PanelSchedule/styles/panel = SubResource("StyleBoxFlat_5itkh")
 PanelSecondary/base_type = &"PanelContainer"
 PanelSecondary/styles/panel = SubResource("StyleBoxFlat_11ing")
 TextEdit/font_sizes/font_size = 100
@@ -171,6 +180,10 @@ TextNumber/constants/outline_size = 3
 TextNumber/constants/shadow_outline_size = 0
 TextNumber/font_sizes/font_size = 21
 TextNumber/fonts/font = ExtResource("3_3xb56")
+TextSchedule/base_type = &"Label"
+TextSchedule/colors/font_color = Color(0.7890625, 0.9736328, 1, 1)
+TextSchedule/font_sizes/font_size = 30
+TextSchedule/fonts/font = ExtResource("6_11ing")
 TextTimer/base_type = &"Label"
 TextTimer/fonts/font = ExtResource("5_lsmgg")
 TextTimerBig/base_type = &"Label"
