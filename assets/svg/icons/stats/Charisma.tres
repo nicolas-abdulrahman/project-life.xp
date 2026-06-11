@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Stat" format=3 uid="uid://ba1o7cqxlmt8g"]
+
+[ext_resource type="Texture2D" uid="uid://c8yy0frv3jrcq" path="res://assets/svg/icons/stats/Charisma.svg" id="1_hxo2v"]
+[ext_resource type="Script" uid="uid://eqq0xxpbm55e" path="res://scripts/resources/STATS.gd" id="1_uaxtg"]
+
+[resource]
+script = ExtResource("1_uaxtg")
+icon = ExtResource("1_hxo2v")
+color = Color(0.57350636, 0.91796875, 0.50201416, 1)
+flip = true
+metadata/_custom_type_script = "uid://eqq0xxpbm55e"

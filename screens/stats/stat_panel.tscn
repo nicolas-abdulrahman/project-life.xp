@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://2bive2utd06f" path="res://screens/stats/stat_panel.gd" id="1_j4pra"]
 [ext_resource type="Texture2D" uid="uid://c6i0vxtv5kr2" path="res://assets/svg/stats_border.svg" id="1_yo7j0"]
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="2_6rpyf"]
-[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/g23.svg" id="3_j4pra"]
+[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/stats/Vitality.svg" id="3_j4pra"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0w6a"]
 texture = ExtResource("1_yo7j0")
@@ -13,6 +13,8 @@ custom_minimum_size = Vector2(0, 150)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_j4pra")
+stat_name = null
+icon = null
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=148513019]
 layout_mode = 1

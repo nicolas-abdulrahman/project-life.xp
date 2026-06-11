@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UserData" format=3 uid="uid://hw7qiw48xdfk"]
+
+[ext_resource type="Script" uid="uid://cjq2xefuaonh3" path="res://scripts/resources/inventory.gd" id="1_1bj47"]
+[ext_resource type="Script" uid="uid://b1l4bm31nakgh" path="res://scripts/resources/user_data.gd" id="1_biccu"]
+[ext_resource type="Texture2D" uid="uid://cossxsopa03yk" path="res://assets/sprites/lifexp.png" id="1_y4i1f"]
+[ext_resource type="Script" uid="uid://cly0dm2sbnyxp" path="res://scripts/resources/stat_data.gd" id="2_7e2uj"]
+
+[sub_resource type="Resource" id="Resource_sn06p"]
+script = ExtResource("1_1bj47")
+chips = 15
+gems = 30
+metadata/_custom_type_script = "uid://cjq2xefuaonh3"
+
+[resource]
+script = ExtResource("1_biccu")
+picture = ExtResource("1_y4i1f")
+inventory = SubResource("Resource_sn06p")
+metadata/_custom_type_script = "uid://b1l4bm31nakgh"

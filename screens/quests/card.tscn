@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://clj56dr4jdoit"]
 
-[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/g23.svg" id="1_6mhe2"]
+[ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/stats/Vitality.svg" id="1_6mhe2"]
 
 [node name="card" type="MarginContainer" unique_id=83839322]
 theme_override_constants/margin_left = 20

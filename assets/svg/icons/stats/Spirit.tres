@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Stat" format=3 uid="uid://btmilqqjbvlvp"]
+
+[ext_resource type="Texture2D" uid="uid://dlabs7tbrlx10" path="res://assets/svg/icons/stats/Spirit.svg" id="1_qb3l3"]
+[ext_resource type="Script" uid="uid://eqq0xxpbm55e" path="res://scripts/resources/STATS.gd" id="1_vti1q"]
+
+[resource]
+script = ExtResource("1_vti1q")
+icon = ExtResource("1_qb3l3")
+color = Color(0.579834, 0.9672642, 0.9765625, 1)
+metadata/_custom_type_script = "uid://eqq0xxpbm55e"

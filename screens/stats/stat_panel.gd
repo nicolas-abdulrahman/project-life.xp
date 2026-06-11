@@ -3,6 +3,10 @@ class_name StatPanel
 extends Control
 
 
+@export var stat_name = "Vitality"
+@export var icon = "res://assets/svg/icons/g23.svg"
+
+
 @onready var barChart := $PanelContainer/HSplitContainer/MarginContainer2/BarChart
 @onready var hbox := $PanelContainer/HSplitContainer/MarginContainer2/BarChart/HBoxContainer
 @onready var stat := $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/Name
