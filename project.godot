@@ -13,6 +13,7 @@ config_version=5
 config/name="project-Life.xp"
 run/main_scene="uid://drnxryx0u53sl"
 config/features=PackedStringArray("4.6", "Mobile")
+config/icon="uid://byghrgdry2dba"
 
 [audio]
 

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" format=3 uid="uid://bl02xhnq18boi"]
+
+[ext_resource type="Texture2D" uid="uid://um6nmnkjunkn" path="res://assets/svg/icons/stats/Focus.svg" id="1_vdq0g"]
+[ext_resource type="Script" uid="uid://dvsj1ivctfl3v" path="res://scripts/data/stat.gd" id="2_2gwpi"]
+
+[resource]
+script = ExtResource("2_2gwpi")
+icon = ExtResource("1_vdq0g")
+color = Color(0.9453125, 0.6765585, 0.4394226, 1)
+metadata/_custom_type_script = "uid://eqq0xxpbm55e"

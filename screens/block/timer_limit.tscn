@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dakrh10xroaef"]
+
+[ext_resource type="Script" uid="uid://07hpjjt3r78t" path="res://screens/block/timer_limit.gd" id="1_iqii0"]
+
+[node name="TimerLimit" type="HBoxContainer" unique_id=2138749012]
+theme_override_constants/separation = 0
+alignment = 1
+script = ExtResource("1_iqii0")
+first_color = Color(0.4832611, 0.5679432, 0.59765625, 1)
+second_color = Color(0.74609375, 0.38179016, 0.38179016, 1)
+separator_color = Color(0.7265625, 0.7265625, 0.7265625, 1)
+font_size = 80
+
+[node name="Label" type="Label" parent="." unique_id=346098487]
+layout_mode = 2
+theme_type_variation = &"TextTimerBig"
+theme_override_colors/font_color = Color(0.4832611, 0.5679432, 0.59765625, 1)
+theme_override_font_sizes/font_size = 80
+text = "0:30"
+
+[node name="Label3" type="Label" parent="." unique_id=1830932971]
+layout_mode = 2
+theme_type_variation = &"TextTimerBig"
+theme_override_colors/font_color = Color(0.7265625, 0.7265625, 0.7265625, 1)
+theme_override_font_sizes/font_size = 80
+text = "/"
+
+[node name="Label2" type="Label" parent="." unique_id=690339056]
+layout_mode = 2
+theme_type_variation = &"TextTimerBig"
+theme_override_colors/font_color = Color(0.74609375, 0.38179016, 0.38179016, 1)
+theme_override_font_sizes/font_size = 80
+text = "0:30"

@@ -19,6 +19,7 @@ script = ExtResource("1_6vi00")
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"TextTitleNormal"
+theme_override_font_sizes/font_size = 25
 text = "Item 1"
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1597460172]
@@ -31,6 +32,7 @@ layout_mode = 2
 
 [node name="Price" parent="PanelContainer/VBoxContainer" unique_id=1477539098 instance=ExtResource("2_rdfac")]
 layout_mode = 2
+type = 0
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1863724447]
 layout_mode = 2
@@ -47,7 +49,7 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="PanelContainer/VBoxContainer/MarginContainer/SubViewportContainer" unique_id=1473250808]
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(29, 2)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="Key" parent="PanelContainer/VBoxContainer/MarginContainer/SubViewportContainer/SubViewport" unique_id=137793381 instance=ExtResource("3_jan8t")]

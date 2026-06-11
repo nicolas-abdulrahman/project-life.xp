@@ -1,7 +1,28 @@
 [gd_scene format=3 uid="uid://dx1om83s4iajf"]
 
+[ext_resource type="StyleBox" uid="uid://c77tvfxjafx8c" path="res://ui/line.tres" id="1_j4sub"]
 [ext_resource type="Texture2D" uid="uid://dkm2upm3eaarg" path="res://ui/youtube.svg" id="1_v0g48"]
 [ext_resource type="Script" uid="uid://cft00r6wfd072" path="res://screens/block/button2.gd" id="2_hwvh4"]
+[ext_resource type="StyleBox" uid="uid://bhc0ahfu0ynmq" path="res://ui/cool_bg.tres" id="2_hxqbp"]
+[ext_resource type="PackedScene" uid="uid://dakrh10xroaef" path="res://screens/block/timer_limit.tscn" id="4_xv2c3"]
+[ext_resource type="Texture2D" uid="uid://fyp1qbij1peq" path="res://assets/svg/icons/Tiktok_icon.svg" id="6_3xnq8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5mcxf"]
+bg_color = Color(0.08656311, 0.10457909, 0.12109375, 1)
+draw_center = false
+border_width_left = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.080540314, 0.20330986, 0.28515625, 1)
+expand_margin_top = 22.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p26m3"]
+bg_color = Color(0.003921569, 0.03529412, 0.05882353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.080540314, 0.20330986, 0.28515625, 1)
 
 [node name="Control" type="Control" unique_id=1763736255]
 layout_mode = 3
@@ -21,94 +42,299 @@ grow_vertical = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=262182671]
 layout_mode = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_right = 15
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=612715985]
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer" unique_id=1609308080]
 layout_mode = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1402162166]
-layout_mode = 2
-size_flags_vertical = 2
-theme_type_variation = &"ContainerAccent"
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1339061349]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1968410552]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer" unique_id=612715985]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_type_variation = &"TextTitle"
-text = "Apps bloqueados"
+size_flags_vertical = 2
+theme_override_constants/separation = 22
 
-[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1911413553]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1402162166]
+layout_mode = 2
+size_flags_vertical = 2
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer" unique_id=1339061349]
+layout_mode = 2
+theme_override_constants/separation = 17
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1968410552]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 0
+theme_type_variation = &"TextTitle"
+text = "  Apps bloqueados"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=480795912]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("1_j4sub")
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1911413553]
 layout_mode = 2
 size_flags_vertical = 3
+columns = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=54514551]
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1658844258]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer" unique_id=2058235772]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_hxqbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer" unique_id=2123023004]
+layout_mode = 2
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer" unique_id=54514551]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/VBoxContainer" unique_id=1828833689]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1828833689]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
+size_flags_horizontal = 4
 texture = ExtResource("1_v0g48")
 expand_mode = 3
+stretch_mode = 4
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=2029982824]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2029982824]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_type_variation = &"TextNormal"
 text = "Youtube"
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1226661944]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2006146564]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("1_j4sub")
+
+[node name="TimerLimit" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=2138749012 instance=ExtResource("4_xv2c3")]
+layout_mode = 2
+font_size = 44
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1463385683]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Gerenciar"
+
+[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1525225036]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2" unique_id=1810617858]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_hxqbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer" unique_id=204607196]
+layout_mode = 2
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer" unique_id=163767830]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer/VBoxContainer" unique_id=1131019267]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_v0g48")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer/VBoxContainer" unique_id=87660039]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "Youtube"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer/VBoxContainer" unique_id=402898828]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("1_j4sub")
+
+[node name="TimerLimit" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer/VBoxContainer" unique_id=728050643 instance=ExtResource("4_xv2c3")]
+layout_mode = 2
+font_size = 44
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer2/PanelContainer/MarginContainer/VBoxContainer" unique_id=1565061860]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Gerenciar"
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1017091477]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3" unique_id=1309343459]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_hxqbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer" unique_id=1481105196]
+layout_mode = 2
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer" unique_id=952151071]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer/VBoxContainer" unique_id=1365530450]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_v0g48")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer/VBoxContainer" unique_id=1460982674]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "Youtube"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer/VBoxContainer" unique_id=558498359]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("1_j4sub")
+
+[node name="TimerLimit" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer/VBoxContainer" unique_id=139396786 instance=ExtResource("4_xv2c3")]
+layout_mode = 2
+font_size = 44
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer3/PanelContainer/MarginContainer/VBoxContainer" unique_id=36669592]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Gerenciar"
+
+[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer" unique_id=1105605863]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4" unique_id=133221037]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_hxqbp")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer" unique_id=1290621491]
+layout_mode = 2
+theme_override_constants/margin_top = 22
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer" unique_id=469681248]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer/VBoxContainer" unique_id=823269674]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("1_v0g48")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer/VBoxContainer" unique_id=1355478561]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "Youtube"
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer/VBoxContainer" unique_id=1572640716]
+layout_mode = 2
+theme_override_styles/separator = ExtResource("1_j4sub")
+
+[node name="TimerLimit" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer/VBoxContainer" unique_id=1804359582 instance=ExtResource("4_xv2c3")]
+layout_mode = 2
+font_size = 44
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer/VBoxContainer/GridContainer/MarginContainer4/PanelContainer/MarginContainer/VBoxContainer" unique_id=490505283]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 8
+text = "Gerenciar"
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1226661944]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 theme_type_variation = &"ButtonNormal"
 text = "see block screen"
 script = ExtResource("2_hwvh4")
 
-[node name="TextEdit" type="TextEdit" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=48489136]
+[node name="TextEdit" type="TextEdit" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=48489136]
 layout_mode = 2
-placeholder_text = "Search"
+theme_type_variation = &"TextEditSearch"
+placeholder_text = "  ⌕ Search"
 scroll_fit_content_height = true
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=333843636]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer" unique_id=791387737]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5mcxf")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2" unique_id=333843636]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
+size_flags_vertical = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer" unique_id=1655156389]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer" unique_id=168979026]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer" unique_id=1339963568]
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer" unique_id=1655156389]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_p26m3")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer" unique_id=1339963568]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=403465771]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=403465771]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1146435949]
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1146435949]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 0
+texture = ExtResource("6_3xnq8")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1838316058]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer" unique_id=1838316058]
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_horizontal = 6
 theme_type_variation = &"TextNormal"
 text = "TikTok"
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=1822444250]
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=1822444250]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer/VBoxContainer2" unique_id=1461463078]
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer/VBoxContainer2" unique_id=1461463078]
 layout_mode = 2
 size_flags_vertical = 3
-theme_type_variation = &"TextoJustificado"
-text = "Hoje:
-Média Diária:"
+bbcode_enabled = true
+text = "[i]Hoje[/i]: [b]2h[/b]
+[i]Média Diária:[/i] [b]4h[/b]
+[i]Média Semanal:[/i] [b]9h[/b]"
 
-[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer/MarginContainer/PanelContainer/HBoxContainer" unique_id=2021201027]
-custom_minimum_size = Vector2(0, 100)
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer" unique_id=705351918]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/PanelContainer2/MarginContainer/VBoxContainer/PanelContainer/HBoxContainer/MarginContainer" unique_id=2021201027]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
-text = "manage"
+text = "Gerenciar"

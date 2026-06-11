@@ -1,20 +1,21 @@
-class_name Stat extends Resource
-
-@export var icon :Texture2D
-@export var color= Color.WHITE
-@export var flip = false
-const STATS = ["Vitality", "Agility", "Focus", "Intellect", "Spirit", "Charisma" ]
+class_name STATS extends Resource
 
 
-func get_xp_to_next_level(current_level: int):
-	# Level 1  -> 100 XP
-	# Level 5  -> 136 XP   (Very easy)
-	# Level 10 -> 225 XP   (Still gentle)
-	# Level 20 -> 625 XP   (Very achievable!)
-	# Level 30 -> 1,600 XP  (Ramping up...)
-	# Level 50 -> 6,400 XP  (The wall hits!)
-	return int(100.0 * pow(1 + (current_level - 1) / 4.0, 2))
-	
-func _init(i, c) -> void:
-	var icon =i
-	var color = c
+# Called when the node enters the scene tree for the first time.
+
+static func get_data() -> Array[Stat]:
+	const dir ="res://scripts/resources/stats/" 
+	return [
+		preload(dir + "Vitality.tres"),
+		preload(dir + "Agility.tres"),
+		preload(dir + "Focus.tres"),
+		preload(dir + "Intellect.tres"),
+		preload(dir + "Spirit.tres"),
+		preload(dir + "Charisma.tres")
+	]
+static func get_resource(name) -> Stat:
+	for stat in get_data():
+		if name == stat.resource_name:
+			return stat
+	push_error("no stat with the name, " + name)
+	return

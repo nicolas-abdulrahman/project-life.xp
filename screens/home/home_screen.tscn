@@ -118,6 +118,7 @@ offset_bottom = 1101.0
 scale = Vector2(1.1760938, 1.72)
 pivot_offset = Vector2(107.69339, 26)
 theme = ExtResource("1_pkmem")
+theme_type_variation = &"ButtonUnchange"
 text = "SYNC"
 script = ExtResource("5_k7ryw")
 
