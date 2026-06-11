@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://qgip3iuwnppr"]
+
+[ext_resource type="Script" uid="uid://6pwoxinmpo0h" path="res://screens/block/item_container.gd" id="1_6vi00"]
+[ext_resource type="PackedScene" uid="uid://dmw8mtt7lbq5f" path="res://screens/store/price.tscn" id="2_rdfac"]
+[ext_resource type="PackedScene" uid="uid://bevcb3d0mnbea" path="res://scripts/key.tscn" id="3_jan8t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x8x5f"]
+bg_color = Color(0.33984375, 0.40669823, 0.453125, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.62890625, 0.62890625, 0.62890625, 1)
+
+[node name="ItemContainer" type="VBoxContainer" unique_id=1014859409]
+script = ExtResource("1_6vi00")
+
+[node name="Label" type="Label" parent="." unique_id=1405264311]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextTitleNormal"
+text = "Item 1"
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1597460172]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_x8x5f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=285785846]
+layout_mode = 2
+
+[node name="Price" parent="PanelContainer/VBoxContainer" unique_id=1477539098 instance=ExtResource("2_rdfac")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer" unique_id=1863724447]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 57
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_bottom = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="PanelContainer/VBoxContainer/MarginContainer" unique_id=117751472]
+layout_mode = 2
+size_flags_vertical = 3
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="PanelContainer/VBoxContainer/MarginContainer/SubViewportContainer" unique_id=1473250808]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(29, 2)
+render_target_update_mode = 4
+
+[node name="Key" parent="PanelContainer/VBoxContainer/MarginContainer/SubViewportContainer/SubViewport" unique_id=137793381 instance=ExtResource("3_jan8t")]
+
+[node name="Label2" type="Label" parent="." unique_id=190572617]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_type_variation = &"TextNormal"
+text = "+21m"

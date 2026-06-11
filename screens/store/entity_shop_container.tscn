@@ -3,8 +3,7 @@
 [ext_resource type="Script" uid="uid://cglqbx1kiwr4k" path="res://screens/store/entity_shop_container.gd" id="1_tobpi"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="2_77us3"]
 [ext_resource type="Resource" uid="uid://bvowpentgjrl2" path="res://entities/persona/mago_branco/mago_branco.tres" id="3_l40yw"]
-[ext_resource type="Texture2D" uid="uid://cxfvq8y43dwfn" path="res://assets/svg/icons/gem-jewelry-jewel-stone-gemstone-svgrepo-com (1).svg" id="4_875br"]
-[ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="5_3qavd"]
+[ext_resource type="PackedScene" uid="uid://dmw8mtt7lbq5f" path="res://screens/store/price.tscn" id="4_e1823"]
 
 [node name="HBoxContainer" type="VBoxContainer" unique_id=1843064992]
 size_flags_vertical = 3
@@ -16,26 +15,5 @@ layout_mode = 2
 size_flags_horizontal = 1
 data = ExtResource("3_l40yw")
 
-[node name="Price" type="HBoxContainer" parent="." unique_id=1681735020]
+[node name="Price" parent="." unique_id=1405403005 instance=ExtResource("4_e1823")]
 layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = -3
-
-[node name="Label2" type="Label" parent="Price" unique_id=703680074]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 0
-theme_type_variation = &"TextNormal"
-text = "20"
-
-[node name="ThemedIcon" type="TextureRect" parent="Price" unique_id=180020123]
-modulate = Color(0.5983354, 0.7842108, 1, 1)
-custom_minimum_size = Vector2(25, 25)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("4_875br")
-expand_mode = 1
-stretch_mode = 5
-script = ExtResource("5_3qavd")
-metadata/_custom_type_script = "uid://ctj1xlf344q5o"

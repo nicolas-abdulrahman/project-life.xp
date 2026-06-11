@@ -7,6 +7,10 @@ enum IconSize {
 	BIG
 }
 
+
+const blue = "b2ebff"
+const red = "ffb4b4"
+const white = "ffffff"
 static func get_value(size: IconSize) -> int:
 	match size:
 		IconSize.SMALL: return 25

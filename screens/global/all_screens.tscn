@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c0eeu7isvnnyi" path="res://screens/quests/quest_screen.tscn" id="4_wyd0a"]
 [ext_resource type="PackedScene" uid="uid://drnxryx0u53sl" path="res://screens/home/home_screen.tscn" id="5_xvjlk"]
 [ext_resource type="PackedScene" uid="uid://dvkpfvavrggqk" path="res://screens/home/login_screen.tscn" id="6_on3n8"]
+[ext_resource type="PackedScene" uid="uid://dx1om83s4iajf" path="res://screens/block/apps_block.tscn" id="8_akjim"]
+[ext_resource type="PackedScene" uid="uid://c7jqw845shr4k" path="res://screens/block/block.tscn" id="9_0w0ce"]
 
 [node name="Control" type="Control" unique_id=1269205600]
 layout_mode = 3
@@ -19,9 +21,9 @@ theme = ExtResource("1_wyd0a")
 
 [node name="Battle" parent="." unique_id=493581333 instance=ExtResource("1_il85u")]
 layout_mode = 1
-offset_left = 1570.0
+offset_left = 1567.0
 offset_top = 18.0
-offset_right = 1570.0
+offset_right = 1567.0
 offset_bottom = 18.0
 theme = null
 
@@ -59,3 +61,17 @@ offset_left = 778.0
 offset_top = 14.0
 offset_right = 778.0
 offset_bottom = 14.0
+
+[node name="Control2" parent="." unique_id=1763736255 instance=ExtResource("8_akjim")]
+layout_mode = 1
+offset_left = -821.0
+offset_top = 1453.0
+offset_right = -821.0
+offset_bottom = 1453.0
+
+[node name="Control7" parent="." unique_id=1953335894 instance=ExtResource("9_0w0ce")]
+layout_mode = 1
+offset_left = 39.0
+offset_top = 1428.0
+offset_right = 39.0
+offset_bottom = 1428.0

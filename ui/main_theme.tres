@@ -1,6 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://dxj4s3b11gbys"]
 
 [ext_resource type="FontFile" uid="uid://b8ex7xystp88u" path="res://assets/fonts/midnight-letters-font/MidnightLettersItalic-aYV6m.ttf" id="1_g6rto"]
+[ext_resource type="FontFile" uid="uid://d22402phs6qqq" path="res://assets/fonts/Inter/static/Inter_18pt-Italic.ttf" id="2_47as2"]
 [ext_resource type="FontFile" uid="uid://cqdlaunyde18f" path="res://assets/fonts/exploreAcross/ExploreAcrossDemoRegular-lxYmd.otf" id="2_g6rto"]
 [ext_resource type="FontFile" uid="uid://dmavgpyx4m4mg" path="res://assets/fonts/verminVibes/VerminVibesV-Zlg3.ttf" id="3_3xb56"]
 [ext_resource type="FontFile" uid="uid://bv2ljgpo162a" path="res://assets/fonts/Inter/Inter-VariableFont_opsz,wght.ttf" id="3_joxlk"]
@@ -8,6 +9,9 @@
 [ext_resource type="FontFile" uid="uid://cgla6otq7t5yq" path="res://assets/fonts/Inter/static/Inter_28pt-Light.ttf" id="6_11ing"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ckmh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uww5w"]
+bg_color = Color(0.036621094, 0.15332827, 0.234375, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4jxl"]
 bg_color = Color(0.11050415, 0.2106079, 0.27734375, 1)
@@ -120,6 +124,10 @@ Button/colors/font_color = Color(0.85490197, 0.8784314, 0.9411765, 1)
 Button/font_sizes/font_size = 19
 Button/fonts/font = ExtResource("1_g6rto")
 Button/styles/normal = SubResource("StyleBoxEmpty_1ckmh")
+ButtonNormal/base_type = &"Button"
+ButtonNormal/font_sizes/font_size = 50
+ButtonNormal/fonts/font = ExtResource("2_47as2")
+ButtonNormal/styles/normal = SubResource("StyleBoxFlat_uww5w")
 ButtonUnchange/base_type = &"Button"
 ButtonUnchange/styles/hover = null
 ButtonUnchange/styles/hover_pressed = null
@@ -160,7 +168,9 @@ PanelSchedule/base_type = &"PanelContainer"
 PanelSchedule/styles/panel = SubResource("StyleBoxFlat_5itkh")
 PanelSecondary/base_type = &"PanelContainer"
 PanelSecondary/styles/panel = SubResource("StyleBoxFlat_11ing")
-TextEdit/font_sizes/font_size = 100
+TextEdit/colors/font_color = Color(0.875, 0.875, 0.875, 1)
+TextEdit/font_sizes/font_size = 15
+TextEdit/fonts/font = ExtResource("6_11ing")
 TextEditSchedule/base_type = &"TextEdit"
 TextEditSchedule/font_sizes/font_size = 21
 TextEditSchedule/fonts/font = ExtResource("6_11ing")
@@ -191,6 +201,8 @@ TextTimerBig/font_sizes/font_size = 120
 TextTimerBig/fonts/font = SubResource("FontFile_11ing")
 TextTitle/base_type = &"Label"
 TextTitle/font_sizes/font_size = 32
+TextTitleLarge/base_type = &"Label"
+TextTitleLarge/font_sizes/font_size = 60
 TextTitleNormal/base_type = &"Label"
 TextTitleNormal/colors/font_color = Color(0.88671875, 0.9017639, 1, 1)
 TextTitleNormal/font_sizes/font_size = 40

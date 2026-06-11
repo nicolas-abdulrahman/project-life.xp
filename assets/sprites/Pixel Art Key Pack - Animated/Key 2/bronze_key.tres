@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://yy3xofuvx1v4"]
+
+[ext_resource type="Script" uid="uid://cvhj7l3brhsko" path="res://scripts/resources/item.gd" id="1_o26io"]
+[ext_resource type="Texture2D" uid="uid://b0y7qn70sdm0l" path="res://assets/sprites/Pixel Art Key Pack - Animated/Key 2/Key 2 - BRONZE - Spritesheet.png" id="2_130lq"]
+
+[resource]
+script = ExtResource("1_o26io")
+name = "Unlock"
+texture = ExtResource("2_130lq")
+metadata/_custom_type_script = "uid://cvhj7l3brhsko"
