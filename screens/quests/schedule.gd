@@ -1,6 +1,6 @@
 class_name Schedule extends PanelContainer
 # Percentage constraints: 10%, 70%, 20%
-const COL_RATIOS = [0.1, 0.7, 0.1, 0.1]
+const COL_RATIOS = [0.1, 0.65, 0.1, 0.1]
 const LINE_COLOR = Color(1, 1, 1, 0.4)
 const LINE_WIDTH = 2.0
 const padding = 3
@@ -25,6 +25,7 @@ func _ready():
 	
 	# Initial layout
 	await get_tree().process_frame
+	fill_children()
 	_update_layout()
 
 func _update_layout():
@@ -78,3 +79,24 @@ func _on_overlay_draw():
 			LINE_COLOR,
 			LINE_WIDTH
 		)
+
+@export var gradient: Gradient 
+# Or if you want a simple 2-color gradient:
+# @export var gradient: Gradient
+func fill_children():
+	var template = preload("res://screens/quests/item.tscn")
+	for i in range(24):
+		var instance = template.instantiate()
+		
+		# Force a rainbow effect based on i
+		var color = Color.from_hsv(i / 24.0, 1.0, 1.0)  # Full saturation and brightness
+		
+		instance.color = color
+		
+		var time = i
+		if i >= 13:
+			time = i - 12
+		instance.time = str(time) + ":00"
+		$VBoxContainer.add_child(instance)
+		instance.update()
+	_update_layout()

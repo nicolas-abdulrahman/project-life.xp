@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://clj56dr4jdoit"]
 
 [ext_resource type="Texture2D" uid="uid://nusbexnko5hb" path="res://assets/svg/icons/stats/Vitality.svg" id="1_6mhe2"]
+[ext_resource type="Script" uid="uid://gwew5k5ysbmm" path="res://screens/quests/card.gd" id="1_x8vke"]
 
 [node name="card" type="MarginContainer" unique_id=83839322]
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
+script = ExtResource("1_x8vke")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=965011504]
 layout_mode = 2

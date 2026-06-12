@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="3_4lj57"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="3_hhfjw"]
 [ext_resource type="Script" uid="uid://ckvi4t0mlgkvu" path="res://screens/quests/panel_color.gd" id="4_3ljin"]
-[ext_resource type="Texture2D" uid="uid://dfu74dhrjgjea" path="res://assets/svg/base/circle.svg" id="4_hhfjw"]
 
 [sub_resource type="Theme" id="Theme_qlwru"]
 Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
@@ -15,7 +14,10 @@ Label/colors/font_outline_color = Color(0.72, 0.72, 0.72, 1)
 Label/colors/font_shadow_color = Color(0.8848981, 0.0075785755, 0.0911073, 1)
 Label/fonts/font = null
 
-[sub_resource type="DPITexture" id="DPITexture_uj7rh"]
+[sub_resource type="Gradient" id="Gradient_y4ke5"]
+colors = PackedColorArray(0.9786377, 1, 0.7265625, 1, 0.19028807, 0.12771606, 0.36328125, 1)
+
+[sub_resource type="DPITexture" id="DPITexture_hhfjw"]
 _source = "<svg
   xmlns=\"http://www.w3.org/2000/svg\"
   width=\"24\"
@@ -34,7 +36,7 @@ _source = "<svg
 </svg>
 "
 
-[sub_resource type="DPITexture" id="DPITexture_y4ke5"]
+[sub_resource type="DPITexture" id="DPITexture_uj7rh"]
 _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg fill=\"#000000\" width=\"800px\" height=\"800px\" viewBox=\"0 0 32 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" style=\"--darkreader-inline-fill: var(--darkreader-background-ffffff, #70644e); --darkreader-inline-stroke: var(--darkreader-text-ffffff, #ffffdd);\" stroke=\"#c9f8ff\" data-darkreader-inline-fill=\"\" data-darkreader-inline-stroke=\"\">
@@ -43,7 +45,7 @@ _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/
 <g id=\"SVGRepo_iconCarrier\"> <title>checkmark</title> <path d=\"M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM23.258 12.307l-9.486 9.485c-0.238 0.237-0.623 0.237-0.861 0l-0.191-0.191-0.001 0.001-5.219-5.256c-0.238-0.238-0.238-0.624 0-0.862l1.294-1.293c0.238-0.238 0.624-0.238 0.862 0l3.689 3.716 7.756-7.756c0.238-0.238 0.624-0.238 0.862 0l1.294 1.294c0.239 0.237 0.239 0.623 0.001 0.862z\"/> </g>
 </svg>"
 
-[sub_resource type="DPITexture" id="DPITexture_3ljin"]
+[sub_resource type="DPITexture" id="DPITexture_y4ke5"]
 _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg width=\"256px\" height=\"256px\" viewBox=\"0 0 91 91\" id=\"Layer_1\" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" fill=\"#000000\" style=\"--darkreader-inline-fill: var(--darkreader-background-000000, #564d3c); --darkreader-inline-stroke: var(--darkreader-text-000000, #ffffdd);\" stroke=\"#c9f8ff\" data-darkreader-inline-fill=\"\" data-darkreader-inline-stroke=\"\">
@@ -80,41 +82,93 @@ size_flags_vertical = 3
 theme_override_constants/separation = 20
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=2112866605]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=73341649]
 layout_mode = 2
-size_flags_horizontal = 6
+size_flags_vertical = 3
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer" unique_id=26733276]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer" unique_id=2112866605]
+top_level = true
 layout_mode = 2
-size_flags_vertical = 0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer" unique_id=2078491666]
-layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 3
+size_flags_vertical = 8
 alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1791244271]
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=1791244271]
 layout_mode = 2
 theme_type_variation = &"TextTitleNormal"
 text = "Daily Routine"
 horizontal_alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer" unique_id=215438090]
+[node name="MarginContainer2" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=83839322 instance=ExtResource("1_y1ajl")]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=26733276]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/MarginContainer" unique_id=2078491666]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer" unique_id=215438090]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_type_variation = &"PanelSecondary"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=369780103]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=369780103]
 layout_mode = 2
 size_flags_vertical = 0
 theme = SubResource("Theme_qlwru")
 
-[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1400500893]
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1400500893]
 custom_minimum_size = Vector2(0, 200)
 layout_mode = 2
 
-[node name="MarginContainer2" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/HFlowContainer" unique_id=83839322 instance=ExtResource("1_y1ajl")]
+[node name="Control" type="Control" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer" unique_id=99157448]
+visible = false
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control" unique_id=1014618768]
+modulate = Color(0.73046875, 0.73046875, 0.73046875, 1)
+y_sort_enabled = true
+layout_mode = 0
+offset_left = -311.0
+offset_top = 76.00001
+offset_right = 60.0
+offset_bottom = 577.0
+scale = Vector2(0.74961066, 0.8832001)
+size_flags_horizontal = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer" unique_id=378841402]
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer/MarginContainer" unique_id=2008550153]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer/MarginContainer/VBoxContainer" unique_id=1700575660]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_type_variation = &"PanelSecondary"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer" unique_id=1404426317]
+layout_mode = 2
+size_flags_vertical = 0
+theme = SubResource("Theme_qlwru")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer" unique_id=168087755]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+
+[node name="MarginContainer2" parent="PanelContainer/ScrollContainer/VBoxContainer2/HBoxContainer/VBoxContainer/Control/VBoxContainer/MarginContainer/VBoxContainer/PanelContainer/VBoxContainer/HFlowContainer" unique_id=653708179 instance=ExtResource("1_y1ajl")]
 layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=849535467]
@@ -139,24 +193,24 @@ horizontal_alignment = 1
 
 [node name="Schedule" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer" unique_id=1564268996]
 layout_mode = 2
-size_flags_horizontal = 4
 size_flags_vertical = 3
 theme_type_variation = &"PanelBG"
 script = ExtResource("3_3ljin")
+gradient = SubResource("Gradient_y4ke5")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule" unique_id=1481732359]
+custom_minimum_size = Vector2(0, 700)
 layout_mode = 2
+size_flags_vertical = 8
 
 [node name="Header" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer" unique_id=1130139578]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/separation = 0
-alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=401447489]
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 3
 
 [node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header/MarginContainer" unique_id=495863719]
@@ -169,7 +223,7 @@ script = ExtResource("4_3ljin")
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_uj7rh")
+texture = SubResource("DPITexture_hhfjw")
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
 svg_path = "uid://dd41walxklimu"
@@ -198,7 +252,7 @@ size_flags_horizontal = 4
 theme_type_variation = &"TextSchedule"
 theme_override_colors/font_color = Color(0.7882353, 0.972549, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Monday"
+text = "Segunda feira"
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=327088443]
 custom_minimum_size = Vector2(70, 0)
@@ -217,7 +271,7 @@ modulate = Color(0.7882353, 0.972549, 1, 1)
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_y4ke5")
+texture = SubResource("DPITexture_uj7rh")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
@@ -243,7 +297,7 @@ modulate = Color(0.7882353, 0.972549, 1, 1)
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_3ljin")
+texture = SubResource("DPITexture_y4ke5")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
@@ -251,69 +305,6 @@ svg_path = "uid://b6xde0qghbt8w"
 fill_color = Color(0, 0, 0, 1)
 stroke_color = Color(0.7882353, 0.972549, 1, 1)
 metadata/_custom_type_script = "uid://ctj1xlf344q5o"
-
-[node name="Item" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer" unique_id=1081362056]
-layout_mode = 2
-theme_override_constants/separation = 0
-alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=722769165]
-custom_minimum_size = Vector2(70, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="PanelColor" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer" unique_id=1854782867]
-self_modulate = Color(0.7798353, 0.78125, 0.56762695, 1)
-layout_mode = 2
-theme_type_variation = &"PanelSchedule"
-script = ExtResource("4_3ljin")
-color = Color(0.7798353, 0.78125, 0.56762695, 1)
-child_color = Color(1, 1, 1, 1)
-metadata/_custom_type_script = "uid://ckvi4t0mlgkvu"
-
-[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer/PanelColor" unique_id=413270303]
-layout_mode = 2
-size_flags_horizontal = 0
-theme_type_variation = &"TextNormal"
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "7:00"
-horizontal_alignment = 1
-
-[node name="MarginContainer2" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=2126052123]
-custom_minimum_size = Vector2(350, 0)
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="TextEdit" type="TextEdit" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer2" unique_id=1068519435]
-layout_mode = 2
-theme_type_variation = &"TextEditSchedule"
-theme_override_constants/caret_width = 0
-theme_override_constants/line_spacing = 0
-theme_override_constants/wrap_offset = 0
-text = "oiiiii"
-placeholder_text = "I Like bananas "
-
-[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=1158719148]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="CheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer3" unique_id=1882891197]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 8
-button_pressed = true
-icon = ExtResource("4_hhfjw")
-
-[node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=462373374]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="CheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer4" unique_id=683665835]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-icon = ExtResource("4_hhfjw")
 
 [node name="Separator2" type="HSeparator" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=1194203151]
 visible = false
@@ -361,12 +352,13 @@ layout_mode = 2
 
 [node name="IconButton" type="Button" parent="." unique_id=2071544823]
 modulate = Color(0.5758667, 0.8385086, 0.99609375, 1)
+top_level = true
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 564.0
-offset_top = 452.0
-offset_right = 614.0
-offset_bottom = 502.0
+offset_left = 453.0
+offset_top = 428.0
+offset_right = 503.0
+offset_bottom = 478.0
 icon = ExtResource("2_2u8ou")
 expand_icon = true
 script = ExtResource("3_4lj57")
