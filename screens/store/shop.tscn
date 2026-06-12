@@ -5,6 +5,9 @@
 [ext_resource type="Script" uid="uid://d3oent2sa4d8x" path="res://scripts/data/entity_data.gd" id="3_7fmer"]
 [ext_resource type="Resource" uid="uid://c7ewgfbp4oihu" path="res://entities/pets/fox/fox.tres" id="3_kykcs"]
 [ext_resource type="Resource" uid="uid://bvowpentgjrl2" path="res://entities/persona/mago_branco/mago_branco.tres" id="4_sburc"]
+[ext_resource type="PackedScene" uid="uid://qgip3iuwnppr" path="res://screens/block/item_container.tscn" id="6_7fmer"]
+[ext_resource type="Resource" uid="uid://yy3xofuvx1v4" path="res://assets/sprites/Pixel Art Key Pack - Animated/Key 2/bronze_key.tres" id="7_x0kdy"]
+[ext_resource type="Resource" uid="uid://daw27gnkndqo" path="res://assets/sprites/Pixel Art Key Pack - Animated/Key 2/Gold_Key.tres" id="8_x0kdy"]
 
 [node name="Control" type="Control" unique_id=1138468343]
 layout_mode = 3
@@ -23,7 +26,10 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer" unique_id=1919707436]
+custom_minimum_size = Vector2(0, 1200)
 layout_mode = 2
+size_flags_vertical = 0
+scroll_deadzone = 869
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer" unique_id=374233619]
 layout_mode = 2
@@ -82,15 +88,30 @@ layout_mode = 2
 theme_type_variation = &"TextTitle"
 text = "Items"
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer" unique_id=844247795]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer" unique_id=1110841796]
 layout_mode = 2
+theme_override_constants/separation = 61
+
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=844247795]
+layout_mode = 2
+size_flags_horizontal = 0
 size_flags_vertical = 3
 theme_type_variation = &"PanelSecondary"
 
-[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/PanelContainer" unique_id=2002815050]
+[node name="ItemContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/PanelContainer" unique_id=1014859409 instance=ExtResource("6_7fmer")]
+custom_minimum_size = Vector2(200, 250)
 layout_mode = 2
+data = ExtResource("7_x0kdy")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/PanelContainer/ScrollContainer" unique_id=1110841796]
+[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer" unique_id=1095622488]
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+theme_type_variation = &"PanelSecondary"
+
+[node name="ItemContainer" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer2/VBoxContainer/HBoxContainer/PanelContainer2" unique_id=379502133 instance=ExtResource("6_7fmer")]
+custom_minimum_size = Vector2(200, 250)
+layout_mode = 2
+data = ExtResource("8_x0kdy")
 
 [editable path="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3/ScrollContainer/VBoxContainer/HBoxContainer/PanelContainer2"]

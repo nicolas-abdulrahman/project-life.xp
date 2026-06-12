@@ -23,7 +23,6 @@ buses/default_bus_layout="uid://bf6lbqq02cjv6"
 
 ScreenHandler="*uid://wvg6f8d4g5i1"
 EventBus="*uid://db4l5qj5a3b8h"
-_mcp_game_helper="*res://addons/godot_ai/runtime/game_helper.gd"
 
 [debug]
 
@@ -37,10 +36,7 @@ window/size/viewport_width=720
 window/size/viewport_height=1280
 window/size/mode=3
 window/stretch/mode="canvas_items"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_ai/plugin.cfg")
+window/handheld/orientation=1
 
 [gui]
 
@@ -66,3 +62,4 @@ pointing/emulate_touch_from_mouse=true
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true

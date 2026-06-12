@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://deeif2c6gxuyp" path="res://scripts/move_component.gd" id="8_0h6hw"]
 [ext_resource type="Script" uid="uid://cs2s6f1iimxjw" path="res://scripts/health_component.gd" id="9_w63fe"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h6hw"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w63fe"]
 size = Vector2(37, 43)
 
 [node name="Entity" type="Control" unique_id=1796109999]
@@ -58,7 +58,7 @@ scale = Vector2(2, 2)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=514453706]
 visible = false
 position = Vector2(-1, 4)
-shape = SubResource("RectangleShape2D_0h6hw")
+shape = SubResource("RectangleShape2D_w63fe")
 disabled = true
 
 [node name="AttackComponent" type="Node2D" parent="." unique_id=1068137273]

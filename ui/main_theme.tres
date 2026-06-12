@@ -27,10 +27,29 @@ bg_color = Color(0.036621094, 0.15332827, 0.234375, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5itkh"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjt7e"]
-bg_color = Color(0.5859375, 0.5859375, 0.5859375, 1)
+[sub_resource type="Gradient" id="Gradient_checked"]
+offsets = PackedFloat32Array(0.8, 0.81)
+colors = PackedColorArray(0.270588, 0.690196, 0.309804, 1, 0.270588, 0.690196, 0.309804, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14qxj"]
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_checked"]
+gradient = SubResource("Gradient_checked")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_unchecked"]
+offsets = PackedFloat32Array(0.8, 0.81)
+colors = PackedColorArray(0.478431, 0.478431, 0.478431, 1, 0.478431, 0.478431, 0.478431, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_unchecked"]
+gradient = SubResource("Gradient_unchecked")
+width = 24
+height = 24
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4jxl"]
 bg_color = Color(0.11050415, 0.2106079, 0.27734375, 1)
@@ -439,12 +458,20 @@ ButtonNothing/styles/normal = SubResource("StyleBoxEmpty_5itkh")
 ButtonUnchange/base_type = &"Button"
 ButtonUnchange/styles/hover = null
 ButtonUnchange/styles/hover_pressed = null
-CheckBox/icons/radio_checked = null
-CheckBox/icons/radio_checked_disabled = null
-CheckBox/icons/radio_unchecked = null
-CheckBox/icons/radio_unchecked_disabled = null
-CheckBox/styles/normal = SubResource("StyleBoxFlat_gjt7e")
-CheckBox/styles/pressed = SubResource("StyleBoxFlat_14qxj")
+CheckBox/icons/checked = SubResource("GradientTexture2D_checked")
+CheckBox/icons/checked_disabled = SubResource("GradientTexture2D_checked")
+CheckBox/icons/radio_checked = SubResource("GradientTexture2D_checked")
+CheckBox/icons/radio_checked_disabled = SubResource("GradientTexture2D_checked")
+CheckBox/icons/radio_unchecked = SubResource("GradientTexture2D_unchecked")
+CheckBox/icons/radio_unchecked_disabled = SubResource("GradientTexture2D_unchecked")
+CheckBox/icons/unchecked = SubResource("GradientTexture2D_unchecked")
+CheckBox/icons/unchecked_disabled = SubResource("GradientTexture2D_unchecked")
+CheckBox/styles/disabled = SubResource("StyleBoxEmpty_47as2")
+CheckBox/styles/focus = SubResource("StyleBoxEmpty_47as2")
+CheckBox/styles/hover = SubResource("StyleBoxEmpty_47as2")
+CheckBox/styles/hover_pressed = SubResource("StyleBoxEmpty_47as2")
+CheckBox/styles/normal = SubResource("StyleBoxEmpty_47as2")
+CheckBox/styles/pressed = SubResource("StyleBoxEmpty_47as2")
 ContainerAccent/base_type = &"PanelContainer"
 ContainerAccent/styles/panel = SubResource("StyleBoxFlat_t4jxl")
 ContainerDimmed/base_type = &"PanelContainer"

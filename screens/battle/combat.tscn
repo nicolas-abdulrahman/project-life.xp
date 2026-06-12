@@ -3,11 +3,14 @@
 [ext_resource type="TileSet" uid="uid://dtr5wdagyise6" path="res://scripts/resources/new_tile_set.tres" id="1_d3lsj"]
 [ext_resource type="Script" uid="uid://mur8qcaecosl" path="res://screens/battle/combat.gd" id="1_latv2"]
 [ext_resource type="Texture2D" uid="uid://k66p0tum8ebm" path="res://assets/bg/craftpix-net-154389-forest-and-trees-free-pixel-backgrounds/3/2304x1296.png" id="2_nyqwa"]
+[ext_resource type="Texture2D" uid="uid://x87sk5tj38lj" path="res://screens/battle/arrow-left-2-svgrepo-com.svg" id="3_l0ln2"]
 [ext_resource type="Texture2D" uid="uid://cxd0kxswaujc2" path="res://assets/svg/base/play-button-svgrepo-com(1).svg" id="3_lm64f"]
 [ext_resource type="Script" uid="uid://drtxeqtamoc31" path="res://screens/battle/timer_label.gd" id="3_va0ij"]
+[ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="4_hqhdc"]
 [ext_resource type="Script" uid="uid://0ekokmrs8j3a" path="res://screens/battle/sub_viewport.gd" id="4_lm64f"]
 [ext_resource type="Script" uid="uid://4oyeh3t5cosy" path="res://screens/battle/map.gd" id="4_y1l6r"]
 [ext_resource type="Script" uid="uid://ceyhx0p13e85y" path="res://screens/battle/characters_to_place.gd" id="5_d3lsj"]
+[ext_resource type="PackedScene" uid="uid://bg6177uivk0no" path="res://screens/battle/battle_screen.tscn" id="5_ifnpr"]
 [ext_resource type="PackedScene" uid="uid://c5rdwkt0yrjb0" path="res://screens/stats/entity_hex.tscn" id="5_latv2"]
 [ext_resource type="Script" uid="uid://bu0qb0u26oobf" path="res://screens/battle/combat_play_button.gd" id="5_va0ij"]
 [ext_resource type="Script" uid="uid://dxoyfbh5mk6s5" path="res://screens/battle/circular_bar.gd" id="6_circular_bar"]
@@ -48,6 +51,20 @@ vertical_scroll_mode = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+
+[node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=288906439]
+layout_mode = 2
+
+[node name="IconButton" type="Button" parent="PanelContainer/ScrollContainer/VBoxContainer/MarginContainer3" unique_id=862083715]
+custom_minimum_size = Vector2(65, 65)
+layout_mode = 2
+size_flags_horizontal = 0
+icon = ExtResource("3_l0ln2")
+expand_icon = true
+script = ExtResource("4_hqhdc")
+target_scene_path = ExtResource("5_ifnpr")
+icon_size = 3
+metadata/_custom_type_script = "uid://dk27wp5pkjvsr"
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=1705149021]
 layout_mode = 2

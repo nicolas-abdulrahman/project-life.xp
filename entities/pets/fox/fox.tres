@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_xptol")
 character_name = "fox"
+max_health = 7
 entity_type = 1
 hitbox = Rect2i(0, 15, 36, 31)
 price = 70

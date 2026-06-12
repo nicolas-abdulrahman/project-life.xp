@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://dk27wp5pkjvsr" path="res://scripts/nodes/IconButton.gd" id="3_4lj57"]
 [ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="3_hhfjw"]
 [ext_resource type="Script" uid="uid://ckvi4t0mlgkvu" path="res://screens/quests/panel_color.gd" id="4_3ljin"]
-[ext_resource type="Texture2D" uid="uid://dfu74dhrjgjea" path="res://assets/svg/base/circle.svg" id="4_hhfjw"]
+[ext_resource type="Texture2D" uid="uid://cch2xjjpnlhi8" path="res://screens/quests/emoji-emoticon-happy-svgrepo-com.svg" id="6_uj7rh"]
 
 [sub_resource type="Theme" id="Theme_qlwru"]
 Label/colors/font_color = Color(0.98, 0.9408, 0.94145334, 1)
@@ -15,7 +15,7 @@ Label/colors/font_outline_color = Color(0.72, 0.72, 0.72, 1)
 Label/colors/font_shadow_color = Color(0.8848981, 0.0075785755, 0.0911073, 1)
 Label/fonts/font = null
 
-[sub_resource type="DPITexture" id="DPITexture_uj7rh"]
+[sub_resource type="DPITexture" id="DPITexture_y4ke5"]
 _source = "<svg
   xmlns=\"http://www.w3.org/2000/svg\"
   width=\"24\"
@@ -34,7 +34,7 @@ _source = "<svg
 </svg>
 "
 
-[sub_resource type="DPITexture" id="DPITexture_y4ke5"]
+[sub_resource type="DPITexture" id="DPITexture_3ljin"]
 _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg fill=\"#000000\" width=\"800px\" height=\"800px\" viewBox=\"0 0 32 32\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" style=\"--darkreader-inline-fill: var(--darkreader-background-ffffff, #70644e); --darkreader-inline-stroke: var(--darkreader-text-ffffff, #ffffdd);\" stroke=\"#c9f8ff\" data-darkreader-inline-fill=\"\" data-darkreader-inline-stroke=\"\">
@@ -43,7 +43,7 @@ _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/
 <g id=\"SVGRepo_iconCarrier\"> <title>checkmark</title> <path d=\"M16 3c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13-5.82-13-13-13zM23.258 12.307l-9.486 9.485c-0.238 0.237-0.623 0.237-0.861 0l-0.191-0.191-0.001 0.001-5.219-5.256c-0.238-0.238-0.238-0.624 0-0.862l1.294-1.293c0.238-0.238 0.624-0.238 0.862 0l3.689 3.716 7.756-7.756c0.238-0.238 0.624-0.238 0.862 0l1.294 1.294c0.239 0.237 0.239 0.623 0.001 0.862z\"/> </g>
 </svg>"
 
-[sub_resource type="DPITexture" id="DPITexture_3ljin"]
+[sub_resource type="DPITexture" id="DPITexture_2oyrc"]
 _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd\">
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 <svg width=\"256px\" height=\"256px\" viewBox=\"0 0 91 91\" id=\"Layer_1\" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" fill=\"#000000\" style=\"--darkreader-inline-fill: var(--darkreader-background-000000, #564d3c); --darkreader-inline-stroke: var(--darkreader-text-000000, #ffffdd);\" stroke=\"#c9f8ff\" data-darkreader-inline-fill=\"\" data-darkreader-inline-stroke=\"\">
@@ -52,6 +52,8 @@ _source = "<!DOCTYPE svg PUBLIC \"-//W3C//DTD SVG 1.1//EN\" \"http://www.w3.org/
 <g id=\"SVGRepo_iconCarrier\"> <style type=\"text/css\"> .st0{fill:#ffffff;} </style>
 <style class=\"darkreader darkreader--sync\" media=\"screen\"/> <g> <g> <path class=\"st0\" d=\"M25.6,31.7c2.1,2.1,4.2,4.2,6.2,6.5c3,3.4,8.4-2.1,5-5c-3.2-2.7-6.1-5.7-9.2-8.5c-1.5-1.5-3.8-1.1-5,0.6 c-2.5,3.8-5.4,7-8.8,10c-1.7,1.4,0.1,4.6,2.2,3.8C19.8,37.6,23,34.8,25.6,31.7z\"/> <path class=\"st0\" d=\"M67.4,24.7c-1.5-1.5-3.8-1.1-5,0.6c-2.5,3.8-5.4,7-8.8,10c-1.7,1.4,0.1,4.6,2.2,3.8c3.8-1.5,6.9-4.3,9.6-7.4 c2.1,2.1,4.2,4.2,6.2,6.5c3,3.4,8.4-2.1,5-5C73.3,30.5,70.4,27.5,67.4,24.7z\"/> <path class=\"st0\" d=\"M67.5,57.2c-3.7,1.6-6.9,3.8-10.9,4.9c-4,1.1-8.1,1.6-12.2,1.5c-8,0-15-3.2-22.3-6c-0.8-0.3-1.6,0.8-1.1,1.4 c1.3,1.6,2.4,3.2,4.1,4.4c1.9,1.3,4,2.2,6.1,3.1c4.2,1.7,8.7,2.6,13.2,2.9c4.6,0.3,9.4-0.3,13.8-1.5c4.3-1.2,9.6-2.9,12.8-6.2 C73.4,59.3,70.4,56,67.5,57.2z\"/> </g> </g> </g>
 </svg>"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uj7rh"]
 
 [node name="Control" type="Control" unique_id=1800851215]
 layout_mode = 3
@@ -169,7 +171,7 @@ script = ExtResource("4_3ljin")
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_uj7rh")
+texture = SubResource("DPITexture_y4ke5")
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
 svg_path = "uid://dd41walxklimu"
@@ -198,7 +200,7 @@ size_flags_horizontal = 4
 theme_type_variation = &"TextSchedule"
 theme_override_colors/font_color = Color(0.7882353, 0.972549, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-text = "Monday"
+text = "Segunda Feira"
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Header" unique_id=327088443]
 custom_minimum_size = Vector2(70, 0)
@@ -217,7 +219,7 @@ modulate = Color(0.7882353, 0.972549, 1, 1)
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_y4ke5")
+texture = SubResource("DPITexture_3ljin")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
@@ -243,7 +245,7 @@ modulate = Color(0.7882353, 0.972549, 1, 1)
 custom_minimum_size = Vector2(25, 25)
 layout_mode = 2
 size_flags_horizontal = 4
-texture = SubResource("DPITexture_3ljin")
+texture = SubResource("DPITexture_2oyrc")
 expand_mode = 1
 stretch_mode = 5
 script = ExtResource("3_hhfjw")
@@ -291,8 +293,7 @@ theme_type_variation = &"TextEditSchedule"
 theme_override_constants/caret_width = 0
 theme_override_constants/line_spacing = 0
 theme_override_constants/wrap_offset = 0
-text = "oiiiii"
-placeholder_text = "I Like bananas "
+text = "Fazer as comprar"
 
 [node name="MarginContainer3" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=1158719148]
 layout_mode = 2
@@ -303,17 +304,19 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 button_pressed = true
-icon = ExtResource("4_hhfjw")
 
 [node name="MarginContainer4" type="MarginContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item" unique_id=462373374]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="CheckBox" type="CheckBox" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer4" unique_id=683665835]
-visible = false
+[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer4" unique_id=1293714133]
 layout_mode = 2
-size_flags_horizontal = 4
-icon = ExtResource("4_hhfjw")
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ScrollContainer/VBoxContainer2/VBoxContainer2/MarginContainer/VBoxContainer/Schedule/VBoxContainer/Item/MarginContainer4/PanelContainer" unique_id=2040909685]
+layout_mode = 2
+texture = ExtResource("6_uj7rh")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Separator2" type="HSeparator" parent="PanelContainer/ScrollContainer/VBoxContainer2" unique_id=1194203151]
 visible = false
@@ -363,10 +366,11 @@ layout_mode = 2
 modulate = Color(0.5758667, 0.8385086, 0.99609375, 1)
 custom_minimum_size = Vector2(50, 50)
 layout_mode = 0
-offset_left = 564.0
-offset_top = 452.0
+offset_left = 449.0
+offset_top = 374.0
 offset_right = 614.0
-offset_bottom = 502.0
+offset_bottom = 511.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_uj7rh")
 icon = ExtResource("2_2u8ou")
 expand_icon = true
 script = ExtResource("3_4lj57")

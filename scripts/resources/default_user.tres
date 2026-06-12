@@ -8,7 +8,6 @@
 [sub_resource type="Resource" id="Resource_sn06p"]
 script = ExtResource("1_1bj47")
 chips = 15
-gems = 30
 metadata/_custom_type_script = "uid://cjq2xefuaonh3"
 
 [resource]
