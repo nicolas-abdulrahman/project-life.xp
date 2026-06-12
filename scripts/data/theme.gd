@@ -4,7 +4,8 @@ extends Resource
 enum IconSize {
 	SMALL,
 	NORMAL,
-	BIG
+	BIG,
+	LARGE,
 }
 
 
@@ -16,4 +17,5 @@ static func get_value(size: IconSize) -> int:
 		IconSize.SMALL: return 25
 		IconSize.NORMAL: return 35
 		IconSize.BIG: return 50
+		IconSize.LARGE: return 65
 	return 35

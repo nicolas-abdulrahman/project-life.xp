@@ -1,6 +1,6 @@
 class_name Stat extends Resource
 
-@export var icon :Texture2D
+@export_file("*.png", "*.jpg", "*.svg", "*.webp") var icon: String = ""
 @export var color= Color.WHITE
 @export var flip = false
 

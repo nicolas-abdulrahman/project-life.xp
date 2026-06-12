@@ -1,10 +1,9 @@
-[gd_resource type="Resource" format=3 uid="uid://bt0o0bk7huevd"]
+[gd_resource type="Resource" script_class="Stat" format=3 uid="uid://bt0o0bk7huevd"]
 
-[ext_resource type="Texture2D" uid="uid://dncoaj4tgf54i" path="res://assets/svg/icons/stats/book-svgrepo-com.svg" id="1_tbqjg"]
 [ext_resource type="Script" uid="uid://dvsj1ivctfl3v" path="res://scripts/data/stat.gd" id="2_rn6dx"]
 
 [resource]
 script = ExtResource("2_rn6dx")
-icon = ExtResource("1_tbqjg")
+icon = "uid://dncoaj4tgf54i"
 color = Color(0.63161325, 0.55926514, 0.9296875, 1)
 metadata/_custom_type_script = "uid://eqq0xxpbm55e"

@@ -3,16 +3,25 @@
 [ext_resource type="Script" uid="uid://2bive2utd06f" path="res://screens/stats/stat_panel.gd" id="1_j4pra"]
 [ext_resource type="Texture2D" uid="uid://c6i0vxtv5kr2" path="res://assets/svg/stats_border.svg" id="1_yo7j0"]
 [ext_resource type="Theme" uid="uid://dxj4s3b11gbys" path="res://ui/main_theme.tres" id="2_6rpyf"]
+[ext_resource type="Script" uid="uid://ctj1xlf344q5o" path="res://scripts/nodes/ThemedIcon.gd" id="5_nbug5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t0w6a"]
 texture = ExtResource("1_yo7j0")
+
+[sub_resource type="DPITexture" id="DPITexture_34kl2"]
+_source = "<svg width=\"85\" height=\"84\" viewBox=\"0 0 85 84\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">
+<path d=\"M43 4C63.4344 4 80 20.5656 80 41C79.9999 61.4343 63.4343 78 43 78C22.5658 77.9999 6.00009 61.4342 6 41C6 20.5657 22.5657 4.00011 43 4Z\" fill=\"#ffffff\"/>
+<path d=\"M55.6475 80.165C55.6475 81.8219 54.3043 83.165 52.6475 83.165H32.9639C31.307 83.165 29.9639 81.8219 29.9639 80.165V3C29.9639 1.34315 31.307 0 32.9639 0H52.6475C54.3043 0 55.6475 1.34315 55.6475 3V80.165Z\" fill=\"#ffffff\"/>
+<path d=\"M82 30.5751C83.6569 30.5751 85 31.9182 85 33.5751L85 48.9784C85 50.6352 83.6569 51.9784 82 51.9784L3 51.9784C1.34315 51.9784 1.60169e-08 50.6352 3.57746e-08 48.9784L2.19457e-07 33.5751C2.39215e-07 31.9182 1.34315 30.5751 3 30.5751L82 30.5751Z\" fill=\"#ffffff\"/>
+<circle opacity=\"0.92\" cx=\"43\" cy=\"41\" r=\"34\" fill=\"#ffffff\"/>
+</svg>
+"
 
 [node name="StatPanelTemplate" type="Control" unique_id=1804356692]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_j4pra")
-data = [1, 5, 2, 4, 7, 6, 10]
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=148513019]
 layout_mode = 1
@@ -51,11 +60,18 @@ size_flags_horizontal = 4
 theme_type_variation = &"TextNormal"
 text = "Vitality"
 
-[node name="TextureRect" type="TextureRect" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=1150735914]
-custom_minimum_size = Vector2(70, 70)
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=2111125745]
+custom_minimum_size = Vector2(65, 65)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+texture = SubResource("DPITexture_34kl2")
+expand_mode = 1
+stretch_mode = 5
+script = ExtResource("5_nbug5")
+icon_size = 3
+stroke_color = Color(1, 1, 1, 1)
+metadata/_custom_type_script = "uid://ctj1xlf344q5o"
 
 [node name="Level" type="Label" parent="PanelContainer/HSplitContainer/MarginContainer/VBoxContainer" unique_id=911804140]
 layout_mode = 2

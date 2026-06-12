@@ -23,6 +23,10 @@ corner_radius_bottom_left = 7
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uww5w"]
 bg_color = Color(0.036621094, 0.15332827, 0.234375, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_47as2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5itkh"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4jxl"]
 bg_color = Color(0.11050415, 0.2106079, 0.27734375, 1)
 corner_radius_top_left = 64
@@ -423,6 +427,10 @@ ButtonNormal/base_type = &"Button"
 ButtonNormal/font_sizes/font_size = 50
 ButtonNormal/fonts/font = ExtResource("2_47as2")
 ButtonNormal/styles/normal = SubResource("StyleBoxFlat_uww5w")
+ButtonNothing/base_type = &"Button"
+ButtonNothing/styles/focus = SubResource("StyleBoxEmpty_47as2")
+ButtonNothing/styles/hover = null
+ButtonNothing/styles/normal = SubResource("StyleBoxEmpty_5itkh")
 ButtonUnchange/base_type = &"Button"
 ButtonUnchange/styles/hover = null
 ButtonUnchange/styles/hover_pressed = null

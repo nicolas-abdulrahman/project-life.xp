@@ -10,16 +10,19 @@ extends Control
 @onready var hbox := $PanelContainer/HSplitContainer/MarginContainer2/BarChart/HBoxContainer
 @onready var stat := $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/Name
 @onready var level := $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/Level
-@onready var icon = $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/TextureRect
+@onready var icon: ThemedIcon = $PanelContainer/HSplitContainer/MarginContainer/VBoxContainer/TextureRect
 
 const template := preload("res://screens/stats/box_label.tscn")
 func initialize(d: StatData):
 	data = d
 	var s: Stat= STATS.get_resource(data.name)
 	stat.text= data.name
+	stat.add_theme_color_override("font_color", s.color)
 	level.text = str(data.level)
-	icon.texture = s.icon
-	
+	icon.svg_path = s.icon
+	icon.fill_color = s.color
+	icon.stroke_color = s.color
+
 func _ready() -> void:
 	if data:
 		initialize(data)

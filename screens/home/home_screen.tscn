@@ -111,14 +111,14 @@ metadata/_edit_lock_ = true
 
 [node name="Button" type="Button" parent="PanelContainer/PanelContainer/Control" unique_id=1716477061]
 layout_mode = 0
-offset_left = 252.0
-offset_top = 1076.0
-offset_right = 461.13647
-offset_bottom = 1101.0
+offset_left = 250.0
+offset_top = 1055.0
+offset_right = 459.13647
+offset_bottom = 1099.0
 scale = Vector2(1.1760938, 1.72)
 pivot_offset = Vector2(107.69339, 26)
 theme = ExtResource("1_pkmem")
-theme_type_variation = &"ButtonUnchange"
+theme_type_variation = &"ButtonNothing"
 text = "SYNC"
 script = ExtResource("5_k7ryw")
 

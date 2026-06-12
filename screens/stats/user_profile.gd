@@ -7,6 +7,5 @@ func _ready() -> void:
 	if data:
 		if data.user_stats.size() == 0:
 			data.initialize_new_profile()
-		print("just work")
 		%UserProfile.initialize(data) 
 		%StatsContainer.initalize(data)

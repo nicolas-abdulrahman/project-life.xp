@@ -1,10 +1,9 @@
-[gd_resource type="Resource" format=3 uid="uid://btmilqqjbvlvp"]
+[gd_resource type="Resource" script_class="Stat" format=3 uid="uid://btmilqqjbvlvp"]
 
-[ext_resource type="Texture2D" uid="uid://dlabs7tbrlx10" path="res://assets/svg/icons/stats/Spirit.svg" id="1_qb3l3"]
 [ext_resource type="Script" uid="uid://dvsj1ivctfl3v" path="res://scripts/data/stat.gd" id="2_srwnc"]
 
 [resource]
 script = ExtResource("2_srwnc")
-icon = ExtResource("1_qb3l3")
+icon = "uid://dlabs7tbrlx10"
 color = Color(0.9453125, 0.9453125, 0.9453125, 1)
 metadata/_custom_type_script = "uid://eqq0xxpbm55e"

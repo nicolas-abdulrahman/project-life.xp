@@ -11,5 +11,7 @@ class_name UserData extends Resource
 
 func initialize_new_profile():
 	if user_stats.size()==0:
+		var i = 0
 		for stat in STATS.get_data():
-			user_stats.append(StatData.new(stat.resource_name, 1 ,0))
+			user_stats.append(StatData.new(STATS.stats().get(i), 1 ,0))
+			i+=1

@@ -1,6 +1,9 @@
 class_name STATS extends Resource
 
 
+
+static func stats() -> Array[String]:
+	return ["Vitality", "Agility", "Focus", "Intellect", "Spirit", "Charisma"]
 # Called when the node enters the scene tree for the first time.
 
 static func get_data() -> Array[Stat]:
@@ -14,8 +17,9 @@ static func get_data() -> Array[Stat]:
 		preload(dir + "Charisma.tres")
 	]
 static func get_resource(name) -> Stat:
-	for stat in get_data():
-		if name == stat.resource_name:
-			return stat
-	push_error("no stat with the name, " + name)
-	return
+	var i = 0
+	for stat in stats():
+		if stat== name:
+			return get_data().get(i)
+		i+=1
+	return null
