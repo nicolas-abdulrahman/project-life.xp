@@ -15,7 +15,7 @@
 
 func _ready() -> void:
 	if data:
-		label.text = str(data.price)
+		#label.text = str(data.price)
 		await persona.ready
 		persona.get_entity().set_data(data)
 

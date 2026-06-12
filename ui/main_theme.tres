@@ -27,6 +27,11 @@ bg_color = Color(0.036621094, 0.15332827, 0.234375, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5itkh"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gjt7e"]
+bg_color = Color(0.5859375, 0.5859375, 0.5859375, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14qxj"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4jxl"]
 bg_color = Color(0.11050415, 0.2106079, 0.27734375, 1)
 corner_radius_top_left = 64
@@ -434,6 +439,12 @@ ButtonNothing/styles/normal = SubResource("StyleBoxEmpty_5itkh")
 ButtonUnchange/base_type = &"Button"
 ButtonUnchange/styles/hover = null
 ButtonUnchange/styles/hover_pressed = null
+CheckBox/icons/radio_checked = null
+CheckBox/icons/radio_checked_disabled = null
+CheckBox/icons/radio_unchecked = null
+CheckBox/icons/radio_unchecked_disabled = null
+CheckBox/styles/normal = SubResource("StyleBoxFlat_gjt7e")
+CheckBox/styles/pressed = SubResource("StyleBoxFlat_14qxj")
 ContainerAccent/base_type = &"PanelContainer"
 ContainerAccent/styles/panel = SubResource("StyleBoxFlat_t4jxl")
 ContainerDimmed/base_type = &"PanelContainer"
