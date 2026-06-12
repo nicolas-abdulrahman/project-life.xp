@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://bu0qb0u26oobf" path="res://screens/battle/combat_play_button.gd" id="5_va0ij"]
 [ext_resource type="Script" uid="uid://dxoyfbh5mk6s5" path="res://screens/battle/circular_bar.gd" id="6_circular_bar"]
 [ext_resource type="Script" uid="uid://c536os7c32q6m" path="res://screens/battle/game_handler.gd" id="8_dcyct"]
+[ext_resource type="Script" uid="uid://cje7rtdljtbys" path="res://screens/battle/entities.gd" id="11_dcyct"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upwx4"]
 texture = ExtResource("2_nyqwa")
@@ -104,6 +105,7 @@ render_target_update_mode = 4
 script = ExtResource("4_lm64f")
 
 [node name="GameHandler" type="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport" unique_id=983253764]
+unique_name_in_owner = true
 script = ExtResource("8_dcyct")
 
 [node name="Map" type="TileMapLayer" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler" unique_id=1584909067]
@@ -114,13 +116,18 @@ tile_set = ExtResource("1_d3lsj")
 script = ExtResource("4_y1l6r")
 
 [node name="Placement" type="TileMapLayer" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler/Map" unique_id=911483936]
-modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+modulate = Color(1, 0.40625, 0.40625, 0.5921569)
 tile_set = ExtResource("1_d3lsj")
 
 [node name="BoardHandler" type="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler/Map" unique_id=957229633]
 position = Vector2(-299, -238)
 
+[node name="Attack" type="TileMapLayer" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler/Map" unique_id=1845397404]
+modulate = Color(0.8900001, 0.66999996, 1, 0.5921569)
+tile_set = ExtResource("1_d3lsj")
+
 [node name="entities" type="Node2D" parent="PanelContainer/ScrollContainer/VBoxContainer/SubViewportContainer/SubViewport/GameHandler" unique_id=1279664460]
+script = ExtResource("11_dcyct")
 
 [node name="InventoryContainer" type="TabContainer" parent="PanelContainer/ScrollContainer/VBoxContainer" unique_id=1187388887]
 unique_name_in_owner = true

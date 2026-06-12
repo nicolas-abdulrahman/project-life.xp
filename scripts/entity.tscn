@@ -7,8 +7,10 @@
 [ext_resource type="Script" uid="uid://c4qn62i6s8od7" path="res://scripts/entities/draw_border_sprite.gd" id="4_itc3x"]
 [ext_resource type="AnimationLibrary" uid="uid://dfvjvy48gobra" path="res://entities/persona/mago_branco/animation_player.res" id="6_0h6hw"]
 [ext_resource type="Script" uid="uid://d4ccn4nxgk4ia" path="res://scripts/attack_component.gd" id="7_itc3x"]
+[ext_resource type="Script" uid="uid://deeif2c6gxuyp" path="res://scripts/move_component.gd" id="8_0h6hw"]
+[ext_resource type="Script" uid="uid://cs2s6f1iimxjw" path="res://scripts/health_component.gd" id="9_w63fe"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w63fe"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0h6hw"]
 size = Vector2(37, 43)
 
 [node name="Entity" type="Control" unique_id=1796109999]
@@ -38,6 +40,7 @@ region_rect = Rect2(0, 0, 64, 64)
 script = ExtResource("4_itc3x")
 
 [node name="controller" type="Control" parent="." unique_id=1983611392]
+visible = false
 anchors_preset = 0
 offset_left = -32.0
 offset_top = -32.0
@@ -48,16 +51,25 @@ size_flags_vertical = 6
 mouse_filter = 1
 script = ExtResource("3_0k7io")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2039989992]
-libraries/ = ExtResource("6_0h6hw")
-autoplay = &"Walk"
-
 [node name="Area2D" type="Area2D" parent="." unique_id=1258273331]
+visible = false
 scale = Vector2(2, 2)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=514453706]
+visible = false
 position = Vector2(-1, 4)
-shape = SubResource("RectangleShape2D_w63fe")
+shape = SubResource("RectangleShape2D_0h6hw")
+disabled = true
 
 [node name="AttackComponent" type="Node2D" parent="." unique_id=1068137273]
 script = ExtResource("7_itc3x")
+
+[node name="MoveComponent" type="Node2D" parent="." unique_id=737507788]
+script = ExtResource("8_0h6hw")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1452997448]
+libraries/ = ExtResource("6_0h6hw")
+autoplay = &"Idle"
+
+[node name="HealthComponent" type="Node2D" parent="." unique_id=718322934]
+script = ExtResource("9_w63fe")
